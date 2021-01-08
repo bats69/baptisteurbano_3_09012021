@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Shrikhand&display=swap');
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-third: #99e2d0;
+body{
+	font-family: Roboto, sans-serif;
+}
+h1{
+	display: flex;
+	justify-content: center;
+	font-family: shrikhand;
+	font-size: 58px;
+}
+.localisation__search--heading{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: space-around;
+	background-color: silver;
+	height: 70px;
+	border-top: 2px solid #cfcfcf;
+		.localisation__search--wrap{
+			margin-left: 15px;
+			font-weight: bold;
+			letter-spacing: 0em;
+}
+}
+main i{
+	font-family: Roboto;
+	color: black;
+}
+.website__descript--heading{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+		.website__descript--title{
+			font-weight: bold;
+			font-size: 36px;
+				.website__descript--subtitle{
+					margin-bottom: 30px;
+		}	
+	}
+}
+.link__restaurant--wrap{
+	display: flex;
+	align-items: center;
+	border: 1px solid $color-primary;
+	height: 50px;
+	margin-bottom: 30px;
+	border-radius: 25px 25px;
+	background: $color-primary;
+	padding-right: 10px;
+	box-shadow: 5px 8px 12px $color-primary;
+	&:hover{
+		cursor: pointer;
+		transform: scale(1.05);
+		transition-duration: 400ms;
+		&:active{
+			transform: scale(1);
+			transition-duration: 200ms;
+		}
+		.link__restaurant{
+			color:#000;
+			text-align: center;
+		}
+	}
+}
+nav{  
+	display: block;
+	i{
+		color: black;
+		margin-left: 30px;
+	}
+}
+.nav__link--wrap{
+	display: flex;
+	justify-content: space-evenly;
+		.nav__link--choice{  
+    		display: inline-flex;
+    		align-items: center;
+    		border: 1px solid $color-primary;
+    		margin-left: 25px;
+    		border-radius: 20px;
+    		height: 60px;
+    		width: 18%;
+    		&:hover{
+    			.nav__link--number{
+    				transform: translate(-15px);
+    				transition-duration: 400ms;
+    				transition-timing-function: linear 400ms;
+    			}
+    				cursor: pointer;
+    				transform: scale(1.10);
+    				transition-duration: 400ms;				
+				}
+				.nav__link--number{
+    				text-align: center;
+   					border: 1px solid $color-primary;
+   					background: $color-primary;
+    				color: white;
+    				border-radius: 15px 15px;
+    				font-size: small;
+    				margin: -8px;
+   					width: 15px;
+    				height: 15px;
+ 		}
+  	}
+}
+.icon-fonc-style .fas{
+	color: $color-primary;
+}
+.fas_fa-mobile-alt{
+    margin-left: inherit; 
+}
+.nav__link--list{  
+    margin-left: inherit;
+    font-weight: bold;
+}
+.food__prev--heading{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;	
+}
+.picture-food-wrap{
+	display: flex;
+	justify-content: space-around;
+	height: auto;
+}
+img{
+	border-radius:15px;
+	width: 335px;
+	height: 175px;
+}
+.picture-food-descript{
+	display: flex;
+	flex-direction: column;
+	i{
+		color: yellow;
+	}
+	.food-name{
+		margin-bottom: 35px;
+	}
+}
+.food__prev--title{
+	display: block;
+	
+}
+.food__prev--ban{
+	position: absolute;
+    border-radius: 5px 5px;
+    width: 90px;
+    margin-left: 230px;
+    margin-top: 10px;
+	z-index: 1;
+	background-color: $color-third;
+	margin-right: 6%;
+    opacity: 1;
+    color: darken($color-third, 30%);
+    height: 25px;
+    text-align: center;
+    padding-top: 9px;
+}
+.food__prev--like{
+	position: absolute;
+	margin-left: 280px;
+    margin-top: 184px;
+    &:hover{
+    	cursor: pointer;
+    	font-color: $color-secondary;
+    }
+    i{
+    	height: 50px;
+    	color: initial;
+    }
+}
+footer{
+	display: flex;
+	flex-direction: column;
+	background: #000;
+	margin-top: 30px;
+		h2{  
+			font-family: shrikhand;
+			font-size: 24px;
+			margin-left: 30px;
+			color: #fff;
+		}
+		span,a{
+			font-family: Roboto, sans-serif;
+			margin-left: 15px;
+			cursor: pointer;
+			width: fit-content;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+}
+.link__footer, a, i{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	font-family: Roboto, sans-serif;
+	width: auto;
+	color: #fff;
+	text-decoration: none;
+	margin-left: 15px;
+	line-height: 15px;
+	.other-restaurant{
+		margin-left: 22px;
+	}
+	
+}
