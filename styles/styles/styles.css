@@ -1,51 +1,87 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Shrikhand&display=swap");
-body {
-  font-family: Roboto, sans-serif; }
+@keyframes loader {
+  0% {
+    transform: rotate(360deg);
+    color: #9356dc; }
+  30% {
+    transition-timing-function: ease-in-out; }
+  100% {
+    color: #ff79da;
+    opacity: 0; } }
+.loader {
+  position: fixed;
+  /*animation-delay: 2s;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*transition-duration: 2s;*/
+  height: 600px;
+  justify-content: center;
+  background: #cfcfcf;
+  opacity: 0.8;
+  width: 100%;
+  /*transform: rotate(360deg);*/ }
+  .loader i {
+    font-size: 13em;
+    animation: loader 4000ms 400ms; }
 
-h1 {
+body {
+  font-family: Roboto, sans-serif;
+  margin-left: 0;
+  margin-right: 0; }
+
+header {
   display: flex;
   justify-content: center;
-  font-family: shrikhand;
-  font-size: 58px; }
+  margin-top: 40px; }
+  header img {
+    width: 300px;
+    text-align: center;
+    height: 60px; }
 
 .localisation__search--heading {
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: space-around;
-  background-color: silver;
   height: 70px;
-  border-top: 2px solid #cfcfcf; }
+  background: linear-gradient(to bottom, grey, 1%, #ececec);
+  margin-top: 50px; }
   .localisation__search--heading .localisation__search--wrap {
     margin-left: 15px;
     font-weight: bold;
     letter-spacing: 0em; }
 
 main i {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   color: black; }
 
 .website__descript--heading {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  background: whitesmoke; }
   .website__descript--heading .website__descript--title {
     font-weight: bold;
-    font-size: 36px; }
-    .website__descript--heading .website__descript--title .website__descript--subtitle {
-      margin-bottom: 30px; }
+    font-size: 36px;
+    margin-bottom: 0px; }
+  .website__descript--heading .website__descript--subtitle {
+    margin-bottom: 30px; }
 
 .link__restaurant--wrap {
   display: flex;
   align-items: center;
-  border: 1px solid #9356dc;
+  width: 16%;
+  justify-content: center;
+  border: 0px groove #b68de7;
   height: 50px;
+  color: #fff;
   margin-bottom: 30px;
-  border-radius: 25px 25px;
-  background: #9356dc;
+  border-radius: 30px 30px;
+  background: linear-gradient(to top, #9356dc, 20%, #b68de7);
   padding-right: 10px;
-  box-shadow: 5px 8px 12px #9356dc; }
+  box-shadow: 5px 8px 8px #cfcfcf; }
   .link__restaurant--wrap:hover {
     cursor: pointer;
     transform: scale(1.05);
@@ -54,11 +90,12 @@ main i {
       transform: scale(1);
       transition-duration: 200ms; }
     .link__restaurant--wrap:hover .link__restaurant {
-      color: #000;
+      color: #fff;
       text-align: center; }
 
 nav {
-  display: block; }
+  display: block;
+  margin-bottom: 50px; }
   nav i {
     color: black;
     margin-left: 30px; }
@@ -69,22 +106,24 @@ nav {
   .nav__link--wrap .nav__link--choice {
     display: inline-flex;
     align-items: center;
-    border: 1px solid #9356dc;
+    border: 0px solid #9356dc;
+    box-shadow: 5px 5px 8px #cfcfcf;
     margin-left: 25px;
     border-radius: 20px;
     height: 60px;
     width: 18%; }
     .nav__link--wrap .nav__link--choice:hover {
       cursor: pointer;
-      transform: scale(1.1);
-      transition-duration: 400ms; }
+      transform: scale(1.05);
+      transition-duration: 400ms;
+      background: #faf7fd; }
       .nav__link--wrap .nav__link--choice:hover .nav__link--number {
         transform: translate(-15px);
         transition-duration: 400ms;
         transition-timing-function: linear 400ms; }
     .nav__link--wrap .nav__link--choice .nav__link--number {
       text-align: center;
-      border: 1px solid #9356dc;
+      border: 0px solid #9356dc;
       background: #9356dc;
       color: white;
       border-radius: 15px 15px;
@@ -106,28 +145,25 @@ nav {
 .food__prev--heading {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap; }
-
-.picture-food-wrap {
-  display: flex;
-  justify-content: space-around;
-  height: auto; }
+  flex-wrap: wrap;
+  background: whitesmoke;
+  align-content: center;
+  height: 1145px;
+  justify-content: space-around; }
 
 img {
-  border-radius: 15px;
+  border-radius: 15px 15px 0 0;
   width: 335px;
   height: 175px; }
 
-.picture-food-descript {
-  display: flex;
-  flex-direction: column; }
-  .picture-food-descript i {
-    color: yellow; }
-  .picture-food-descript .food-name {
-    margin-bottom: 35px; }
-
 .food__prev--title {
   display: block; }
+
+.food__prev {
+  background: white;
+  border-radius: 15px;
+  height: auto;
+  margin-bottom: 30px; }
 
 .food__prev--ban {
   position: absolute;
@@ -144,22 +180,46 @@ img {
   text-align: center;
   padding-top: 9px; }
 
+.food__prev--nolike {
+  position: absolute;
+  margin-left: 280px;
+  margin-top: 200px;
+  cursor: pointer;
+  font-size: x-large; }
+  .food__prev--nolike .far {
+    color: #000; }
+  .food__prev--nolike:hover {
+    display: none;
+    color: #fff;
+    content: ""; }
+
 .food__prev--like {
   position: absolute;
   margin-left: 280px;
-  margin-top: 184px; }
+  margin-top: 200px;
+  font-size: x-large;
+  cursor: pointer;
+  opacity: 0; }
+  .food__prev--like .fas {
+    color: #e179ff; }
   .food__prev--like:hover {
-    cursor: pointer;
-    font-color: #ff79da; }
-  .food__prev--like i {
-    height: 50px;
-    color: initial; }
+    transition: 400ms;
+    opacity: 1;
+    content: ""; }
+
+.food__prev--script {
+  font-weight: bold;
+  margin-left: 15px;
+  margin-top: 8px;
+  line-height: 1.8em; }
+
+.food__prev--main {
+  margin-left: 15px; }
 
 footer {
   display: flex;
   flex-direction: column;
-  background: #000;
-  margin-top: 30px; }
+  background: #000; }
   footer h2 {
     font-family: shrikhand;
     font-size: 24px;
@@ -186,6 +246,6 @@ footer {
   margin-left: 15px;
   line-height: 15px; }
   .link__footer .other-restaurant, a .other-restaurant, i .other-restaurant {
-    margin-left: 22px; }
+    margin-left: 18px; }
 
 /*# sourceMappingURL=styles.css.map */
