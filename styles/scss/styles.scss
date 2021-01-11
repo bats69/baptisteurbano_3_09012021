@@ -1,62 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Shrikhand&display=swap');
+@import "../libs/keyframes.scss";
+@import "../libs/mixins.scss";
+@import "../libs/reset.css";
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-third: #99e2d0;
-@mixin hover{
-	cursor: pointer;
-	transform: scale(1.05);
-	transition-duration: 400ms;
-}
-@mixin align{
-	display: flex;
-	flex-direction: column;
-}
-@keyframes loader{
-	0%{
-		transform: rotate(360deg);
-		color: $color-primary;
-	}
-	30%{
-		transition-timing-function: ease-in-out;
-	}
-	100%{
-		color: $color-secondary;
-		opacity: 0;
-	}
-}
-.loader{
+.loader{ 
 	position: fixed;
-	/*animation-delay: 2s;*/
-	display: flex;
-	align-items:center;
-	justify-content: center;
-	/*transition-duration: 2s;*/
-	height: 600px;
-    justify-content: center;
-    background: #cfcfcf;
-    opacity: 0.8;
-    width: 100%;
-    /*transform: rotate(360deg);*/
+	animation: background 3200ms;
 	i{
-        font-size: 13em;
-		animation: loader 4000ms 400ms;
+		position: fixed;
+		display: flex;
+		z-index: 1;
+		height: 600px;
+		width: 100%;
+		align-items:center;
+		justify-content: center;
+        font-size: 15em;
+		animation: loader 2800ms 400ms both;
 	}
 }
 body{
 	font-family: Roboto, sans-serif;
-	margin-left: 0;
-	margin-right: 0;
+	background-size: cover;
+	animation: body 3200ms;
 }
 header {
 	display: flex;
 	justify-content: center;
-	margin-top: 40px;
-	& img{  
-	width: 300px;
-	text-align: center;
-	height: 60px;
-}
+		& img{  
+		width: 300px;
+		text-align: center;
+		height: 60px;
+	}
 }
 .localisation__search--heading{
 	display: flex;
@@ -79,14 +56,15 @@ main i{
 .website__descript--heading{
 	@include align;
 	align-items: center;
-	background:lighten(#cfcfcf, 15%);
+	background: lighten(#cfcfcf, 15%);
 		.website__descript--title{
 			font-weight: bold;
 			font-size: 36px;
-			margin-bottom: 0px;		
+			margin-top: 30px;		
 	}
 	.website__descript--subtitle{
-					margin-bottom: 30px;
+		margin-top: 30px;
+		margin-bottom: 30px;
 	}
 }
 .link__restaurant--wrap{
@@ -99,11 +77,12 @@ main i{
 	color: #fff;
 	margin-bottom: 30px;
 	border-radius: 30px 30px;
-	background:linear-gradient(to top,$color-primary,20%,#b68de7);
+	background: $color-primary;
 	padding-right: 10px;
 	box-shadow: 5px 8px 8px #cfcfcf;
 	&:hover{
 		@include hover;
+		background: linear-gradient(to top,$color-primary,20%,#b68de7);
 			&:active{
 				transform: scale(1);
 				transition-duration: 200ms;
@@ -122,6 +101,10 @@ nav{
 		margin-left: 30px;
 	}
 }
+.nav__link--title{
+	margin: 30px;
+	font-size: 24px;
+}
 .nav__link--wrap{
 	display: flex;
 	justify-content: space-evenly;
@@ -134,6 +117,7 @@ nav{
     		border-radius: 20px;
     		height: 60px;
     		width: 18%;
+    		background: lighten(#cfcfcf, 15%);
     		&:hover{
     			.nav__link--number{
     				transform: translate(-15px);
@@ -153,6 +137,9 @@ nav{
     				margin: -8px;
    					width: 15px;
     				height: 15px;
+    				font-size: 12px;
+    				padding-top: 3px;
+    				padding-right: 3px;
  		}
   	}
 }
@@ -171,27 +158,32 @@ nav{
 	flex-wrap: wrap;
 	background:lighten(#cfcfcf, 15%);
 	align-content: center;
-	height: 1145px;
+	height: 1200px;
     justify-content: space-around;
 }
 img{
 	border-radius:15px 15px 0 0;
 	width: 335px;
 	height: 175px;
+	cursor: pointer;
 }
 .food__prev--title{
 	display: block;
+	margin: 15px;
+	font-size: 24px;
 }
 .food__prev{
 	background: white;
     border-radius: 15px;
-    height: auto;
+    height: 250px;
     margin-bottom: 30px;
+    cursor: pointer;
 }
 .food__prev--ban{
 	position: absolute;
     border-radius: 5px 5px;
     width: 90px;
+    cursor: pointer;
     margin-left: 230px;
     margin-top: 10px;
 	z-index: 1;
@@ -215,9 +207,7 @@ img{
     &:hover{
     	display: none;
     	color: #fff;
-    	content: "";
 	}
-
 }
 .food__prev--like{ 
   	position: absolute;
@@ -227,16 +217,12 @@ img{
    	cursor: pointer;
    	opacity: 0;
    	.fas{
+
    		color: adjust-hue($color-secondary, -30);
-   		
    	}
    	&:hover{
-   		transition: 400ms;
+   		animation: like 1500ms;
    		opacity:1;
-   		content: "";
-   }
-   &:checked{
-
    }
 }
 .food__prev--script{
@@ -244,7 +230,6 @@ img{
 	margin-left: 15px;
     margin-top: 8px;
     line-height: 1.8em;
-
 }
 .food__prev--main{
     	margin-left: 15px;
@@ -257,6 +242,8 @@ footer{
 			font-size: 24px;
 			margin-left: 30px;
 			color: #fff;
+			margin-top: 15px;
+			margin-bottom: 15px;
 		}
 		span,a{
 			font-family: Roboto, sans-serif;
@@ -276,6 +263,7 @@ footer{
 	justify-content: space-around;
 	font-family: Roboto, sans-serif;
 	width: auto;
+	height: auto;
 	color: #fff;
 	text-decoration: none;
 	margin-left: 15px;

@@ -1,40 +1,93 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Shrikhand&display=swap");
-@keyframes loader {
+@import url(../libs/reset.css);
+@keyframes body {
+  from {
+    filter: blur(3px); }
+  to {
+    filter: blur(3px); } }
+@keyframes background {
+  from {
+    height: 100%;
+    width: 100%; }
+  to {
+    height: 100%;
+    width: 100%; }
   0% {
-    transform: rotate(360deg);
-    color: #9356dc; }
-  30% {
-    transition-timing-function: ease-in-out; }
+    background-color: rgba(153, 226, 208, 0.7); }
+  33% {
+    background-color: rgba(255, 121, 218, 0.7); }
+  50% {
+    background-color: rgba(147, 86, 220, 0.7); }
+  75% {
+    background-color: rgba(153, 226, 208, 0.7); }
   100% {
-    color: #ff79da;
-    opacity: 0; } }
+    background-color: rgba(153, 226, 208, 0.7);
+    transition-timing-function: cubic-bezier(0.54, 0.31, 0.89, 0.3);
+    display: none; } }
+@keyframes loader {
+  from {
+    position: fixed; }
+  to {
+    position: fixed; }
+  0% {
+    transform: scale(0) rotate(45deg);
+    color: 60%;
+    opacity: 1;
+    transition-timing-function: cubic-bezier(0.54, 0.31, 0.89, 0.3); }
+  33% {
+    transform: scale(1) rotate(120deg);
+    color: 74.3137254902%;
+    opacity: 1; }
+  50% {
+    transform: scale(1) rotate(180deg);
+    color: 74.3137254902%;
+    opacity: 1; }
+  75% {
+    transform: scale(1) rotate(260deg);
+    color: 73.7254901961%;
+    opacity: 1; }
+  100% {
+    transform: scale(0) rotate(360deg);
+    color: #8641d8;
+    opacity: 0.8;
+    visibility: hidden;
+    transition-timing-function: cubic-bezier(0.54, 0.31, 0.89, 0.3); } }
+@keyframes like {
+  0% {
+    transform: scaleX(0);
+    opacity: 0; }
+  17% {
+    transform: scaleX(0.18); }
+  24% {
+    transform: scaleX(0.4); }
+  46% {
+    transform: scaleX(0.81); }
+  100% {
+    transform: scaleX(1);
+    opacity: 1; } }
 .loader {
   position: fixed;
-  /*animation-delay: 2s;*/
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /*transition-duration: 2s;*/
-  height: 600px;
-  justify-content: center;
-  background: #cfcfcf;
-  opacity: 0.8;
-  width: 100%;
-  /*transform: rotate(360deg);*/ }
+  animation: background 3200ms; }
   .loader i {
-    font-size: 13em;
-    animation: loader 4000ms 400ms; }
+    position: fixed;
+    display: flex;
+    z-index: 1;
+    height: 600px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 15em;
+    animation: loader 2800ms 400ms both; }
 
 body {
   font-family: Roboto, sans-serif;
-  margin-left: 0;
-  margin-right: 0; }
+  background-size: cover;
+  animation: body 3200ms; }
 
 header {
   display: flex;
-  justify-content: center;
-  margin-top: 40px; }
+  justify-content: center; }
   header img {
     width: 300px;
     text-align: center;
@@ -65,8 +118,9 @@ main i {
   .website__descript--heading .website__descript--title {
     font-weight: bold;
     font-size: 36px;
-    margin-bottom: 0px; }
+    margin-top: 30px; }
   .website__descript--heading .website__descript--subtitle {
+    margin-top: 30px;
     margin-bottom: 30px; }
 
 .link__restaurant--wrap {
@@ -79,13 +133,16 @@ main i {
   color: #fff;
   margin-bottom: 30px;
   border-radius: 30px 30px;
-  background: linear-gradient(to top, #9356dc, 20%, #b68de7);
+  background: #9356dc;
   padding-right: 10px;
   box-shadow: 5px 8px 8px #cfcfcf; }
   .link__restaurant--wrap:hover {
     cursor: pointer;
     transform: scale(1.05);
-    transition-duration: 400ms; }
+    background: linear-gradient(to top, #9356dc, 20%, #b68de7);
+    box-shadow: 5px 8px 8px #9c9c9c;
+    transition-duration: 400ms;
+    background: linear-gradient(to top, #9356dc, 20%, #b68de7); }
     .link__restaurant--wrap:hover:active {
       transform: scale(1);
       transition-duration: 200ms; }
@@ -100,6 +157,10 @@ nav {
     color: black;
     margin-left: 30px; }
 
+.nav__link--title {
+  margin: 30px;
+  font-size: 24px; }
+
 .nav__link--wrap {
   display: flex;
   justify-content: space-evenly; }
@@ -111,10 +172,13 @@ nav {
     margin-left: 25px;
     border-radius: 20px;
     height: 60px;
-    width: 18%; }
+    width: 18%;
+    background: whitesmoke; }
     .nav__link--wrap .nav__link--choice:hover {
       cursor: pointer;
       transform: scale(1.05);
+      background: linear-gradient(to top, #9356dc, 20%, #b68de7);
+      box-shadow: 5px 8px 8px #9c9c9c;
       transition-duration: 400ms;
       background: #faf7fd; }
       .nav__link--wrap .nav__link--choice:hover .nav__link--number {
@@ -130,7 +194,10 @@ nav {
       font-size: small;
       margin: -8px;
       width: 15px;
-      height: 15px; }
+      height: 15px;
+      font-size: 12px;
+      padding-top: 3px;
+      padding-right: 3px; }
 
 .icon-fonc-style .fas {
   color: #9356dc; }
@@ -148,27 +215,32 @@ nav {
   flex-wrap: wrap;
   background: whitesmoke;
   align-content: center;
-  height: 1145px;
+  height: 1200px;
   justify-content: space-around; }
 
 img {
   border-radius: 15px 15px 0 0;
   width: 335px;
-  height: 175px; }
+  height: 175px;
+  cursor: pointer; }
 
 .food__prev--title {
-  display: block; }
+  display: block;
+  margin: 15px;
+  font-size: 24px; }
 
 .food__prev {
   background: white;
   border-radius: 15px;
-  height: auto;
-  margin-bottom: 30px; }
+  height: 250px;
+  margin-bottom: 30px;
+  cursor: pointer; }
 
 .food__prev--ban {
   position: absolute;
   border-radius: 5px 5px;
   width: 90px;
+  cursor: pointer;
   margin-left: 230px;
   margin-top: 10px;
   z-index: 1;
@@ -190,8 +262,7 @@ img {
     color: #000; }
   .food__prev--nolike:hover {
     display: none;
-    color: #fff;
-    content: ""; }
+    color: #fff; }
 
 .food__prev--like {
   position: absolute;
@@ -203,9 +274,8 @@ img {
   .food__prev--like .fas {
     color: #e179ff; }
   .food__prev--like:hover {
-    transition: 400ms;
-    opacity: 1;
-    content: ""; }
+    animation: like 1500ms;
+    opacity: 1; }
 
 .food__prev--script {
   font-weight: bold;
@@ -224,7 +294,9 @@ footer {
     font-family: shrikhand;
     font-size: 24px;
     margin-left: 30px;
-    color: #fff; }
+    color: #fff;
+    margin-top: 15px;
+    margin-bottom: 15px; }
   footer span, footer a {
     font-family: Roboto, sans-serif;
     margin-left: 15px;
@@ -241,6 +313,7 @@ footer {
   justify-content: space-around;
   font-family: Roboto, sans-serif;
   width: auto;
+  height: auto;
   color: #fff;
   text-decoration: none;
   margin-left: 15px;
