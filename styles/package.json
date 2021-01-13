@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./scss/styles.scss:./styles/styles/styles.css"
+    "sass": "sass --watch ./scss/styles.scss:./styles/styles/styles.css",
+    "sass": "sass --watch ./styles/scss/menu.scss:./styles/styles/menu.css",
+    "prefix": "postcss ./styles/styles/styles.css --use autoprefixer -d ./styles/styles/styles.css/prefixed/"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "browserslist": "last 4 versions"
 }

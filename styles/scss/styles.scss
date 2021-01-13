@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Shrikhand&display=swap');
-@import "../libs/keyframes.scss";
+@import "../libs/_keyframes.scss";
 @import "../libs/mixins.scss";
 @import "../libs/reset.css";
 $color-primary: #9356dc;
@@ -12,7 +12,6 @@ $color-third: #99e2d0;
 	i{
 		position: fixed;
 		display: flex;
-		z-index: 1;
 		height: 600px;
 		width: 100%;
 		align-items:center;
@@ -27,15 +26,9 @@ body{
 	animation: body 3200ms;
 }
 header {
-	display: flex;
-	justify-content: center;
-		& img{  
-		width: 300px;
-		text-align: center;
-		height: 60px;
-	}
+	@include header;
 }
-.localisation__search--heading{
+.localisation-search__heading{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -43,31 +36,31 @@ header {
 	height: 70px;
 	background: linear-gradient(to bottom,grey,1%,#ececec);
 	margin-top: 50px;
-		.localisation__search--wrap{
+		.localisation-search__city{
 			margin-left: 15px;
 			font-weight: bold;
 			letter-spacing: 0em;
-}
+	}
 }
 main i{
 	font-family: Roboto, sans-serif;
 	color: black;
 }
-.website__descript--heading{
+.website-descript__heading{
 	@include align;
 	align-items: center;
 	background: lighten(#cfcfcf, 15%);
-		.website__descript--title{
+		.website-descript__title{
 			font-weight: bold;
 			font-size: 36px;
-			margin-top: 30px;		
-	}
-	.website__descript--subtitle{
-		margin-top: 30px;
-		margin-bottom: 30px;
+			margin-top: 30px;
+		}		
+			.website-descript__subtitle{
+				margin-top: 30px;
+				margin-bottom: 30px;	
 	}
 }
-.link__restaurant--wrap{
+.link-restaurant__wrap{
 	display: flex;
 	align-items: center;    
 	width: 16%;
@@ -87,7 +80,7 @@ main i{
 				transform: scale(1);
 				transition-duration: 200ms;
 		}
-		.link__restaurant{
+		.link-restaurant{
 			color:#fff;
 			text-align: center;
 		}
@@ -101,14 +94,14 @@ nav{
 		margin-left: 30px;
 	}
 }
-.nav__link--title{
+.nav-link__title{
 	margin: 30px;
 	font-size: 24px;
 }
-.nav__link--wrap{
+.nav-link__wrap{
 	display: flex;
 	justify-content: space-evenly;
-		.nav__link--choice{  
+		.nav-link__choice{  
     		display: inline-flex;
     		align-items: center;
     		border: 0px solid $color-primary;
@@ -119,7 +112,7 @@ nav{
     		width: 18%;
     		background: lighten(#cfcfcf, 15%);
     		&:hover{
-    			.nav__link--number{
+    			.nav-link__number{
     				transform: translate(-15px);
     				transition-duration: 400ms;
     				transition-timing-function: linear 400ms;
@@ -127,7 +120,7 @@ nav{
     				@include hover;	
     				background:lighten($color-primary, 38%);			
 				}
-				.nav__link--number{
+				.nav-link__number{
     				text-align: center;
    					border: 0px solid $color-primary;
    					background: $color-primary;
@@ -149,17 +142,20 @@ nav{
 .fas_fa-mobile-alt{
     margin-left: inherit; 
 }
-.nav__link--list{  
+.nav-link__list{  
     margin-left: inherit;
     font-weight: bold;
 }
-.food__prev--heading{
+.food-prev__heading{
 	@include align;
 	flex-wrap: wrap;
 	background:lighten(#cfcfcf, 15%);
 	align-content: center;
 	height: 1200px;
     justify-content: space-around;
+    a{
+    	color: inherit;
+    }
 }
 img{
 	border-radius:15px 15px 0 0;
@@ -167,23 +163,28 @@ img{
 	height: 175px;
 	cursor: pointer;
 }
-.food__prev--title{
-	display: block;
-	margin: 15px;
-	font-size: 24px;
+.container__food__prev--menu{
+	display: flex;
+	border: 1px solid #000;
 }
-.food__prev{
+.food-prev{
 	background: white;
     border-radius: 15px;
     height: 250px;
     margin-bottom: 30px;
     cursor: pointer;
+		.food-prev__title{
+			display: block;
+			margin: 15px;
+			font-size: 24px;
+				
+	}
 }
-.food__prev--ban{
+.food-prev__ban{
 	position: absolute;
     border-radius: 5px 5px;
     width: 90px;
-    cursor: pointer;
+   	cursor: pointer;
     margin-left: 230px;
     margin-top: 10px;
 	z-index: 1;
@@ -195,12 +196,8 @@ img{
     text-align: center;
     padding-top: 9px;
 }
-.food__prev--nolike{
-	position: absolute;
-	margin-left: 280px;
-    margin-top: 200px;
-    cursor: pointer;
-    font-size: x-large;
+.food-prev__nolike{
+	@include like;
     .far{
     	color: #000;
     }
@@ -209,12 +206,8 @@ img{
     	color: #fff;
 	}
 }
-.food__prev--like{ 
-  	position: absolute;
-	margin-left: 280px;
-   	margin-top: 200px;
-   	font-size: x-large;
-   	cursor: pointer;
+.food-prev__like{ 
+  	@include like;
    	opacity: 0;
    	transition-duration: 500ms;
    	.fas{
@@ -222,54 +215,22 @@ img{
    	}
    	&:hover{
    		animation: like;
-   		transform-origin: 50% left;
+   		transform-origin: 0% 50% left;
    		opacity:1;
    }
 }
-.food__prev--script{
+a{
+	z-index: 0;
+}
+.food-prev__name{
 	font-weight: bold;
 	margin-left: 15px;
     margin-top: 8px;
     line-height: 1.8em;
 }
-.food__prev--main{
+.food-prev__place{
     	margin-left: 15px;
 }
 footer{
-	@include align;
-	background: #000;
-		h2{  
-			font-family: shrikhand;
-			font-size: 24px;
-			margin-left: 30px;
-			color: #fff;
-			margin-top: 15px;
-			margin-bottom: 15px;
-		}
-		span,a{
-			font-family: Roboto, sans-serif;
-			margin-left: 15px;
-			cursor: pointer;
-			width: fit-content;
-			&:hover{
-				text-decoration: underline;
-			}
-		}
-			a:hover{
-				text-decoration: underline;
-		}
-}
-.link__footer, a, i{
-	@include align;
-	justify-content: space-around;
-	font-family: Roboto, sans-serif;
-	width: auto;
-	height: auto;
-	color: #fff;
-	text-decoration: none;
-	margin-left: 15px;
-	line-height: 15px;
-	.other-restaurant{
-		margin-left: 18px;
-	}	
+	@include footer;
 }

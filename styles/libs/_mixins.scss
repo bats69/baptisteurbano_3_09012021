@@ -1,0 +1,68 @@
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-third: #99e2d0;
+@mixin header{
+	display: flex;
+	justify-content: center;
+		& img{  
+		width: 300px;
+		text-align: center;
+		height: 60px;
+	}
+}
+@mixin hover{
+	cursor: pointer;
+	transform: scale(1.05);
+	background: linear-gradient(to top,$color-primary,20%,#b68de7);
+	box-shadow: 5px 8px 8px darken(#cfcfcf,20%);
+	transition-duration: 400ms;
+}
+@mixin align{
+	display: flex;
+	flex-direction: column;  
+}
+@mixin footer{
+	@include align;
+	background: #000;
+		h2{  
+			font-family: shrikhand;
+			font-size: 24px;
+			margin-left: 30px;
+			color: #fff;
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+		span,a{
+			font-family: Roboto, sans-serif;
+			margin-left: 15px;
+			cursor: pointer;
+			width: fit-content;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+			a:hover{
+				text-decoration: underline;
+		}
+}
+.link-footer, a, i{
+	@include align;
+	justify-content: space-around;
+	font-family: Roboto, sans-serif;
+	width: auto;
+	height: auto;
+	color: #fff;
+	text-decoration: none;
+	margin-left: 15px;
+	line-height: 15px;
+	.other-restaurant{
+		margin-left: 18px;
+	}	
+}
+@mixin like{
+	position: absolute;
+	margin-left: 280px;
+    margin-top: 200px;
+    cursor: pointer;
+    font-size: x-large;
+}

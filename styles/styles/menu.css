@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Shrikhand&display=swap");
+@import url(../libs/reset.css);
+@keyframes body {
+  from {
+    filter: blur(3px); }
+  to {
+    filter: blur(3px); } }
+@keyframes background {
+  from {
+    height: 100%;
+    width: 100%; }
+  to {
+    height: 100%;
+    width: 100%; }
+  0% {
+    background-color: rgba(153, 226, 208, 0.7); }
+  33% {
+    background-color: rgba(255, 121, 218, 0.7); }
+  50% {
+    background-color: rgba(147, 86, 220, 0.7); }
+  75% {
+    background-color: rgba(153, 226, 208, 0.7); }
+  100% {
+    background-color: rgba(153, 226, 208, 0.7);
+    transition-timing-function: cubic-bezier(0.54, 0.31, 0.89, 0.3);
+    display: none; } }
+@keyframes loader {
+  0% {
+    transform: scale(0) rotate(45deg);
+    color: 60%;
+    opacity: 1;
+    transition-timing-function: cubic-bezier(0.54, 0.31, 0.89, 0.3); }
+  33% {
+    transform: scale(1) rotate(120deg);
+    color: 74.3137254902%;
+    opacity: 1; }
+  50% {
+    transform: scale(1) rotate(180deg);
+    color: 74.3137254902%;
+    opacity: 1; }
+  75% {
+    transform: scale(1) rotate(260deg);
+    color: 73.7254901961%;
+    opacity: 1; }
+  100% {
+    transform: scale(0) rotate(360deg);
+    color: #8641d8;
+    opacity: 0.8;
+    visibility: hidden;
+    transition-timing-function: cubic-bezier(0.54, 0.31, 0.89, 0.3); } }
+@keyframes like {
+  0% {
+    transform: translateX(left, 0);
+    opacity: 0; }
+  33% {
+    transform: scale(0.33);
+    opacity: 0.3; }
+  66% {
+    transform: scale(0.66);
+    opacity: 0.6; }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    transform-origin: 50% left; } }
+.link-footer, a, i {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: Roboto, sans-serif;
+  width: auto;
+  height: auto;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+  line-height: 15px; }
+  .link-footer .other-restaurant, a .other-restaurant, i .other-restaurant {
+    margin-left: 18px; }
+
+.container__header {
+  display: flex;
+  justify-content: center;
+  width: 100%; }
+  .container__header .fas {
+    font-size: 2rem;
+    position: absolute;
+    align-items: flex-start;
+    margin-left: -530px;
+    color: #000; }
+    .container__header .fas:hover {
+      transform: scale(1.15); }
+
+.i {
+  display: flex; }
+  .i img {
+    width: 20%; }
+
+/*# sourceMappingURL=menu.css.map */
