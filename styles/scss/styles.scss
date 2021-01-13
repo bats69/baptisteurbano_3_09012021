@@ -61,29 +61,10 @@ main i{
 	}
 }
 .link-restaurant__wrap{
-	display: flex;
-	align-items: center;    
-	width: 16%;
-    justify-content: center;
-	border: 0px groove lighten($color-primary, 13%);
-	height: 50px;
-	color: #fff;
-	margin-bottom: 30px;
-	border-radius: 30px 30px;
-	background: $color-primary;
-	padding-right: 10px;
-	box-shadow: 5px 8px 8px #cfcfcf;
-	&:hover{
-		@include hover;
-		background: linear-gradient(to top,$color-primary,20%,#b68de7);
-			&:active{
-				transform: scale(1);
-				transition-duration: 200ms;
-		}
+	@include btn;
 		.link-restaurant{
 			color:#fff;
 			text-align: center;
-		}
 	}
 }
 nav{  
@@ -198,6 +179,8 @@ img{
 }
 .food-prev__nolike{
 	@include like;
+	margin-left: 280px;
+    margin-top: 200px;
     .far{
     	color: #000;
     }
@@ -208,6 +191,8 @@ img{
 }
 .food-prev__like{ 
   	@include like;
+  	margin-left: 280px;
+    margin-top: 200px;
    	opacity: 0;
    	transition-duration: 500ms;
    	.fas{

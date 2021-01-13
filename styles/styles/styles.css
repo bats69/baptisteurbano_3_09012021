@@ -156,9 +156,9 @@ main i {
     .link-restaurant__wrap:hover:active {
       transform: scale(1);
       transition-duration: 200ms; }
-    .link-restaurant__wrap:hover .link-restaurant {
-      color: #fff;
-      text-align: center; }
+  .link-restaurant__wrap .link-restaurant {
+    color: #fff;
+    text-align: center; }
 
 nav {
   display: block;
@@ -269,10 +269,10 @@ img {
 
 .food-prev__nolike {
   position: absolute;
-  margin-left: 280px;
-  margin-top: 200px;
   cursor: pointer;
-  font-size: x-large; }
+  font-size: x-large;
+  margin-left: 280px;
+  margin-top: 200px; }
   .food-prev__nolike .far {
     color: #000; }
   .food-prev__nolike:hover {
@@ -281,10 +281,10 @@ img {
 
 .food-prev__like {
   position: absolute;
-  margin-left: 280px;
-  margin-top: 200px;
   cursor: pointer;
   font-size: x-large;
+  margin-left: 280px;
+  margin-top: 200px;
   opacity: 0;
   transition-duration: 500ms; }
   .food-prev__like .fas {
