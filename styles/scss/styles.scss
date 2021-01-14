@@ -137,6 +137,10 @@ nav{
     a{
     	color: inherit;
     }
+    h2{
+    	font-size: 26px;
+    	margin: 15px;
+    }
 }
 img{
 	border-radius:15px 15px 0 0;
@@ -163,7 +167,6 @@ img{
 }
 .food-prev__ban{
 	position: absolute;
-    border-radius: 5px 5px;
     width: 90px;
    	cursor: pointer;
     margin-left: 230px;
