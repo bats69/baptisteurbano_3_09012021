@@ -9,7 +9,6 @@ body{
 }
 h1{
 	font-family: shrikhand, sans-serif;
-	margin-left: -5px;
 }
 .container__header{
 	display: flex;
@@ -36,11 +35,12 @@ h1{
 			margin-left: -15px;
 		}
 }
-.i {  
+.food--picture {  
 	display: flex;
 	justify-content: center;
 	img{
 		width: 22%;
+		margin-top: 80px;
 	}
 }
 .container__name-food{
@@ -76,11 +76,11 @@ h1{
    	opacity: 0;
    	transition-duration: 500ms;
    	.fas{
-   		font-size: 0px;
    		color: $color-secondary;
    	}
    	&:hover{
    		animation: like;
+   		transform-origin: 0% 100%;
    		opacity:1;
    }
 }
@@ -93,8 +93,8 @@ h1{
     margin-left: 39%;
     margin-right: 40%;
     background: lighten(#cfcfcf, 15%);
-    margin-top: -155px;
-    border-radius: 57px 57px 0 0;
+    margin-top: -46px;
+    border-radius: 50px 50px 0 0;
 }
 .food__wrap{
 	display: flex;
@@ -169,7 +169,6 @@ h1{
 .etc{
 	visibility: hidden;
 }
-
 .food__descript--price{
 	position: absolute;
     margin-left: 280px;
@@ -184,6 +183,6 @@ h1{
 footer{
 	@include footer;
 	    position: absolute;
-    	margin-top: 985px;
+    	margin-top: 1010px;
     	width: 100%;
 }

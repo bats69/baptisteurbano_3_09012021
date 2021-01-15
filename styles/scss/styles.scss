@@ -219,6 +219,27 @@ a{
 .food-prev__place{
     	margin-left: 15px;
 }
+.load{  
+ & i{
+	display: flex;
+	align-items: center;
+    font-size: 120px;
+    background: #cfcfcf;
+    margin-left: 800px;
+    margin-right: 800px;
+	color: #000;
+	animation: rotate 2800ms linear infinite;
+	}
+}
+.load__bar{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    height: 20px;
+    font-family: Shrikhand, sans-serif;
+    background: linear-gradient(0turn, $color-third, #fff, $color-primary);
+}
 footer{
 	@include footer;
 }

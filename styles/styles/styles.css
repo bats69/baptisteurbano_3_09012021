@@ -60,7 +60,7 @@
     transform: scale(0.66);
     opacity: 0.6; }
   100% {
-    transform: scale(1);
+    font-size: inherit;
     opacity: 1;
     transform-origin: 50% left; } }
 @keyframes checked {
@@ -78,6 +78,13 @@
     transform: scaleX(0); }
   100% {
     transform: scaleX(1); } }
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); }
+  transition-duration: 8s;
+  animation-duration: infinite; }
 .link-footer, a, i {
   display: flex;
   flex-direction: column;
@@ -322,6 +329,25 @@ a {
 
 .food-prev__place {
   margin-left: 15px; }
+
+.load i {
+  display: flex;
+  align-items: center;
+  font-size: 120px;
+  background: #cfcfcf;
+  margin-left: 800px;
+  margin-right: 800px;
+  color: #000;
+  animation: rotate 2800ms linear infinite; }
+
+.load__bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  height: 20px;
+  font-family: Shrikhand, sans-serif;
+  background: linear-gradient(0turn, #99e2d0, #fff, #9356dc); }
 
 footer {
   display: flex;

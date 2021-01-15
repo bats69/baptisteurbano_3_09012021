@@ -5,6 +5,7 @@
   "scripts": {
     "sass": "sass --watch ./scss/styles.scss:./styles/styles/styles.css",
     "sass": "sass --watch ./styles/scss/menu.scss:./styles/styles/menu.css",
+    "sass": "sass --watch ./styles/scss/all.scss:./styles/styles/all.css",
     "prefix": "postcss ./styles/styles/styles.css --use autoprefixer -d ./styles/styles/styles.css/prefixed/"
   },
   "author": "",
