@@ -83,8 +83,14 @@
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); }
-  transition-duration: 8s;
-  animation-duration: infinite; }
+  transition-duration: 8s; }
+@keyframes wrap {
+  0% {
+    transform: scaleY(0);
+    opacity: 0; }
+  100% {
+    transform: scaleY(1);
+    opacity: 1; } }
 .link-footer, a, i {
   display: flex;
   flex-direction: column;
@@ -101,7 +107,7 @@
 
 body {
   font-family: Roboto, sans-serif;
-  background: linear-gradient(0.25turn, #99de73, white, #99de73); }
+  background: linear-gradient(0.25turn, #9356dc, white, #9356dc); }
 
 h1 {
   font-family: shrikhand, sans-serif;
@@ -159,6 +165,11 @@ h1 {
   .food-prev__nolike:hover {
     opacity: 0;
     color: #fff; }
+    .food-prev__nolike:hover .fas {
+      animation: like;
+      opacity: 1;
+      font-size: 0px;
+      color: #ff79da; }
 
 .food-prev__like {
   position: absolute;
@@ -169,12 +180,6 @@ h1 {
   margin-top: 35px;
   opacity: 0;
   transition-duration: 500ms; }
-  .food-prev__like .fas {
-    font-size: 0px;
-    color: #ff79da; }
-  .food-prev__like:hover {
-    animation: like;
-    opacity: 1; }
 
 .container__main--food {
   display: flex;

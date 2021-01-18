@@ -83,8 +83,14 @@
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); }
-  transition-duration: 8s;
-  animation-duration: infinite; }
+  transition-duration: 8s; }
+@keyframes wrap {
+  0% {
+    transform: scaleY(0);
+    opacity: 0; }
+  100% {
+    transform: scaleY(1);
+    opacity: 1; } }
 .link-footer, a, i {
   display: flex;
   flex-direction: column;
@@ -101,7 +107,7 @@
 
 body {
   font-family: Roboto, sans-serif;
-  background: linear-gradient(0.25turn, #99de73, white, #99de73); }
+  background: linear-gradient(0.25turn, #9356dc, white, #9356dc); }
 
 h1 {
   font-family: shrikhand, sans-serif; }
@@ -192,7 +198,6 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-size: 15px;
   width: 90%;
   height: 60px;
   border-radius: 15px;
@@ -200,19 +205,39 @@ h1 {
   cursor: pointer;
   border: 2px solid #fff;
   background: #fff;
-  margin-top: 15px; }
+  margin-top: 15px;
+  font-size: 15px;
+  animation-duration: 3000ms;
+  animation: wrap 1000ms forwards; }
+  .food__wrap--1 {
+    animation-delay: 111.1111111111ms; }
+  .food__wrap--2 {
+    animation-delay: 222.2222222222ms; }
+  .food__wrap--3 {
+    animation-delay: 333.3333333333ms; }
+  .food__wrap--4 {
+    animation-delay: 444.4444444444ms; }
+  .food__wrap--5 {
+    animation-delay: 555.5555555556ms; }
+  .food__wrap--6 {
+    animation-delay: 666.6666666667ms; }
+  .food__wrap--7 {
+    animation-delay: 777.7777777778ms; }
+  .food__wrap--8 {
+    animation-delay: 888.8888888889ms; }
+  .food__wrap--9 {
+    animation-delay: 1000ms; }
   .food__wrap:hover .box {
     display: flex;
     animation: affich 600ms;
     transition-duration: 400ms;
     transform-origin: right -4px -50px; }
+  .food__wrap:hover .fas {
+    animation: rotate 800ms; }
   .food__wrap:hover .food__descript--price {
     transform: translateX(-50px);
     animation-duration: 600ms;
     transition-duration: 400ms; }
-  .food__wrap:hover .box.fas {
-    transform: rotate(45deg);
-    animation-duration: 1000ms; }
   .food__wrap:hover .sup {
     display: none; }
   .food__wrap:hover .etc {

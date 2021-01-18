@@ -83,8 +83,14 @@
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); }
-  transition-duration: 8s;
-  animation-duration: infinite; }
+  transition-duration: 8s; }
+@keyframes wrap {
+  0% {
+    transform: scaleY(0);
+    opacity: 0; }
+  100% {
+    transform: scaleY(1);
+    opacity: 1; } }
 .link-footer, a, i {
   display: flex;
   flex-direction: column;
