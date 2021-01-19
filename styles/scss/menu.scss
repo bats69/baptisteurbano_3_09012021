@@ -3,6 +3,22 @@
 @import "../libs/keyframes";
 @import "../libs/mixins.scss";
 @import "../libs/reset.css";
+@media screen and (max-width: 480px) {
+body{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: center;
+	width: 100%; 
+}
+header{
+	display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 50px;
+}
+}
 body{
 	font-family: Roboto, sans-serif;
 	background: linear-gradient(0.25turn,$color-primary, white, $color-primary);

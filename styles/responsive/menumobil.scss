@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Shrikhand&display=swap');
+@import "../libs/_keyframes.scss";
+@import "../libs/mixins.scss";
+@import "../libs/reset.css";
+@media screen and (max-width: 480px) {
+body{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: center;
+	width: 100%; 
+}
+header{
+	display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    background: #fff;
+    height: 66px;
+    width: inherit;
+    margin: 0;
+}
+.container__header{ 
+ img{
+    	height: 34px;
+    	position: relative;
+    	top: 5px;
+    	margin: 0px auto;
+    	width: 50%;
+    }
+    .fas{
+    	left: 25px;
+    	top: 28px;
+    	margin: 0;
+    	font-size: 1rem;
+    }
+}
+.i{
+	img{
+		width: 100%;
+		bottom: 50px;
+		top: -50px;
+	}
+}
+.name__food-heading{
+	margin-top: 35px;
+	margin-right: 125px;
+	font-size: 2rem;
+}
+.container__main--food{
+	width: 100%;
+	top: 340px;
+	margin: 0;
+}
+.food-prev__nolike{
+	font-size: 1.6rem;
+	top: 37px;
+	right: 80px;
+}
+.food-prev__like{
+	font-size: 1.6rem;
+	top: 37px;
+	right: 80px;
+}
+.food__list-heading{
+	position: relative;
+	right: 55px;
+}
+.food__wrap{
+	height: 75px;
+	.box{
+	height: 78px;
+	margin-left: 74%;
+	width: 80px;
+	i{
+		color: #fff;
+		margin-left: 25px;
+		font-size: 30px;
+		}
+	}
+}
+.food__descript{
+	font-size: 20px;
+	margin-left: 20px
+}
+.food__descript-acompaniment{
+	font-size: 15px;
+	line-height: 35px;
+	margin-left: 20px;
+}
+.food__descript--price{
+	left: 80%;
+	font-size: 18px;
+	margin: 0;
+	margin-top: 40px;
+}
+.link__command--wrap{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+footer{
+	top: 1648px;
+}
+}

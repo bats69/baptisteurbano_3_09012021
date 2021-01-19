@@ -98,6 +98,20 @@
   .link-footer .other-restaurant, a .other-restaurant, i .other-restaurant {
     margin-left: 18px; }
 
+@media screen and (max-width: 480px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    width: 100%; }
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 50px; } }
 body {
   font-family: Roboto, sans-serif;
   background: linear-gradient(0.25turn, #9356dc, white, #9356dc); }

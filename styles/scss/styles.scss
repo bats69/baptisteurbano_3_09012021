@@ -223,7 +223,7 @@ a{
 }
 .load{ 
 	height: 140px;
-	background: #cfcfcf;
+	background: lighten(#cfcfcf, 15%);
   i{
 	display: flex;
 	align-items: center;
