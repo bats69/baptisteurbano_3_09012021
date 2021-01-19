@@ -1,6 +1,12 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-third: #99e2d0;
+$breakpoints: (mobile: 599px);
+@mixin mobile-only{
+	@media screen and (max-width: map-get($breakpoints, mobile)) {
+		width: 599px;
+	}
+}
 @mixin header{
 	display: flex;
 	justify-content: center;

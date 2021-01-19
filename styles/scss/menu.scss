@@ -16,6 +16,7 @@ h1{
 	justify-content: center;
 	position: absolute;
 	width: 100%;
+	z-index: 1;
 	.fas{
 		font-size: 2rem;
     	position: absolute;
@@ -28,19 +29,21 @@ h1{
 		}		
 	}
 	img{
-			background: #fff;
-			padding-top: 10px;
-			padding-bottom: 10px;
-			margin-bottom: 25px;
-			width: 22%;
-			margin-left: -15px;
-		}
+		background: #fff;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		margin-bottom: 25px;
+		width: 22%;
+		margin-left: -15px;
+	}
 }
 .i {  
 	display: flex;
 	justify-content: center;
 	img{
-		width: 22%;
+		position: relative;
+   		top: -23px;
+    	width: 22%;
 	}
 }
 .container__name-food{
@@ -58,33 +61,28 @@ h1{
 .food-prev__nolike{
 	@include like;
 	width: 0%;
-	margin-left: 193px;
-    margin-top: 35px;
+	top: 35px;
+    right: 70px;
     .far{
     	color: #000;
     }
     &:hover{
     	opacity: 0;
-    	color: #fff;
-    	.fas{
-    		animation: like;
-   		opacity:1;
-   		font-size: 0px;
-   		color: $color-secondary;}
 	}
 }
 .food-prev__like{ 
   	@include like;
   	width: 0%;
-  	margin-left: 193px;
-    margin-top: 35px;
+  	top: 35px;
+    right: 70px;
    	opacity: 0;
-   	transition-duration: 500ms;
+   	transition-duration: 1000ms;
    	.fas{
-   		
+   		color: lighten($color-secondary,10%);
    	}
    	&:hover{
-   		
+   		transition: all 0.3s linear 0s;
+   		opacity: 1;
    }
 }
 .container__main--food{
@@ -123,9 +121,8 @@ h1{
 				animation-duration: 600ms;
 				transition-duration: 400ms;
 		}
-			&:hover .box.fas{
-				transform: rotate(45deg);
-				animation-duration: 1000ms;
+			&:hover .fas{
+				animation: rotate 800ms;
 		}
 		&:hover .sup{
 			display: none;
@@ -141,7 +138,7 @@ h1{
    	margin-left: 15px;
 }
 .box{
-	border: 1px solid #15dea5;
+	border: 1px solid $color-third;
     height: 62px;
     width: 50px;
     display: none;
@@ -172,7 +169,6 @@ h1{
 .etc{
 	visibility: hidden;
 }
-
 .food__descript--price{
 	position: absolute;
     margin-left: 280px;

@@ -84,13 +84,6 @@
   to {
     transform: rotate(360deg); }
   transition-duration: 8s; }
-@keyframes wrap {
-  0% {
-    transform: scaleY(0);
-    opacity: 0; }
-  100% {
-    transform: scaleY(1);
-    opacity: 1; } }
 .link-footer, a, i {
   display: flex;
   flex-direction: column;
@@ -117,7 +110,8 @@ h1 {
   display: flex;
   justify-content: center;
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  z-index: 1; }
   .container__header .fas {
     font-size: 2rem;
     position: absolute;
@@ -139,6 +133,8 @@ h1 {
   display: flex;
   justify-content: center; }
   .i img {
+    position: relative;
+    top: -23px;
     width: 22%; }
 
 .container__name-food {
@@ -158,28 +154,27 @@ h1 {
   cursor: pointer;
   font-size: x-large;
   width: 0%;
-  margin-left: 193px;
-  margin-top: 35px; }
+  top: 35px;
+  right: 70px; }
   .food-prev__nolike .far {
     color: #000; }
   .food-prev__nolike:hover {
-    opacity: 0;
-    color: #fff; }
-    .food-prev__nolike:hover .fas {
-      animation: like;
-      opacity: 1;
-      font-size: 0px;
-      color: #ff79da; }
+    opacity: 0; }
 
 .food-prev__like {
   position: absolute;
   cursor: pointer;
   font-size: x-large;
   width: 0%;
-  margin-left: 193px;
-  margin-top: 35px;
+  top: 35px;
+  right: 70px;
   opacity: 0;
-  transition-duration: 500ms; }
+  transition-duration: 1000ms; }
+  .food-prev__like .fas {
+    color: #fface8; }
+  .food-prev__like:hover {
+    transition: all 0.3s linear 0s;
+    opacity: 1; }
 
 .container__main--food {
   display: flex;
@@ -215,9 +210,8 @@ h1 {
     transform: translateX(-50px);
     animation-duration: 600ms;
     transition-duration: 400ms; }
-  .food__wrap:hover .box.fas {
-    transform: rotate(45deg);
-    animation-duration: 1000ms; }
+  .food__wrap:hover .fas {
+    animation: rotate 800ms; }
   .food__wrap:hover .sup {
     display: none; }
   .food__wrap:hover .etc {
@@ -230,7 +224,7 @@ h1 {
   margin-left: 15px; }
 
 .box {
-  border: 1px solid #15dea5;
+  border: 1px solid #99e2d0;
   height: 62px;
   width: 50px;
   display: none;

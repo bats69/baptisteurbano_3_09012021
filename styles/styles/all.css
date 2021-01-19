@@ -84,13 +84,6 @@
   to {
     transform: rotate(360deg); }
   transition-duration: 8s; }
-@keyframes wrap {
-  0% {
-    transform: scaleY(0);
-    opacity: 0; }
-  100% {
-    transform: scaleY(1);
-    opacity: 1; } }
 .link-footer, a, i {
   display: flex;
   flex-direction: column;
@@ -138,8 +131,9 @@ h1 {
   display: flex;
   justify-content: center; }
   .food--picture img {
-    width: 22%;
-    margin-top: 80px; }
+    position: relative;
+    width: 348px;
+    top: 80px; }
 
 .container__name-food {
   display: flex;
@@ -174,12 +168,12 @@ h1 {
   margin-left: 193px;
   margin-top: 35px;
   opacity: 0;
-  transition-duration: 500ms; }
+  transition-duration: 1000ms; }
   .food-prev__like .fas {
     color: #ff79da; }
   .food-prev__like:hover {
     animation: like;
-    transform-origin: 0% 100%;
+    transition: all 0.3s linear 0s;
     opacity: 1; }
 
 .container__main--food {
@@ -188,10 +182,9 @@ h1 {
   position: absolute;
   align-items: center;
   width: 22%;
-  margin-left: 39%;
-  margin-right: 40%;
+  top: 259px;
+  left: 618px;
   background: whitesmoke;
-  margin-top: -46px;
   border-radius: 50px 50px 0 0; }
 
 .food__wrap {
@@ -251,12 +244,12 @@ h1 {
 
 .box {
   border: 1px solid #15dea5;
-  height: 62px;
+  height: 64px;
   width: 50px;
   display: none;
   position: absolute;
   margin-top: -2px;
-  margin-left: 263px;
+  margin-left: 264px;
   border-radius: 0 15px 15px 0;
   background: #15dea5; }
 
@@ -318,7 +311,7 @@ footer {
   flex-direction: column;
   background: #000;
   position: absolute;
-  margin-top: 1010px;
+  top: 1318px;
   width: 100%; }
   footer h2 {
     font-family: shrikhand;

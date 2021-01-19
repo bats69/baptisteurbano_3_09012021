@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Shrikhand&display=swap");
+@import url(../libs/reset.css);
+@keyframes body {
+  from {
+    filter: blur(3px); }
+  to {
+    filter: blur(3px); } }
+@keyframes background {
+  from {
+    height: 100%;
+    width: 100%; }
+  to {
+    height: 100%;
+    width: 100%; }
+  0% {
+    background-color: rgba(153, 226, 208, 0.7); }
+  33% {
+    background-color: rgba(255, 121, 218, 0.7); }
+  50% {
+    background-color: rgba(147, 86, 220, 0.7); }
+  75% {
+    background-color: rgba(153, 226, 208, 0.7); }
+  100% {
+    background-color: rgba(153, 226, 208, 0.7);
+    transition-timing-function: cubic-bezier(0.54, 0.31, 0.89, 0.3);
+    display: none; } }
+@keyframes loader {
+  0% {
+    transform: scale(0) rotate(45deg);
+    color: 60%;
+    opacity: 1;
+    transition-timing-function: cubic-bezier(0.54, 0.31, 0.89, 0.3); }
+  33% {
+    transform: scale(1) rotate(120deg);
+    color: 74.3137254902%;
+    opacity: 1; }
+  50% {
+    transform: scale(1) rotate(180deg);
+    color: 74.3137254902%;
+    opacity: 1; }
+  75% {
+    transform: scale(1) rotate(260deg);
+    color: 73.7254901961%;
+    opacity: 1; }
+  100% {
+    transform: scale(0) rotate(360deg);
+    color: #8641d8;
+    opacity: 0.8;
+    visibility: hidden;
+    transition-timing-function: cubic-bezier(0.54, 0.31, 0.89, 0.3); } }
+@keyframes like {
+  0% {
+    transform: scale(0);
+    opacity: 0; }
+  33% {
+    transform: scale(0.33);
+    opacity: 0.3; }
+  66% {
+    transform: scale(0.66);
+    opacity: 0.6; }
+  100% {
+    font-size: inherit;
+    opacity: 1;
+    transform-origin: 50% left; } }
+@keyframes checked {
+  0% {
+    transform: rotate(90deg);
+    opacity: 0; }
+  50% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+    transition-duration: 2000ms; } }
+@keyframes affich {
+  0% {
+    transform: scaleX(0); }
+  100% {
+    transform: scaleX(1); } }
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); }
+  transition-duration: 8s; }
+.link-footer, a, i {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: Roboto, sans-serif;
+  width: auto;
+  height: auto;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+  line-height: 15px; }
+  .link-footer .other-restaurant, a .other-restaurant, i .other-restaurant {
+    margin-left: 18px; }
+
+@media screen and (max-width: 480px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    width: 100%; }
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 50px; }
+
+  .localisation-search__heading {
+    flex-wrap: wrap;
+    width: auto;
+    font-size: 1.5rem; }
+
+  .website__descript--heading {
+    flex-wrap: wrap;
+    width: auto;
+    justify-content: center;
+    text-align: center; }
+
+  .website__descript--title {
+    text-align: center; }
+    .website__descript--title .suit {
+      display: block; }
+
+  .website__descript--subtitle {
+    text-align: center;
+    font-size: larger;
+    margin-left: 30px;
+    flex-wrap: wrap;
+    margin-right: 30px; }
+
+  .link-restaurant__wrap {
+    width: 50%; }
+
+  .nav__link--title {
+    display: flex;
+    margin-bottom: 0; }
+
+  .nav__link--wrap {
+    flex-direction: column; }
+    .nav__link--wrap .nav__link--choice {
+      width: 90%;
+      margin-top: 20px; }
+      .nav__link--wrap .nav__link--choice:hover .nav__link--number {
+        transform: none; }
+      .nav__link--wrap .nav__link--choice i {
+        font-size: 1.5rem;
+        margin-left: 60px; }
+      .nav__link--wrap .nav__link--choice--list {
+        font-size: 1.2rem; }
+
+  .nav__link--heading {
+    height: 350px; }
+
+  .load {
+    background: whitesmoke; }
+    .load i {
+      margin: 0;
+      background: none; } }
+
+/*# sourceMappingURL=accueilmobil.css.map */

@@ -84,13 +84,6 @@
   to {
     transform: rotate(360deg); }
   transition-duration: 8s; }
-@keyframes wrap {
-  0% {
-    transform: scaleY(0);
-    opacity: 0; }
-  100% {
-    transform: scaleY(1);
-    opacity: 1; } }
 .link-footer, a, i {
   display: flex;
   flex-direction: column;
@@ -148,16 +141,16 @@ main i {
   font-family: Roboto, sans-serif;
   color: black; }
 
-.website-descript__heading {
+.website__descript--heading {
   display: flex;
   flex-direction: column;
   align-items: center;
   background: whitesmoke; }
-  .website-descript__heading .website-descript__title {
+  .website__descript--heading .website__descript--title {
     font-weight: bold;
     font-size: 36px;
     margin-top: 30px; }
-  .website-descript__heading .website-descript__subtitle {
+  .website__descript--heading .website__descript--subtitle {
     margin-top: 30px;
     margin-bottom: 30px; }
 
@@ -195,14 +188,14 @@ nav {
     color: black;
     margin-left: 30px; }
 
-.nav-link__title {
+.nav__link--title {
   margin: 30px;
   font-size: 24px; }
 
-.nav-link__wrap {
+.nav__link--wrap {
   display: flex;
   justify-content: space-evenly; }
-  .nav-link__wrap .nav-link__choice {
+  .nav__link--wrap .nav__link--choice {
     display: inline-flex;
     align-items: center;
     border: 0px solid #9356dc;
@@ -212,18 +205,18 @@ nav {
     height: 60px;
     width: 18%;
     background: whitesmoke; }
-    .nav-link__wrap .nav-link__choice:hover {
+    .nav__link--wrap .nav__link--choice:hover {
       cursor: pointer;
       transform: scale(1.05);
       background: linear-gradient(to top, #9356dc, 20%, #b68de7);
       box-shadow: 5px 8px 8px #9c9c9c;
       transition-duration: 400ms;
       background: #faf7fd; }
-      .nav-link__wrap .nav-link__choice:hover .nav-link__number {
+      .nav__link--wrap .nav__link--choice:hover .nav__link--number {
         transform: translate(-15px);
         transition-duration: 400ms;
         transition-timing-function: linear 400ms; }
-    .nav-link__wrap .nav-link__choice .nav-link__number {
+    .nav__link--wrap .nav__link--choice .nav__link--number {
       text-align: center;
       border: 0px solid #9356dc;
       background: #9356dc;
@@ -243,7 +236,7 @@ nav {
 .fas_fa-mobile-alt {
   margin-left: inherit; }
 
-.nav-link__list {
+.nav__link--list {
   margin-left: inherit;
   font-weight: bold; }
 
@@ -336,15 +329,17 @@ a {
 .food-prev__place {
   margin-left: 15px; }
 
-.load i {
-  display: flex;
-  align-items: center;
-  font-size: 120px;
-  background: #cfcfcf;
-  margin-left: 800px;
-  margin-right: 800px;
-  color: #000;
-  animation: rotate 2800ms linear infinite; }
+.load {
+  height: 140px;
+  background: #cfcfcf; }
+  .load i {
+    display: flex;
+    align-items: center;
+    font-size: 120px;
+    margin-left: 800px;
+    margin-right: 800px;
+    color: #000;
+    animation: rotate 2800ms linear infinite; }
 
 .load__bar {
   display: flex;

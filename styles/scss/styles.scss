@@ -3,6 +3,9 @@
 @import "../libs/_keyframes.scss";
 @import "../libs/mixins.scss";
 @import "../libs/reset.css";
+@media all and (max-device-width: 599px) {
+	
+}
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-third: #99e2d0;
@@ -46,16 +49,16 @@ main i{
 	font-family: Roboto, sans-serif;
 	color: black;
 }
-.website-descript__heading{
+.website__descript--heading{
 	@include align;
 	align-items: center;
 	background: lighten(#cfcfcf, 15%);
-		.website-descript__title{
+		.website__descript--title{
 			font-weight: bold;
 			font-size: 36px;
 			margin-top: 30px;
 		}		
-			.website-descript__subtitle{
+			.website__descript--subtitle{
 				margin-top: 30px;
 				margin-bottom: 30px;	
 	}
@@ -75,14 +78,14 @@ nav{
 		margin-left: 30px;
 	}
 }
-.nav-link__title{
+.nav__link--title{
 	margin: 30px;
 	font-size: 24px;
 }
-.nav-link__wrap{
+.nav__link--wrap{
 	display: flex;
 	justify-content: space-evenly;
-		.nav-link__choice{  
+		.nav__link--choice{  
     		display: inline-flex;
     		align-items: center;
     		border: 0px solid $color-primary;
@@ -93,7 +96,7 @@ nav{
     		width: 18%;
     		background: lighten(#cfcfcf, 15%);
     		&:hover{
-    			.nav-link__number{
+    			.nav__link--number{
     				transform: translate(-15px);
     				transition-duration: 400ms;
     				transition-timing-function: linear 400ms;
@@ -101,7 +104,7 @@ nav{
     				@include hover;	
     				background:lighten($color-primary, 38%);			
 				}
-				.nav-link__number{
+				.nav__link--number{
     				text-align: center;
    					border: 0px solid $color-primary;
    					background: $color-primary;
@@ -123,7 +126,7 @@ nav{
 .fas_fa-mobile-alt{
     margin-left: inherit; 
 }
-.nav-link__list{  
+.nav__link--list{  
     margin-left: inherit;
     font-weight: bold;
 }
@@ -161,8 +164,7 @@ img{
 		.food-prev__title{
 			display: block;
 			margin: 15px;
-			font-size: 24px;
-				
+			font-size: 24px;			
 	}
 }
 .food-prev__ban{
@@ -219,12 +221,13 @@ a{
 .food-prev__place{
     	margin-left: 15px;
 }
-.load{  
- & i{
+.load{ 
+	height: 140px;
+	background: #cfcfcf;
+  i{
 	display: flex;
 	align-items: center;
     font-size: 120px;
-    background: #cfcfcf;
     margin-left: 800px;
     margin-right: 800px;
 	color: #000;
