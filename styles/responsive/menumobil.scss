@@ -9,7 +9,7 @@ body{
 	flex-wrap: wrap;
 	flex-direction: column;
 	align-content: center;
-	width: 100%; 
+	width: 480px; 
 }
 header{
 	display: flex;
@@ -18,10 +18,11 @@ header{
     align-content: center;
     background: #fff;
     height: 66px;
-    width: inherit;
+    width: 480px;
     margin: 0;
 }
 .container__header{ 
+	width: 480px;
  img{
     	height: 34px;
     	position: relative;
@@ -38,7 +39,7 @@ header{
 }
 .i{
 	img{
-		width: 100%;
+		width: 480px;
 		bottom: 50px;
 		top: -50px;
 	}
@@ -49,7 +50,7 @@ header{
 	font-size: 2rem;
 }
 .container__main--food{
-	width: 100%;
+	width: 480px;
 	top: 330px;
 	margin: 0;
 	height: 1270px;
@@ -104,6 +105,7 @@ header{
 	height: 70px;
 }
 footer{
+	width: 480px;
 	top: 1620px;
 }
 }
