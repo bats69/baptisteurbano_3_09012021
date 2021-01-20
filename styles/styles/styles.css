@@ -123,6 +123,10 @@ header {
     width: 300px;
     text-align: center;
     height: 60px; }
+  header img {
+    margin-bottom: 10px;
+    width: 50%;
+    height: 34px; }
 
 .localisation-search__heading {
   display: flex;
@@ -130,8 +134,7 @@ header {
   align-items: center;
   align-content: space-around;
   height: 70px;
-  background: linear-gradient(to bottom, grey, 1%, #ececec);
-  margin-top: 50px; }
+  background: linear-gradient(to bottom, grey, 1%, #ececec); }
   .localisation-search__heading .localisation-search__city {
     margin-left: 15px;
     font-weight: bold;
@@ -162,7 +165,7 @@ main i {
   border: 0px groove #b68de7;
   height: 50px;
   color: #fff;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   border-radius: 30px 30px;
   background: #9356dc;
   padding-right: 10px;
@@ -328,27 +331,6 @@ a {
 
 .food-prev__place {
   margin-left: 15px; }
-
-.load {
-  height: 140px;
-  background: whitesmoke; }
-  .load i {
-    display: flex;
-    align-items: center;
-    font-size: 120px;
-    margin-left: 800px;
-    margin-right: 800px;
-    color: #000;
-    animation: rotate 2800ms linear infinite; }
-
-.load__bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  height: 20px;
-  font-family: Shrikhand, sans-serif;
-  background: linear-gradient(0turn, #99e2d0, #fff, #9356dc); }
 
 footer {
   display: flex;

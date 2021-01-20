@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Shrikhand&display=swap');
-@import "../libs/_keyframes.scss";
+@import "../libs/keyframes";
 @import "../libs/mixins.scss";
 @import "../libs/reset.css";
-@media screen and (min-width: 280px) and (max-width: 480px) {
-body{
+@media screen and (max-width: 480px) {
+	body{
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
@@ -21,7 +21,7 @@ header{
     width: inherit;
     margin: 0;
 }
-.container__header{ 
+ .container__header{ 
  img{
     	height: 34px;
     	position: relative;
@@ -36,11 +36,11 @@ header{
     	font-size: 1rem;
     }
 }
-.i{
+.food--picture{
 	img{
 		width: 100%;
 		bottom: 50px;
-		top: -50px;
+		top: 66px;
 	}
 }
 .name__food-heading{
@@ -53,15 +53,14 @@ header{
 	top: 350px;
 	margin: 0;
 	height: 1270px;
+	left: 0;
 }
 .food-prev__nolike{
 	font-size: 1.6rem;
-	top: 37px;
 	right: 80px;
 }
 .food-prev__like{
 	font-size: 1.6rem;
-	top: 37px;
 	right: 80px;
 }
 .food__list-heading{

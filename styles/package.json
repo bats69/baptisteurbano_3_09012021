@@ -6,8 +6,9 @@
     "sass": "sass --watch ./scss/styles.scss:./styles/styles/styles.css",
     "sass": "sass --watch ./styles/scss/menu.scss:./styles/styles/menu.css",
     "sass": "sass --watch ./styles/scss/all.scss:./styles/styles/all.css",
-    "sass": "sass --watch ./styles/resonsive/accueilmobil.scss:./styles/resonsive/accueilmobil.css",
+    "sass": "sass --watch ./styles/responsive/accueilmobil.scss:./styles/resonsive/accueilmobil.css",
     "sass": "sass --watch ./styles/responsive/menumobil.scss:.styles/responsive/menumobil.css",
+    "sass": "sass --watch ./styles/responsive/allmobil.scss:.styles/responsive/allmobil.css",
     "prefix": "postcss ./styles/styles/styles.css --use autoprefixer -d ./styles/styles/styles.css/prefixed/"
   },
   "author": "",

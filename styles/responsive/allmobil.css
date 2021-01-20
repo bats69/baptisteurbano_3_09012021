@@ -98,7 +98,7 @@
   .link-footer .other-restaurant, a .other-restaurant, i .other-restaurant {
     margin-left: 18px; }
 
-@media screen and (min-width: 280px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   body {
     display: flex;
     flex-wrap: wrap;
@@ -128,10 +128,10 @@
     margin: 0;
     font-size: 1rem; }
 
-  .i img {
+  .food--picture img {
     width: 100%;
     bottom: 50px;
-    top: -50px; }
+    top: 66px; }
 
   .name__food-heading {
     margin-top: 35px;
@@ -142,16 +142,15 @@
     width: 100%;
     top: 350px;
     margin: 0;
-    height: 1270px; }
+    height: 1270px;
+    left: 0; }
 
   .food-prev__nolike {
     font-size: 1.6rem;
-    top: 37px;
     right: 80px; }
 
   .food-prev__like {
     font-size: 1.6rem;
-    top: 37px;
     right: 80px; }
 
   .food__list-heading {
@@ -194,4 +193,4 @@
   footer {
     top: 1620px; } }
 
-/*# sourceMappingURL=menumobil.css.map */
+/*# sourceMappingURL=allmobil.css.map */

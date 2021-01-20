@@ -30,6 +30,11 @@ body{
 }
 header {
 	@include header;
+	img{
+		margin-bottom: 10px;
+		width: 50%;
+		height: 34px;
+	}
 }
 .localisation-search__heading{
 	display: flex;
@@ -38,7 +43,6 @@ header {
 	align-content: space-around;
 	height: 70px;
 	background: linear-gradient(to bottom,grey,1%,#ececec);
-	margin-top: 50px;
 		.localisation-search__city{
 			margin-left: 15px;
 			font-weight: bold;
@@ -220,28 +224,6 @@ a{
 }
 .food-prev__place{
     	margin-left: 15px;
-}
-.load{ 
-	height: 140px;
-	background: lighten(#cfcfcf, 15%);
-  i{
-	display: flex;
-	align-items: center;
-    font-size: 120px;
-    margin-left: 800px;
-    margin-right: 800px;
-	color: #000;
-	animation: rotate 2800ms linear infinite;
-	}
-}
-.load__bar{
-	display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    height: 20px;
-    font-family: Shrikhand, sans-serif;
-    background: linear-gradient(0turn, $color-third, #fff, $color-primary);
 }
 footer{
 	@include footer;
