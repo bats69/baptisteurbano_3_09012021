@@ -16,7 +16,12 @@ header{
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
-    margin-top: 50px;
+    margin-top: 20px;
+	img{
+		margin-bottom: 10px;
+		width: 50%;
+		height: 34px;
+	}
 }
 .localisation-search__heading{
 	flex-wrap: wrap;

@@ -31,9 +31,8 @@ body{
 header {
 	@include header;
 	img{
-		margin-bottom: 10px;
-		width: 50%;
-		height: 34px;
+		width: 20%;
+		margin: 20px;
 	}
 }
 .localisation-search__heading{

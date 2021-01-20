@@ -46,7 +46,7 @@ h1{
 			padding-top: 10px;
 			padding-bottom: 10px;
 			margin-bottom: 25px;
-			width: 22%;
+			width: 23%;
 			margin-left: -15px;
 		}
 }
@@ -55,7 +55,7 @@ h1{
 	justify-content: center;
 	img{
 		position: relative;
-		width: 348px;
+		width: 358px;
 		top: 80px;
 	}
 }
@@ -67,7 +67,7 @@ h1{
 }
 .name__food-heading{
     margin-top: 35px;
-    margin-right: 70px;
+    margin-right: 80px;
     height: 20px;
     font-size: 1.5rem;
 }
@@ -103,11 +103,10 @@ h1{
 .container__main--food{
 	display: flex;
     flex-direction: column;
-    position: absolute;
+    position: relative;
     align-items: center;
-    width: 22%;
-    top: 259px;
-    left: 618px;
+    width: 23%;
+    left: 601px;
     background: lighten(#cfcfcf, 15%);
     border-radius: 50px 50px 0 0;
 }
@@ -166,7 +165,7 @@ $animation-delay: $anim-dur / 9;
     display: none;
     position: absolute;
     margin-top: -2px;
-    margin-left: 264px;
+    margin-left: 273px;
     border-radius: 0 15px 15px 0;
     background: #15dea5;
 }
@@ -193,7 +192,7 @@ $animation-delay: $anim-dur / 9;
 }
 .food__descript--price{
 	position: absolute;
-    margin-left: 280px;
+    margin-left: 290px;
     margin-top: 24px;
     font-weight: bold;
 }
