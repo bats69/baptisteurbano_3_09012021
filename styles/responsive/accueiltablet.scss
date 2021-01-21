@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Shrikhand&display=swap');
+@import "../libs/_keyframes.scss";
+@import "../libs/mixins.scss";
+@import "../libs/reset.css";
+@media screen and (min-width: 481px) and (max-width: 1101px){  
+	body{
+		max-width: 1101px;
+		min-width: 481px;
+	}
+	header{
+		display: flex;
+		max-width: 1101px;
+		min-width: 481px;
+		img{
+			width: 40%;
+		}
+	}
+	.localisation-search__heading{
+		max-width: 1101px;
+		min-width: 481px;
+	}
+	.website__descript--heading{
+		max-width: 1101px;
+		min-width: 481px;
+		.website__descript--title{
+			max-width: 1101px;
+			min-width: 481px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+	.link-restaurant__wrap{
+		width: 200px;
+		padding-right: 0;
+	}	
+	.nav__link--wrap{
+			flex-wrap: wrap;
+			flex-direction: column;
+			align-items: center;
+		}
+		.nav__link--choice{
+			width: 282px;
+			margin-bottom: 20px;
+		}
+}

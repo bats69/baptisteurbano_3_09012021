@@ -139,12 +139,18 @@ $animation-delay: $anim-dur / 9;
 					animation-duration: 600ms;
 					transition-duration: 400ms;
 			}		
-				&:hover .sup{
-					display: none;
-			}
-				&:hover .etc{
-					visibility: visible;
-			}
+					 &:hover .food__descript{
+    	width: 60%;
+    	text-overflow: ellipsis;
+    	overflow: hidden;
+    	white-space: nowrap;
+    }
+     &:hover .food__descript-acompaniment{
+    	width: 60%;
+    	text-overflow: ellipsis;
+    	overflow: hidden;
+    	white-space: nowrap;
+    }
 		}		
 .box .fas{
 	display: flex;
@@ -172,11 +178,13 @@ $animation-delay: $anim-dur / 9;
     margin-top: 40px;
 }
 .food__descript{
+	width: 100%;
 	margin-left: 10px;
     font-weight: bold;
     margin-top: 12px;
 }
 .food__descript-acompaniment{
+	width: 100%;
 	margin-left: 10px;
     line-height: 25px;
     font-size: 14px;

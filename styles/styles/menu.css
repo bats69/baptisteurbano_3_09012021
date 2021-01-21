@@ -215,7 +215,13 @@ h1 {
   cursor: pointer;
   border: 2px solid #fff;
   background: #fff;
-  margin-top: 15px; }
+  margin-top: 15px;
+  /*&:hover .sup{
+  	display: none;
+  }
+  &:hover .etc{
+  	visibility: visible;
+  }*/ }
   .food__wrap:hover .box {
     display: flex;
     animation: affich 600ms;
@@ -227,10 +233,16 @@ h1 {
     transition-duration: 400ms; }
   .food__wrap:hover .fas {
     animation: rotate 800ms; }
-  .food__wrap:hover .sup {
-    display: none; }
-  .food__wrap:hover .etc {
-    visibility: visible; }
+  .food__wrap:hover .food__descript {
+    width: 60%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; }
+  .food__wrap:hover .food__descript-acompaniment {
+    width: 60%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; }
 
 .box .fas {
   display: flex;
@@ -258,14 +270,21 @@ h1 {
   margin-top: 40px; }
 
 .food__descript {
+  width: 100%;
   margin-left: 5px;
   font-weight: bold;
   margin-top: 12px; }
 
 .food__descript-acompaniment {
+  width: 100%;
   margin-left: 5px;
   line-height: 25px;
   font-size: 14px; }
+  .food__descript-acompaniment:hover {
+    width: 68%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; }
 
 .etc {
   visibility: hidden; }
