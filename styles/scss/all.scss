@@ -5,17 +5,11 @@
 @import "../libs/reset.css";
 @media screen and (max-width: 480px) {
 body{
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	align-content: center;
+	@include flex;
 	width: 100%; 
 }
 header{
-	display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
+	@include flex;
     margin-top: 50px;
 }
 body{

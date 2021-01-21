@@ -3,25 +3,20 @@
 @import "../libs/keyframes";
 @import "../libs/mixins.scss";
 @import "../libs/reset.css";
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 280px) and (max-width: 480px) {
 	body{
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	align-content: center;
-	width: 100%; 
+	@include flex;
+	width: 480px; 
 }
 header{
-	display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
+	@include flex;
     background: #fff;
     height: 66px;
-    width: inherit;
+    width: 480px;
     margin: 0;
 }
  .container__header{ 
+ 	width: 480px;
  img{
     	height: 34px;
     	position: relative;
@@ -38,7 +33,7 @@ header{
 }
 .food--picture{
 	img{
-		width: 100%;
+		width: 480px;
 		bottom: 50px;
 		top: 66px;
 	}
@@ -49,26 +44,26 @@ header{
 	font-size: 2rem;
 }
 .container__main--food{
-	width: 100%;
+	width: 480px;
 	top: 330px;
 	margin: 0;
 	height: 1270px;
 	left: 0;
+	@include anim;
 }
 .food-prev__nolike{
-	font-size: 1.6rem;
-	right: 80px;
+	@include heart;
 }
 .food-prev__like{
-	font-size: 1.6rem;
-	right: 80px;
+	@include heart;
 }
 .food__list-heading{
 	position: relative;
 	right: 55px;
 }
 .food__wrap{
-	height: 90px;
+	height: 70px;
+	@include anim;
 	.box{
 	height: 72px;
 	margin-left: 74%;
@@ -78,6 +73,15 @@ header{
 		margin-left: 20px;
 		font-size: 30px;
 		}
+	}
+}
+.food__wrap--4{
+	height: 85px;
+	.box{
+		height: 87px;
+	}
+	.food__descript--price{
+		margin-top: 60px;
 	}
 }
 .food__descript{
@@ -100,9 +104,10 @@ header{
 	margin-bottom: 50px;
 }
 .link__command--wrap{
-	height: 70px;
+	height: 60px;
 }
 footer{
-	top: 1600px;
+	width: 480px;
+	top: 1535px;
 }
 }

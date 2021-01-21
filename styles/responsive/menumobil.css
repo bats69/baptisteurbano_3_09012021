@@ -142,7 +142,7 @@
 
   .container__main--food {
     width: 480px;
-    top: 330px;
+    top: 365px;
     margin: 0;
     height: 1270px; }
 
@@ -161,7 +161,26 @@
     right: 55px; }
 
   .food__wrap {
-    height: 90px; }
+    height: 90px;
+    animation: wrap 1000ms forwards; }
+    .food__wrap--1 {
+      animation-delay: 111.1111111111ms; }
+    .food__wrap--2 {
+      animation-delay: 222.2222222222ms; }
+    .food__wrap--3 {
+      animation-delay: 333.3333333333ms; }
+    .food__wrap--4 {
+      animation-delay: 444.4444444444ms; }
+    .food__wrap--5 {
+      animation-delay: 555.5555555556ms; }
+    .food__wrap--6 {
+      animation-delay: 666.6666666667ms; }
+    .food__wrap--7 {
+      animation-delay: 777.7777777778ms; }
+    .food__wrap--8 {
+      animation-delay: 888.8888888889ms; }
+    .food__wrap--9 {
+      animation-delay: 1000ms; }
     .food__wrap .box {
       height: 72px;
       margin-left: 74%;
@@ -195,6 +214,6 @@
 
   footer {
     width: 480px;
-    top: 1620px; } }
+    top: 1625px; } }
 
 /*# sourceMappingURL=menumobil.css.map */

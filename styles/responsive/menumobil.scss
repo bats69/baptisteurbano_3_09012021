@@ -51,26 +51,25 @@ header{
 }
 .container__main--food{
 	width: 480px;
-	top: 330px;
+	top: 365px;
 	margin: 0;
 	height: 1270px;
 }
 .food-prev__nolike{
-	font-size: 1.6rem;
-	top: 37px;
-	right: 80px;
+	@include heart;
 }
 .food-prev__like{
-	font-size: 1.6rem;
-	top: 37px;
-	right: 80px;
+	@include heart;
 }
 .food__list-heading{
 	position: relative;
 	right: 55px;
 }
+$anim-dur: 3000ms;
+$animation-delay: $anim-dur / 10;
 .food__wrap{
 	height: 90px;
+	@include anim; 
 	.box{
 	height: 72px;
 	margin-left: 74%;
@@ -106,6 +105,6 @@ header{
 }
 footer{
 	width: 480px;
-	top: 1620px;
+	top: 1625px;
 }
 }

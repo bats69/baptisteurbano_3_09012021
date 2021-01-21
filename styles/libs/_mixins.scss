@@ -86,3 +86,24 @@ $color-third: #99e2d0;
 		}
 	}
 }
+@mixin flex{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+}
+@mixin heart{
+	font-size: 1.6rem;
+	top: 37px;
+	right: 80px;
+}
+$anim-dur: 1000ms;
+$animation-delay: $anim-dur / 9;
+@mixin anim{
+	animation: wrap $anim-dur forwards;
+			@for $i from 1 through 9 {
+				&--#{$i} {
+					animation-delay: $animation-delay * $i;
+			}
+		}	
+}
