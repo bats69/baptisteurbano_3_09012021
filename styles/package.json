@@ -9,6 +9,8 @@
     "sass": "sass --watch ./styles/responsive/accueilmobil.scss:./styles/resonsive/accueilmobil.css",
     "sass": "sass --watch ./styles/responsive/menumobil.scss:.styles/responsive/menumobil.css",
     "sass": "sass --watch ./styles/responsive/allmobil.scss:.styles/responsive/allmobil.css",
+    "sass": "sass --watch ./styles/responsive/alltablet.scss:./styles/responsive/alltablet.css",
+    "sass": "sass --watch ./styles/responsive/accueiltablet.scss:./styles/responsive/accueiltablet.css",
     "prefix": "postcss ./styles/styles/styles.css --use autoprefixer -d ./styles/styles/styles.css/prefixed/"
   },
   "author": "",

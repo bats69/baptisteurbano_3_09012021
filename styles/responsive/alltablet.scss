@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Shrikhand&display=swap');
+@import "../libs/_keyframes.scss";
+@import "../libs/mixins.scss";
+@import "../libs/reset.css";
+@media screen and (min-width: 481px) and (max-width: 1101px) {
+	body{
+		width: 1101px;
+	}
+	header{
+		width: 1101px;
+		.fas{
+			margin-left: 0;
+			left: 100px;
+		}
+		
+	}img{
+		width: 0%;
+		width: 365px;
+		}
+	.container__main--food{
+		margin-left: 0;
+		margin-right: 0;
+		width: 365px
+	}
+	footer{
+		@include footer;
+	}
+}
