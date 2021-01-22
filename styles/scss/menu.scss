@@ -3,7 +3,6 @@
 @import "../libs/keyframes";
 @import "../libs/mixins.scss";
 @import "../libs/reset.css";
-@media screen and (max-width: 480px) {
 body{
 	display: flex;
 	flex-wrap: wrap;
@@ -16,8 +15,6 @@ header{
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
-    margin-top: 50px;
-}
 }
 body{
 	font-family: Roboto, sans-serif;
@@ -25,7 +22,6 @@ body{
 }
 h1{
 	font-family: shrikhand, sans-serif;
-	margin-left: -5px;
 }
 .container__header{
 	display: flex;
@@ -39,7 +35,7 @@ h1{
     	align-items: flex-start;
     	margin-left: -470px;
 		color: #000;
-		margin-bottom: 25px;
+		top: 25px;
 		&:hover{
 			transform: scale(1.15);
 		}		
@@ -50,7 +46,6 @@ h1{
 		padding-bottom: 10px;
 		margin-bottom: 25px;
 		width: 22%;
-		margin-left: -15px;
 	}
 }
 .i {  
@@ -111,7 +106,7 @@ h1{
     margin-left: 39%;
     margin-right: 40%;
     background: lighten(#cfcfcf, 15%);
-    margin-top: -155px;
+    margin-top: 280px;
     border-radius: 57px 57px 0 0;
 }
 .food__wrap{
