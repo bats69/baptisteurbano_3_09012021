@@ -217,13 +217,7 @@ h1 {
   cursor: pointer;
   border: 2px solid #fff;
   background: #fff;
-  margin-top: 15px;
-  /*&:hover .sup{
-  	display: none;
-  }
-  &:hover .etc{
-  	visibility: visible;
-  }*/ }
+  margin-top: 15px; }
   .food__wrap:hover .box {
     display: flex;
     animation: box 600ms;
