@@ -75,6 +75,11 @@
     transition-duration: 2000ms; } }
 @keyframes affich {
   0% {
+    transform: scaleY(0); }
+  100% {
+    transform: scaleY(1); } }
+@keyframes box {
+  0% {
     transform: scaleX(0); }
   100% {
     transform: scaleX(1); } }
@@ -341,5 +346,123 @@ footer {
       text-decoration: underline; }
   footer a:hover {
     text-decoration: underline; }
+
+@media screen and (max-width: 480px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 480px; }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    background: #fff;
+    height: 66px;
+    width: 480px;
+    margin: 0; }
+
+  .container__header {
+    width: 480px; }
+    .container__header img {
+      height: 34px;
+      position: relative;
+      top: 5px;
+      margin: 0px auto;
+      width: 50%; }
+    .container__header .fas {
+      left: 25px;
+      top: 28px;
+      margin: 0;
+      font-size: 1rem; }
+
+  .i img {
+    width: 480px;
+    bottom: 50px;
+    top: -50px; }
+
+  .name__food-heading {
+    margin-top: 35px;
+    margin-right: 125px;
+    font-size: 2rem; }
+
+  .container__main--food {
+    width: 480px;
+    top: 365px;
+    margin: 0;
+    height: 1270px; }
+
+  .food-prev__nolike {
+    font-size: 1.6rem;
+    top: 37px;
+    right: 80px; }
+
+  .food-prev__like {
+    font-size: 1.6rem;
+    top: 37px;
+    right: 80px; }
+
+  .food__list-heading {
+    position: relative;
+    right: 55px; }
+
+  .food__wrap {
+    height: 90px;
+    animation: wrap 1000ms forwards; }
+    .food__wrap--1 {
+      animation-delay: 111.1111111111ms; }
+    .food__wrap--2 {
+      animation-delay: 222.2222222222ms; }
+    .food__wrap--3 {
+      animation-delay: 333.3333333333ms; }
+    .food__wrap--4 {
+      animation-delay: 444.4444444444ms; }
+    .food__wrap--5 {
+      animation-delay: 555.5555555556ms; }
+    .food__wrap--6 {
+      animation-delay: 666.6666666667ms; }
+    .food__wrap--7 {
+      animation-delay: 777.7777777778ms; }
+    .food__wrap--8 {
+      animation-delay: 888.8888888889ms; }
+    .food__wrap--9 {
+      animation-delay: 1000ms; }
+    .food__wrap .box {
+      height: 72px;
+      margin-left: 74%;
+      width: 16%; }
+      .food__wrap .box i {
+        color: #fff;
+        margin-left: 20px;
+        font-size: 30px; }
+
+  .food__descript {
+    font-size: 20px;
+    margin-left: 20px; }
+
+  .food__descript-acompaniment {
+    font-size: 15px;
+    line-height: 35px;
+    margin-left: 20px; }
+
+  .food__descript--price {
+    left: 80%;
+    font-size: 18px;
+    margin: 0;
+    margin-top: 40px; }
+
+  .link__command--wrap {
+    margin-top: 50px;
+    margin-bottom: 50px; }
+
+  .link__command--wrap {
+    height: 70px; }
+
+  footer {
+    width: 480px;
+    top: 1625px; } }
 
 /*# sourceMappingURL=menu.css.map */

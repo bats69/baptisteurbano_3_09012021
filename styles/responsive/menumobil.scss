@@ -1,21 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Shrikhand&display=swap');
 @import "../libs/_keyframes.scss";
 @import "../libs/mixins.scss";
 @import "../libs/reset.css";
 @media screen and (min-width: 280px) and (max-width: 480px) {
 body{
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	align-content: center;
+	@include flex;
 	width: 480px; 
 }
 header{
-	display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
+	@include flex;
     background: #fff;
     height: 66px;
     width: 480px;
@@ -107,4 +101,4 @@ footer{
 	width: 480px;
 	top: 1625px;
 }
-}
+}*/

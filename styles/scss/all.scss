@@ -103,8 +103,8 @@ h1{
     margin-right: 39%;
     top: 15px;
 }
-$anim-dur: 1000ms;
-$animation-delay: $anim-dur / 9;    	
+$anim-dur:1500ms;
+$animation-delay: $anim-dur / 10;    	
 .food__wrap{
 	    display: flex;
 		flex-direction: column;
@@ -117,16 +117,16 @@ $animation-delay: $anim-dur / 9;
 		border: 2px solid #fff;
 		background: #fff;
 		margin-top: 15px;
-		font-size: 15px; animation-duration: 3000ms; 
-		animation: wrap $anim-dur forwards;
-			@for $i from 1 through 9 {
+		font-size: 15px; 
+		animation: affich $anim-dur backwards;
+			@for $i from 1 through 10 {
 				&--#{$i} {
 					animation-delay: $animation-delay * $i;
 			}
 		}	
 				&:hover .box{
 					display: flex;
-					animation: affich 600ms;
+					animation: box 600ms;
 					transition-duration: 400ms;
 					transform-origin: right -4px -50px;
 				}
@@ -208,3 +208,4 @@ footer{
     	top: 1318px;
     	width: 100%;
 }
+@include mobil-all-only;

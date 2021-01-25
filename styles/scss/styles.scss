@@ -224,3 +224,4 @@ a{
 footer{
 	@include footer;
 }
+@include mobil-accueil-only;
