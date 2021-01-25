@@ -298,9 +298,6 @@ h1 {
   line-height: 25px;
   font-size: 14px; }
 
-.etc {
-  visibility: hidden; }
-
 .food__descript--price {
   position: absolute;
   margin-left: 290px;
@@ -404,35 +401,16 @@ footer {
     top: 10px;
     margin: 0;
     height: 1270px;
-    left: 0;
-    animation: wrap 1500ms forwards; }
-    .container__main--food--1 {
-      animation-delay: 150ms; }
-    .container__main--food--2 {
-      animation-delay: 300ms; }
-    .container__main--food--3 {
-      animation-delay: 450ms; }
-    .container__main--food--4 {
-      animation-delay: 600ms; }
-    .container__main--food--5 {
-      animation-delay: 750ms; }
-    .container__main--food--6 {
-      animation-delay: 900ms; }
-    .container__main--food--7 {
-      animation-delay: 1050ms; }
-    .container__main--food--8 {
-      animation-delay: 1200ms; }
-    .container__main--food--9 {
-      animation-delay: 1350ms; }
+    left: 0; }
 
   .food-prev__nolike {
     font-size: 1.6rem;
-    top: 37px;
+    top: 5px;
     right: 80px; }
 
   .food-prev__like {
     font-size: 1.6rem;
-    top: 37px;
+    top: 5px;
     right: 80px; }
 
   .food__list-heading {
@@ -441,7 +419,7 @@ footer {
 
   .food__wrap {
     height: 70px;
-    animation: wrap 1500ms forwards; }
+    animation: affich 1500ms backwards; }
     .food__wrap--1 {
       animation-delay: 150ms; }
     .food__wrap--2 {
@@ -469,16 +447,19 @@ footer {
         margin-left: 20px;
         font-size: 30px; }
 
-  .food__wrap--4 {
+  .wrap---4 {
     height: 85px; }
-    .food__wrap--4 .box {
-      height: 87px; }
-    .food__wrap--4 .food__descript--price {
-      margin-top: 60px; }
+    .wrap---4 .box {
+      height: 82px; }
+
+  .food__descript--price {
+    margin-top: 60px; }
 
   .food__descript {
     font-size: 20px;
     margin-left: 20px; }
+    .food__descript.food__descript--1 {
+      margin-top: 2px; }
 
   .food__descript-acompaniment {
     font-size: 15px;

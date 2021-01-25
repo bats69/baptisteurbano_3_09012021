@@ -10,6 +10,18 @@ $color-third: #99e2d0;
 		height: 60px;
 	}
 }
+@mixin mobile-header{
+	background: #fff;
+    height: 66px;
+    width: 480px;
+    margin: 0;
+}
+@mixin mobil-price{
+	left: 80%;
+	font-size: 18px;
+	margin: 0;
+	margin-top: 40px;
+}
 @mixin hover{
 	cursor: pointer;
 	transform: scale(1.05);
@@ -94,13 +106,13 @@ $color-third: #99e2d0;
 }
 @mixin heart{
 	font-size: 1.6rem;
-	top: 37px;
+	top: 5px;
 	right: 80px;
 }
-$anim-dur: 1000ms;
+$anim-dur: 2000ms;
 $animation-delay: $anim-dur / 9;
 @mixin anim{
-	animation: wrap $anim-dur forwards;
+	animation: affich $anim-dur backwards;
 			@for $i from 1 through 9 {
 				&--#{$i} {
 					animation-delay: $animation-delay * $i;
@@ -108,7 +120,7 @@ $animation-delay: $anim-dur / 9;
 		}	
 }
 @mixin mobil-menu-only{
-	@media screen and (max-width:480px){
+	@media screen and (min-width: 190px) and (max-width:480px){
 		@content;
 body{
 	@include flex;
@@ -116,10 +128,7 @@ body{
 }
 header{
 	@include flex;
-    background: #fff;
-    height: 66px;
-    width: 480px;
-    margin: 0;
+    @include mobile-header;
 }
 .container__header{ 
 	width: 480px;
@@ -154,22 +163,26 @@ header{
 	top: 365px;
 	margin: 0;
 	height: 1270px;
+	
 }
 .food-prev__nolike{
-	@include heart;
+	font-size: 1.6rem;
+	top: 37px;
+	right: 80px;
 }
 .food-prev__like{
-	@include heart;
+	font-size: 1.6rem;
+	top: 37px;
+	right: 80px;
 }
 .food__list-heading{
 	position: relative;
 	right: 55px;
 }
-$anim-dur: 3000ms;
-$animation-delay: $anim-dur / 10;
+
 .food__wrap{
-	height: 90px;
-	@include anim; 
+	height: 90px; 
+	@include anim;
 	.box{
 	height: 72px;
 	margin-left: 74%;
@@ -191,10 +204,7 @@ $animation-delay: $anim-dur / 10;
 	margin-left: 20px;
 }
 .food__descript--price{
-	left: 80%;
-	font-size: 18px;
-	margin: 0;
-	margin-top: 40px;
+	@include mobil-price;
 }
 .link__command--wrap{
 	margin-top: 50px;
@@ -217,10 +227,7 @@ footer{
 }
 header{
 	@include flex;
-    background: #fff;
-    height: 66px;
-    width: 480px;
-    margin: 0;
+	@include mobile-header;    
 }
  .container__header{ 
  	width: 480px;
@@ -256,7 +263,7 @@ header{
 	margin: 0;
 	height: 1270px;
 	left: 0;
-	@include anim;
+	
 }
 .food-prev__nolike{
 	@include heart;
@@ -282,18 +289,21 @@ header{
 		}
 	}
 }
-.food__wrap--4{
+.wrap---4{
 	height: 85px;
 	.box{
-		height: 87px;
-	}
-	.food__descript--price{
-		margin-top: 60px;
+		height: 82px;
 	}
 }
+.food__descript--price{
+		margin-top: 60px;
+	}
 .food__descript{
 	font-size: 20px;
-	margin-left: 20px
+	margin-left: 20px;
+	&.food__descript--1{
+		margin-top: 2px;
+	}
 }
 .food__descript-acompaniment{
 	font-size: 15px;
@@ -301,10 +311,7 @@ header{
 	margin-left: 20px;
 }
 .food__descript--price{
-	left: 80%;
-	font-size: 18px;
-	margin: 0;
-	margin-top: 40px;
+	@include mobil-price;
 }
 .link__command--wrap{
 	margin-top: 50px;

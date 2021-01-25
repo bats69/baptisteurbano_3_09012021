@@ -226,7 +226,7 @@ h1 {
   }*/ }
   .food__wrap:hover .box {
     display: flex;
-    animation: affich 600ms;
+    animation: box 600ms;
     transition-duration: 400ms;
     transform-origin: right -4px -50px; }
   .food__wrap:hover .food__descript--price {
@@ -347,7 +347,7 @@ footer {
   footer a:hover {
     text-decoration: underline; }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 190px) and (max-width: 480px) {
   body {
     display: flex;
     flex-direction: column;
@@ -411,25 +411,25 @@ footer {
 
   .food__wrap {
     height: 90px;
-    animation: wrap 1000ms forwards; }
+    animation: affich 2000ms backwards; }
     .food__wrap--1 {
-      animation-delay: 111.1111111111ms; }
-    .food__wrap--2 {
       animation-delay: 222.2222222222ms; }
-    .food__wrap--3 {
-      animation-delay: 333.3333333333ms; }
-    .food__wrap--4 {
+    .food__wrap--2 {
       animation-delay: 444.4444444444ms; }
-    .food__wrap--5 {
-      animation-delay: 555.5555555556ms; }
-    .food__wrap--6 {
+    .food__wrap--3 {
       animation-delay: 666.6666666667ms; }
-    .food__wrap--7 {
-      animation-delay: 777.7777777778ms; }
-    .food__wrap--8 {
+    .food__wrap--4 {
       animation-delay: 888.8888888889ms; }
+    .food__wrap--5 {
+      animation-delay: 1111.1111111111ms; }
+    .food__wrap--6 {
+      animation-delay: 1333.3333333333ms; }
+    .food__wrap--7 {
+      animation-delay: 1555.5555555556ms; }
+    .food__wrap--8 {
+      animation-delay: 1777.7777777778ms; }
     .food__wrap--9 {
-      animation-delay: 1000ms; }
+      animation-delay: 2000ms; }
     .food__wrap .box {
       height: 72px;
       margin-left: 74%;

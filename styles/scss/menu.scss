@@ -124,7 +124,7 @@ h1{
 	margin-top: 15px;
 	&:hover .box{
 		display: flex;
-		animation: affich 600ms;
+		animation: box 600ms;
 		transition-duration: 400ms;
 		transform-origin: right -4px -50px;
 		}
