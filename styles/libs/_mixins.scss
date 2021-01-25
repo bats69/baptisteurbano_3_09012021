@@ -10,18 +10,6 @@ $color-third: #99e2d0;
 		height: 60px;
 	}
 }
-@mixin mobile-header{
-	background: #fff;
-    height: 66px;
-    width: 480px;
-    margin: 0;
-}
-@mixin mobil-price{
-	left: 80%;
-	font-size: 18px;
-	margin: 0;
-	margin-top: 40px;
-}
 @mixin hover{
 	cursor: pointer;
 	transform: scale(1.05);
@@ -119,6 +107,42 @@ $animation-delay: $anim-dur / 9;
 			}
 		}	
 }
+
+			/* mixin element mobile*/
+
+@mixin mobile-header{
+	background: #fff;
+    height: 66px;
+    width: 480px;
+    margin: 0;
+}
+@mixin mobil-price{
+	left: 80%;
+	font-size: 18px;
+	margin: 0;
+	margin-top: 40px;
+}
+@mixin mobil-img{
+	height: 34px;
+    	position: relative;
+    	top: 5px;
+    	margin: 0px auto;
+    	width: 50%;
+}
+@mixin mobil-icon{
+	left: 25px;
+    top: 28px;
+   	margin: 0;
+   	font-size: 1rem;
+}
+@mixin mobil-icon-box{
+	color: #fff;
+	margin-left: 20px;
+	font-size: 30px;
+}
+
+			/*mixin version mobile pour le menu1*/
+
 @mixin mobil-menu-only{
 	@media screen and (min-width: 190px) and (max-width:480px){
 		@content;
@@ -133,17 +157,10 @@ header{
 .container__header{ 
 	width: 480px;
  img{
-    	height: 34px;
-    	position: relative;
-    	top: 5px;
-    	margin: 0px auto;
-    	width: 50%;
+    @include mobil-img;
     }
     .fas{
-    	left: 25px;
-    	top: 28px;
-    	margin: 0;
-    	font-size: 1rem;
+    	@include mobil-icon;
     }
 }
 .i{
@@ -162,8 +179,7 @@ header{
 	width: 480px;
 	top: 365px;
 	margin: 0;
-	height: 1270px;
-	
+	height: 1270px;	
 }
 .food-prev__nolike{
 	font-size: 1.6rem;
@@ -179,7 +195,6 @@ header{
 	position: relative;
 	right: 55px;
 }
-
 .food__wrap{
 	height: 90px; 
 	@include anim;
@@ -188,9 +203,7 @@ header{
 	margin-left: 74%;
 	width: 16%;
 	i{
-		color: #fff;
-		margin-left: 20px;
-		font-size: 30px;
+		@include mobil-icon-box;		
 		}
 	}
 }
@@ -219,6 +232,9 @@ footer{
 }
 }
 }
+
+			/* mixin version mobile menu2.3.4.*/
+
 @mixin mobil-all-only{
 	@media screen and (min-width: 280px) and (max-width: 480px) {
 	body{
@@ -232,17 +248,10 @@ header{
  .container__header{ 
  	width: 480px;
  img{
-    	height: 34px;
-    	position: relative;
-    	top: 5px;
-    	margin: 0px auto;
-    	width: 50%;
+    @include mobil-img;
     }
     .fas{
-    	left: 25px;
-    	top: 28px;
-    	margin: 0;
-    	font-size: 1rem;
+    	@include mobil-icon;
     }
 }
 .food--picture{
@@ -263,7 +272,6 @@ header{
 	margin: 0;
 	height: 1270px;
 	left: 0;
-	
 }
 .food-prev__nolike{
 	@include heart;
@@ -283,9 +291,7 @@ header{
 	margin-left: 74%;
 	width: 16%;
 	i{
-		color: #fff;
-		margin-left: 20px;
-		font-size: 30px;
+		@include mobil-icon-box;
 		}
 	}
 }
@@ -326,6 +332,9 @@ footer{
 }
 }
 }
+
+				/*mixin version mobile page accueil*/
+
 @mixin mobil-accueil-only{
 	@media screen and (min-width: 280px) and (max-width: 480px) {
 body{
@@ -394,7 +403,6 @@ header{
 .nav__link--heading{
 	height: 350px;
 }
-
 .load{
 	background: lighten(#cfcfcf, 15%);
 		i{

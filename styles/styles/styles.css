@@ -103,6 +103,10 @@
   .link-footer .other-restaurant, a .other-restaurant, i .other-restaurant {
     margin-left: 18px; }
 
+/* mixin element mobile*/
+/*mixin version mobile pour le menu1*/
+/* mixin version mobile menu2.3.4.*/
+/*mixin version mobile page accueil*/
 .loader {
   position: fixed;
   animation: background 3200ms; }
