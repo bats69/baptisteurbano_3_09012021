@@ -5,23 +5,34 @@
 @import "../libs/reset.css";
 @media screen and (min-width: 481px) and (max-width: 1101px) {
 	body{
-		width: 1101px;
+		max-width: 1101px;
 	}
 	header{
 		width: 1101px;
+		
+	}
+	.container__header{
+		background: #fff;
+		position: absolute;
+		height: 80px;
 		.fas{
 			margin-left: 0;
-			left: 100px;
+			left: 60px;
+			font-size: 1.5rem;
+		}	
+		img{
+			width: 264px;
+			margin-bottom: 0;
 		}
-		
-	}img{
-		width: 0%;
+	}
+	img{
 		width: 365px;
 		}
 	.container__main--food{
 		margin-left: 0;
 		margin-right: 0;
-		width: 365px
+		width: 365px;
+		
 	}
 	footer{
 		@include footer;

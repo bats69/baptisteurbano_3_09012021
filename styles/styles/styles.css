@@ -73,6 +73,46 @@
     transform: rotate(360deg);
     opacity: 1;
     transition-duration: 2000ms; } }
+@keyframes progress__bar {
+  0% {
+    transform: scaleX(0);
+    color: #9356dc;
+    opacity: 0; }
+  50% {
+    transform: scaleX(0.5);
+    opacity: 0.5; }
+  100% {
+    transform: scaleX(1);
+    color: #99e2d0;
+    opacity: 1; }
+  transform-delay: 3000ms;
+  transform-origin: left; }
+@keyframes suite {
+  0% {
+    transform: translateX(0%);
+    opacity: 0;
+    font-size: 12px; }
+  10% {
+    opacity: 0.2; }
+  20% {
+    opacity: 0.5; }
+  30% {
+    opacity: 0.8; }
+  50% {
+    transform: translateX(50%);
+    opacity: 1;
+    font-size: 19px; }
+  70% {
+    opacity: 0.8; }
+  80% {
+    opacity: 0.5; }
+  90% {
+    opacity: 0.2; }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+    font-size: 12px; }
+  transform-delay: 3200ms; }
 @keyframes affich {
   0% {
     transform: scaleY(0); }
@@ -109,14 +149,13 @@
 /*mixin version mobile page accueil*/
 .loader {
   position: fixed;
+  z-index: 1;
   animation: background 3200ms; }
   .loader i {
     position: fixed;
-    display: flex;
-    height: 600px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+    margin: 0;
+    left: 42%;
+    top: 125px;
     font-size: 15em;
     animation: loader 2800ms 400ms both; }
 
@@ -200,6 +239,7 @@ nav {
     margin-left: 30px; }
 
 .nav__link--title {
+  text-align: center;
   margin: 30px;
   font-size: 24px; }
 
@@ -263,7 +303,8 @@ nav {
     color: inherit; }
   .food-prev__heading h2 {
     font-size: 26px;
-    margin: 15px; }
+    margin: 15px;
+    text-align: center; }
 
 img {
   border-radius: 15px 15px 0 0;
@@ -281,10 +322,6 @@ img {
   height: 250px;
   margin-bottom: 30px;
   cursor: pointer; }
-  .food-prev .food-prev__title {
-    display: block;
-    margin: 15px;
-    font-size: 24px; }
 
 .food-prev__ban {
   position: absolute;
@@ -339,6 +376,34 @@ a {
 
 .food-prev__place {
   margin-left: 15px; }
+
+.load__bar {
+  height: 25px;
+  padding: 4px;
+  border: 2px solid #9356dc;
+  background: #9356dc; }
+
+.progress__bar {
+  height: 25px;
+  border-radius: 16px;
+  width: 100%;
+  background: #99e2d0;
+  color: #99e2d0;
+  transform-origin: left;
+  animation: progress__bar 1500ms; }
+
+.suite {
+  text-align: center;
+  width: 50%;
+  display: block;
+  font-family: shrikhand, sans-serif;
+  text-align: center;
+  color: #9356dc;
+  font-size: 19px;
+  position: relative;
+  top: 3px;
+  transform-origin: left;
+  animation: suite linear 3000ms infinite; }
 
 footer {
   display: flex;

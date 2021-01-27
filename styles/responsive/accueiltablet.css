@@ -75,6 +75,11 @@
     transition-duration: 2000ms; } }
 @keyframes affich {
   0% {
+    transform: scaleY(0); }
+  100% {
+    transform: scaleY(1); } }
+@keyframes box {
+  0% {
     transform: scaleX(0); }
   100% {
     transform: scaleX(1); } }
@@ -98,6 +103,10 @@
   .link-footer .other-restaurant, a .other-restaurant, i .other-restaurant {
     margin-left: 18px; }
 
+/* mixin element mobile*/
+/*mixin version mobile pour le menu1*/
+/* mixin version mobile menu2.3.4.*/
+/*mixin version mobile page accueil*/
 @media screen and (min-width: 481px) and (max-width: 1101px) {
   body {
     max-width: 1101px;
@@ -125,8 +134,8 @@
       justify-content: center; }
 
   .link-restaurant__wrap {
-    width: 200px;
-    padding-right: 0; }
+    width: auto;
+    padding-left: 10px; }
 
   .nav__link--title {
     text-align: center; }
@@ -140,7 +149,11 @@
     width: 282px;
     margin-bottom: 20px; }
 
+  .food-prev__title {
+    text-align: center; }
+
   footer {
+    max-width: 1101px;
     display: flex;
     flex-direction: column;
     background: #000; }

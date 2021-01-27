@@ -32,8 +32,8 @@
 		}
 	}
 	.link-restaurant__wrap{
-		width: 200px;
-		padding-right: 0;
+		width: auto;
+		padding-left: 10px;
 	}	
 	.nav__link--title{
 		text-align: center;
@@ -47,7 +47,11 @@
 			width: 282px;
 			margin-bottom: 20px;
 		}
+	.food-prev__title{
+		text-align: center;
+	}
 	footer{
+		max-width: 1101px;
 		@include footer;
 	}
 }

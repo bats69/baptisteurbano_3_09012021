@@ -8,14 +8,13 @@ $color-secondary: #ff79da;
 $color-third: #99e2d0;
 .loader{ 
 	position: fixed;
+	z-index: 1;
 	animation: background 3200ms;
 	i{
 		position: fixed;
-		display: flex;
-		height: 600px;
-		width: 100%;
-		align-items:center;
-		justify-content: center;
+		margin: 0;
+		left: 42%;
+		top: 125px;
         font-size: 15em;
 		animation: loader 2800ms 400ms both;
 	}
@@ -79,6 +78,7 @@ nav{
 	}
 }
 .nav__link--title{
+	text-align: center;
 	margin: 30px;
 	font-size: 24px;
 }
@@ -143,6 +143,7 @@ nav{
     h2{
     	font-size: 26px;
     	margin: 15px;
+    	text-align: center;
     }
 }
 img{
@@ -161,11 +162,7 @@ img{
     height: 250px;
     margin-bottom: 30px;
     cursor: pointer;
-		.food-prev__title{
-			display: block;
-			margin: 15px;
-			font-size: 24px;			
-	}
+		
 }
 .food-prev__ban{
 	position: absolute;
@@ -221,6 +218,35 @@ a{
 .food-prev__place{
     	margin-left: 15px;
 }
+.load__bar { 
+    height: 25px;
+    padding: 4px;
+    border: 2px solid $color-primary;
+    background: $color-primary;
+}
+ .progress__bar{
+ 		height: 25px;
+ 		border-radius: 16px;
+ 		width: 100%;
+ 		background: $color-third;
+ 		color: $color-third;
+ 		transform-origin: left;
+	    animation: progress__bar 1500ms;
+    }
+.suite{
+	text-align: center;
+    width: 50%;
+    display: block;
+	font-family: shrikhand, sans-serif;
+	text-align: center;
+	color: $color-primary;
+	font-size: 19px;
+	position: relative;
+    top: 3px;
+    transform-origin: left;
+    animation: suite linear 3000ms infinite;
+}
+
 footer{
 	@include footer;
 }
