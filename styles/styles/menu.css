@@ -73,6 +73,46 @@
     transform: rotate(360deg);
     opacity: 1;
     transition-duration: 2000ms; } }
+@keyframes progress__bar {
+  0% {
+    transform: scaleX(0);
+    color: #9356dc;
+    opacity: 0; }
+  50% {
+    transform: scaleX(0.5);
+    opacity: 0.5; }
+  100% {
+    transform: scaleX(1);
+    color: #99e2d0;
+    opacity: 1; }
+  transform-delay: 3000ms;
+  transform-origin: left; }
+@keyframes suite {
+  0% {
+    transform: translateX(0%);
+    opacity: 0;
+    font-size: 12px; }
+  10% {
+    opacity: 0.2; }
+  20% {
+    opacity: 0.5; }
+  30% {
+    opacity: 0.8; }
+  50% {
+    transform: translateX(50%);
+    opacity: 1;
+    font-size: 19px; }
+  70% {
+    opacity: 0.8; }
+  80% {
+    opacity: 0.5; }
+  90% {
+    opacity: 0.2; }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+    font-size: 12px; }
+  transform-delay: 3200ms; }
 @keyframes affich {
   0% {
     transform: scaleY(0); }
@@ -109,15 +149,15 @@
 /*mixin version mobile page accueil*/
 body {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  flex-wrap: wrap;
   align-content: center;
   width: 100%; }
 
 header {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  flex-wrap: wrap;
   align-content: center; }
 
 body {
@@ -165,9 +205,9 @@ h1 {
 
 .name__food-heading {
   margin-top: 35px;
-  margin-right: 70px;
   height: 20px;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  margin-right: 70px; }
 
 .food-prev__nolike {
   position: absolute;
@@ -213,7 +253,6 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-size: 15px;
   width: 90%;
   height: 60px;
   border-radius: 15px;
@@ -221,7 +260,29 @@ h1 {
   cursor: pointer;
   border: 2px solid #fff;
   background: #fff;
-  margin-top: 15px; }
+  margin-top: 15px;
+  font-size: 15px;
+  animation: affich 2000ms backwards; }
+  .food__wrap--1 {
+    animation-delay: 222.2222222222ms; }
+  .food__wrap--2 {
+    animation-delay: 444.4444444444ms; }
+  .food__wrap--3 {
+    animation-delay: 666.6666666667ms; }
+  .food__wrap--4 {
+    animation-delay: 888.8888888889ms; }
+  .food__wrap--5 {
+    animation-delay: 1111.1111111111ms; }
+  .food__wrap--6 {
+    animation-delay: 1333.3333333333ms; }
+  .food__wrap--7 {
+    animation-delay: 1555.5555555556ms; }
+  .food__wrap--8 {
+    animation-delay: 1777.7777777778ms; }
+  .food__wrap--9 {
+    animation-delay: 2000ms; }
+  .food__wrap--10 {
+    animation-delay: 2222.2222222222ms; }
   .food__wrap:hover .box {
     display: flex;
     animation: box 600ms;

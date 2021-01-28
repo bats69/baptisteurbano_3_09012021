@@ -204,9 +204,9 @@ h1 {
 
 .name__food-heading {
   margin-top: 35px;
-  margin-right: 100px;
   height: 20px;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  margin-right: 100px; }
 
 .food-prev__nolike {
   position: absolute;
@@ -312,7 +312,7 @@ h1 {
   margin-left: 15px; }
 
 .box {
-  border: 1px solid #15dea5;
+  border: 1px solid #99e2d0;
   height: 62px;
   width: 50px;
   display: none;
