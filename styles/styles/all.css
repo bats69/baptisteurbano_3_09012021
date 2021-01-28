@@ -73,6 +73,46 @@
     transform: rotate(360deg);
     opacity: 1;
     transition-duration: 2000ms; } }
+@keyframes progress__bar {
+  0% {
+    transform: scaleX(0);
+    color: #9356dc;
+    opacity: 0; }
+  50% {
+    transform: scaleX(0.5);
+    opacity: 0.5; }
+  100% {
+    transform: scaleX(1);
+    color: #99e2d0;
+    opacity: 1; }
+  transform-delay: 3000ms;
+  transform-origin: left; }
+@keyframes suite {
+  0% {
+    transform: translateX(0%);
+    opacity: 0;
+    font-size: 12px; }
+  10% {
+    opacity: 0.2; }
+  20% {
+    opacity: 0.5; }
+  30% {
+    opacity: 0.8; }
+  50% {
+    transform: translateX(50%);
+    opacity: 1;
+    font-size: 19px; }
+  70% {
+    opacity: 0.8; }
+  80% {
+    opacity: 0.5; }
+  90% {
+    opacity: 0.2; }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+    font-size: 12px; }
+  transform-delay: 3200ms; }
 @keyframes affich {
   0% {
     transform: scaleY(0); }
@@ -164,7 +204,7 @@ h1 {
 
 .name__food-heading {
   margin-top: 35px;
-  margin-right: 80px;
+  margin-right: 100px;
   height: 20px;
   font-size: 1.5rem; }
 
@@ -287,7 +327,7 @@ h1 {
   border-bottom: 2px solid #99e2d0;
   padding-bottom: 5px;
   width: 13%;
-  margin-left: -260px;
+  margin-left: -275px;
   margin-top: 40px; }
 
 .food__descript {
@@ -322,7 +362,7 @@ h1 {
   padding-right: 10px;
   box-shadow: 5px 8px 8px #cfcfcf;
   width: 45%;
-  margin-top: 25px; }
+  margin-top: 40px; }
   .link__command--wrap:hover {
     cursor: pointer;
     transform: scale(1.05);
@@ -339,7 +379,7 @@ footer {
   flex-direction: column;
   background: #000;
   position: absolute;
-  top: 1318px;
+  top: 1340px;
   width: 100%; }
   footer h2 {
     font-family: shrikhand;

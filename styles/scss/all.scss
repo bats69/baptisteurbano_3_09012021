@@ -58,7 +58,7 @@ h1{
 }
 .name__food-heading{
     margin-top: 35px;
-    margin-right: 80px;
+    margin-right: 100px;
     height: 20px;
     font-size: 1.5rem;
 }
@@ -173,7 +173,7 @@ $animation-delay: $anim-dur / 10;
     border-bottom: 2px solid $color-third;
     padding-bottom: 5px;
     width: 13%;
-    margin-left: -260px;
+    margin-left: -275px;
     margin-top: 40px;
 }
 .food__descript{
@@ -197,12 +197,12 @@ $animation-delay: $anim-dur / 10;
 .link__command--wrap{
 	@include btn;
 	width: 45%;
-	margin-top: 25px;
+	margin-top: 40px;
 }
 footer{
 	@include footer;
 	    position: absolute;
-    	top: 1318px;
+    	top: 1340px;
     	width: 100%;
 }
 @include mobil-all-only;
