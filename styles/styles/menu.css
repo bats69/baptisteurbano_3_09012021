@@ -436,7 +436,7 @@ footer {
       margin: 0;
       font-size: 1rem; }
 
-  .i img {
+  .food--picture img {
     width: 480px;
     bottom: 50px;
     top: -50px; }
@@ -448,9 +448,9 @@ footer {
 
   .container__main--food {
     width: 480px;
-    top: 365px;
+    top: -200px;
     margin: 0;
-    height: 1270px; }
+    height: 1295px; }
 
   .food-prev__nolike {
     font-size: 1.6rem;

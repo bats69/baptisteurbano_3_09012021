@@ -445,6 +445,10 @@ footer {
       width: 50%;
       height: 34px; }
 
+  .loader i {
+    left: 17%;
+    font-size: 20em; }
+
   .localisation-search__heading {
     flex-wrap: wrap;
     width: auto;

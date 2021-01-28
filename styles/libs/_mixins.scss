@@ -217,7 +217,7 @@ header{
     	@include mobil-icon;
     }
 }
-.i{
+.food--picture{
 	img{
 		width: 480px;
 		bottom: 50px;
@@ -231,9 +231,9 @@ header{
 }
 .container__main--food{
 	width: 480px;
-	top: 365px;
+	top: -200px;
 	margin: 0;
-	height: 1270px;	
+	height: 1295px;	
 }
 .food-prev__nolike{
 	font-size: 1.6rem;
@@ -402,6 +402,12 @@ header{
 		margin-bottom: 10px;
 		width: 50%;
 		height: 34px;
+	}
+}
+.loader{
+	i{
+		left: 17%;
+		font-size: 20em;
 	}
 }
 .localisation-search__heading{
