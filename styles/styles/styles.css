@@ -154,9 +154,9 @@
   .loader i {
     position: fixed;
     margin: 0;
-    left: 42%;
+    left: 37%;
     top: 125px;
-    font-size: 15em;
+    font-size: 26em;
     animation: loader 2800ms 400ms both; }
 
 body {
