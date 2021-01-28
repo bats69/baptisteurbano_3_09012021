@@ -219,8 +219,8 @@ header{
 }
 .food--picture{
 	img{
+		position: absolute;
 		width: 480px;
-		bottom: 50px;
 		top: -50px;
 	}
 }
@@ -230,10 +230,11 @@ header{
 	font-size: 2rem;
 }
 .container__main--food{
+	position: absolute;
 	width: 480px;
-	top: -200px;
+	top: 371px;
 	margin: 0;
-	height: 1295px;	
+	height: 1260px;	
 }
 .food-prev__nolike{
 	font-size: 1.6rem;
@@ -282,7 +283,7 @@ header{
 }
 footer{
 	width: 480px;
-	top: 1625px;
+	top: 1630px;
 }
 }
 }
