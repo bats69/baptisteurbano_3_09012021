@@ -200,6 +200,9 @@ header {
     font-weight: bold;
     letter-spacing: 0em; }
 
+.research__city {
+  display: none; }
+
 main i {
   font-family: Roboto, sans-serif;
   color: black; }
