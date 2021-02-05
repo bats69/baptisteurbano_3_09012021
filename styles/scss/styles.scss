@@ -44,7 +44,6 @@ header {
 			margin-left: 15px;
 			font-weight: bold;
 			letter-spacing: 0em;
-		
 	}
 }
 .research__city{
@@ -168,7 +167,6 @@ img{
     height: 250px;
     margin-bottom: 30px;
     cursor: pointer;
-		
 }
 .food-prev__ban{
 	position: absolute;
@@ -223,34 +221,6 @@ a{
 }
 .food-prev__place{
     	margin-left: 15px;
-}
-.load__bar { 
-    height: 25px;
-    padding: 4px;
-    border: 2px solid $color-primary;
-    background: $color-primary;
-}
- .progress__bar{
- 		height: 25px;
- 		border-radius: 16px;
- 		width: 100%;
- 		background: $color-third;
- 		color: $color-third;
- 		transform-origin: left;
-	    animation: progress__bar 1500ms;
-    }
-.suite{
-	text-align: center;
-  width: 50%;
-  display: block;
-	font-family: shrikhand, sans-serif;
-	text-align: center;
-	color: $color-primary;
-	font-size: 19px;
-	position: relative;
-  top: 3px;
-  transform-origin: left;
-  animation: suite linear 3000ms infinite;
 }
 .three_col{
 	height: 125px;

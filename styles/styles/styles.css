@@ -28,20 +28,20 @@
 @keyframes loader {
   0% {
     transform: scale(0) rotate(45deg);
-    color: 60%;
+    color: #9356dc;
     opacity: 1;
     transition-timing-function: cubic-bezier(0.54, 0.31, 0.89, 0.3); }
   33% {
     transform: scale(1) rotate(120deg);
-    color: 74.3137254902%;
+    color: #99e2d0;
     opacity: 1; }
   50% {
     transform: scale(1) rotate(180deg);
-    color: 74.3137254902%;
+    color: #99e2d0;
     opacity: 1; }
   75% {
     transform: scale(1) rotate(260deg);
-    color: 73.7254901961%;
+    color: #ff79da;
     opacity: 1; }
   100% {
     transform: scale(0) rotate(360deg);
@@ -61,8 +61,7 @@
     opacity: 0.6; }
   100% {
     font-size: inherit;
-    opacity: 1;
-    transform-origin: 50% left; } }
+    opacity: 1; } }
 @keyframes checked {
   0% {
     transform: rotate(90deg);
@@ -73,20 +72,6 @@
     transform: rotate(360deg);
     opacity: 1;
     transition-duration: 2000ms; } }
-@keyframes progress__bar {
-  0% {
-    transform: scaleX(0);
-    color: #9356dc;
-    opacity: 0; }
-  50% {
-    transform: scaleX(0.5);
-    opacity: 0.5; }
-  100% {
-    transform: scaleX(1);
-    color: #99e2d0;
-    opacity: 1; }
-  transform-delay: 3000ms;
-  transform-origin: left; }
 @keyframes suite {
   0% {
     transform: translateX(0%);
@@ -118,11 +103,13 @@
     transform: scaleY(0); }
   100% {
     transform: scaleY(1); } }
-@keyframes box {
-  0% {
-    transform: scaleX(0); }
-  100% {
-    transform: scaleX(1); } }
+/*@keyframes box{
+	0%{
+		transform: scaleX(0);
+	}
+	100%{
+		transform: scaleX(1);
+	}*/
 @keyframes rotate {
   from {
     transform: rotate(0deg); }
@@ -392,34 +379,6 @@ a {
 
 .food-prev__place {
   margin-left: 15px; }
-
-.load__bar {
-  height: 25px;
-  padding: 4px;
-  border: 2px solid #9356dc;
-  background: #9356dc; }
-
-.progress__bar {
-  height: 25px;
-  border-radius: 16px;
-  width: 100%;
-  background: #99e2d0;
-  color: #99e2d0;
-  transform-origin: left;
-  animation: progress__bar 1500ms; }
-
-.suite {
-  text-align: center;
-  width: 50%;
-  display: block;
-  font-family: shrikhand, sans-serif;
-  text-align: center;
-  color: #9356dc;
-  font-size: 19px;
-  position: relative;
-  top: 3px;
-  transform-origin: left;
-  animation: suite linear 3000ms infinite; }
 
 .three_col {
   height: 125px;
