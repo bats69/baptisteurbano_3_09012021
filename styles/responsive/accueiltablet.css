@@ -73,6 +73,46 @@
     transform: rotate(360deg);
     opacity: 1;
     transition-duration: 2000ms; } }
+@keyframes progress__bar {
+  0% {
+    transform: scaleX(0);
+    color: #9356dc;
+    opacity: 0; }
+  50% {
+    transform: scaleX(0.5);
+    opacity: 0.5; }
+  100% {
+    transform: scaleX(1);
+    color: #99e2d0;
+    opacity: 1; }
+  transform-delay: 3000ms;
+  transform-origin: left; }
+@keyframes suite {
+  0% {
+    transform: translateX(0%);
+    opacity: 0;
+    font-size: 12px; }
+  10% {
+    opacity: 0.2; }
+  20% {
+    opacity: 0.5; }
+  30% {
+    opacity: 0.8; }
+  50% {
+    transform: translateX(50%);
+    opacity: 1;
+    font-size: 19px; }
+  70% {
+    opacity: 0.8; }
+  80% {
+    opacity: 0.5; }
+  90% {
+    opacity: 0.2; }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+    font-size: 12px; }
+  transform-delay: 3200ms; }
 @keyframes affich {
   0% {
     transform: scaleY(0); }
@@ -89,6 +129,17 @@
   to {
     transform: rotate(360deg); }
   transition-duration: 8s; }
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 .link-footer, a, i {
   display: flex;
   flex-direction: column;
@@ -132,6 +183,9 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center; }
+
+  .suit {
+    margin-left: 10px; }
 
   .link-restaurant__wrap {
     width: auto;
