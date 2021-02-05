@@ -85,7 +85,7 @@ h1{
     border-radius: 50px 50px 0 0;
     margin-left: 39%;
     margin-right: 39%;
-    top: 15px;
+    top: 30px;
 }
 $anim-dur:1500ms;
 $animation-delay: $anim-dur / 10;    	
@@ -166,7 +166,7 @@ $animation-delay: $anim-dur / 10;
 footer{
 	@include footer;
 	    position: absolute;
-    	top: 1340px;
+    	top: 1360px;
     	width: 100%;
 }
 @include mobil-all-only;
