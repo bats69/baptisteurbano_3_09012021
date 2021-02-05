@@ -1,530 +1,70 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Shrikhand&display=swap");
-@import url(../libs/reset.css);
-@keyframes body {
-  from {
-    filter: blur(3px); }
-  to {
-    filter: blur(3px); } }
-@keyframes background {
-  from {
-    height: 100%;
-    width: 100%; }
-  to {
-    height: 100%;
-    width: 100%; }
-  0% {
-    background-color: rgba(153, 226, 208, 0.7); }
-  33% {
-    background-color: rgba(255, 121, 218, 0.7); }
-  50% {
-    background-color: rgba(147, 86, 220, 0.7); }
-  75% {
-    background-color: rgba(153, 226, 208, 0.7); }
-  100% {
-    background-color: rgba(153, 226, 208, 0.7);
-    transition-timing-function: cubic-bezier(0.54, 0.31, 0.89, 0.3);
-    display: none; } }
-@keyframes loader {
-  0% {
-    transform: scale(0) rotate(45deg);
-    color: #9356dc;
-    opacity: 1;
-    transition-timing-function: cubic-bezier(0.54, 0.31, 0.89, 0.3); }
-  33% {
-    transform: scale(1) rotate(120deg);
-    color: #99e2d0;
-    opacity: 1; }
-  50% {
-    transform: scale(1) rotate(180deg);
-    color: #99e2d0;
-    opacity: 1; }
-  75% {
-    transform: scale(1) rotate(260deg);
-    color: #ff79da;
-    opacity: 1; }
-  100% {
-    transform: scale(0) rotate(360deg);
-    color: #8641d8;
-    opacity: 0.8;
-    visibility: hidden;
-    transition-timing-function: cubic-bezier(0.54, 0.31, 0.89, 0.3); } }
-@keyframes like {
-  0% {
-    transform: scale(0);
-    opacity: 0; }
-  33% {
-    transform: scale(0.33);
-    opacity: 0.3; }
-  66% {
-    transform: scale(0.66);
-    opacity: 0.6; }
-  100% {
-    font-size: inherit;
-    opacity: 1; } }
-@keyframes checked {
-  0% {
-    transform: rotate(90deg);
-    opacity: 0; }
-  50% {
-    transform: rotate(180deg); }
-  100% {
-    transform: rotate(360deg);
-    opacity: 1;
-    transition-duration: 2000ms; } }
-@keyframes suite {
-  0% {
-    transform: translateX(0%);
-    opacity: 0;
-    font-size: 12px; }
-  10% {
-    opacity: 0.2; }
-  20% {
-    opacity: 0.5; }
-  30% {
-    opacity: 0.8; }
-  50% {
-    transform: translateX(50%);
-    opacity: 1;
-    font-size: 19px; }
-  70% {
-    opacity: 0.8; }
-  80% {
-    opacity: 0.5; }
-  90% {
-    opacity: 0.2; }
-  100% {
-    transform: translateX(100%);
-    opacity: 0;
-    font-size: 12px; }
-  transform-delay: 3200ms; }
-@keyframes affich {
-  0% {
-    transform: scaleY(0); }
-  100% {
-    transform: scaleY(1); } }
-/*@keyframes box{
-	0%{
-		transform: scaleX(0);
-	}
-	100%{
-		transform: scaleX(1);
-	}*/
-@keyframes rotate {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); }
-  transition-duration: 8s; }
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg); } }
-.link-footer, a, i {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  font-family: Roboto, sans-serif;
-  width: auto;
-  height: auto;
-  color: #fff;
-  text-decoration: none;
-  margin-left: 15px;
-  line-height: 15px; }
-  .link-footer .other-restaurant, a .other-restaurant, i .other-restaurant {
-    margin-left: 18px; }
+/*
+Error: Invalid CSS after "}": expected "}", was ""
+        on line 180 of styles/libs/_keyframes.scss
+        from line 3 of ./styles/scss/all.scss
 
-/* mixin element mobile*/
-/*mixin version mobile pour le menu1*/
-/* mixin version mobile menu2.3.4.*/
-/*mixin version mobile page accueil*/
-body {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  width: 100%; }
+175:     -ms-transform: rotate(360deg);
+176:     -o-transform: rotate(360deg);
+177:     transform: rotate(360deg);
+178:   }
+179: }
 
-header {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center; }
-
-body {
-  font-family: Roboto, sans-serif;
-  background: linear-gradient(0.25turn, #9356dc, white, #9356dc); }
-
-h1 {
-  font-family: shrikhand, sans-serif; }
-
-.container__header {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  width: 100%; }
-  .container__header .fas {
-    font-size: 2rem;
-    position: absolute;
-    align-items: flex-start;
-    margin-left: -470px;
-    color: #000;
-    top: 25px; }
-    .container__header .fas:hover {
-      transform: scale(1.15); }
-  .container__header img {
-    background: #fff;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 25px;
-    width: 365px; }
-
-.food--picture {
-  display: flex;
-  justify-content: center; }
-  .food--picture img {
-    position: relative;
-    width: 365px;
-    top: 80px; }
-
-.container__name-food {
-  display: flex;
-  margin-left: 635px;
-  width: fit-content;
-  justify-content: flex-end; }
-
-.name__food-heading {
-  margin-top: 35px;
-  height: 20px;
-  font-size: 1.5rem;
-  margin-right: 100px; }
-
-.food-prev__nolike {
-  position: absolute;
-  cursor: pointer;
-  font-size: x-large;
-  width: 0%;
-  margin-left: 193px;
-  margin-top: 35px; }
-  .food-prev__nolike .far {
-    color: #000; }
-  .food-prev__nolike:hover {
-    opacity: 0;
-    color: #fff; }
-
-.food-prev__like {
-  position: absolute;
-  cursor: pointer;
-  font-size: x-large;
-  width: 0%;
-  margin-left: 193px;
-  margin-top: 35px;
-  opacity: 0;
-  transition-duration: 1000ms; }
-  .food-prev__like .fas {
-    color: #ff79da; }
-  .food-prev__like:hover {
-    animation: like;
-    transition: all 0.3s linear 0s;
-    opacity: 1; }
-
-.container__main--food {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  align-items: center;
-  width: 365px;
-  background: whitesmoke;
-  border-radius: 50px 50px 0 0;
-  margin-left: 39%;
-  margin-right: 39%;
-  top: 30px; }
-
-.food__wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 90%;
-  height: 60px;
-  border-radius: 15px;
-  box-shadow: 3px 3px 8px 2px #CFCFCF;
-  cursor: pointer;
-  border: 2px solid #fff;
-  background: #fff;
-  margin-top: 15px;
-  font-size: 15px;
-  animation: affich 1500ms backwards; }
-  .food__wrap--1 {
-    animation-delay: 150ms; }
-  .food__wrap--2 {
-    animation-delay: 300ms; }
-  .food__wrap--3 {
-    animation-delay: 450ms; }
-  .food__wrap--4 {
-    animation-delay: 600ms; }
-  .food__wrap--5 {
-    animation-delay: 750ms; }
-  .food__wrap--6 {
-    animation-delay: 900ms; }
-  .food__wrap--7 {
-    animation-delay: 1050ms; }
-  .food__wrap--8 {
-    animation-delay: 1200ms; }
-  .food__wrap--9 {
-    animation-delay: 1350ms; }
-  .food__wrap--10 {
-    animation-delay: 1500ms; }
-  .food__wrap:hover .box {
-    display: flex;
-    animation: box 600ms;
-    transition-duration: 400ms;
-    transform-origin: right -4px -50px; }
-  .food__wrap:hover .fas {
-    animation: rotate 800ms; }
-  .food__wrap:hover .food__descript--price {
-    transform: translateX(-50px);
-    animation-duration: 600ms;
-    transition-duration: 400ms; }
-  .food__wrap:hover .food__descript {
-    width: 60%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap; }
-  .food__wrap:hover .food__descript-acompaniment {
-    width: 60%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap; }
-
-.box .fas {
-  display: flex;
-  margin-top: 2px;
-  font-size: 24px;
-  margin-left: 15px; }
-
-.box {
-  border: 1px solid #99e2d0;
-  height: 62px;
-  width: 50px;
-  display: none;
-  position: absolute;
-  margin-top: -2px;
-  margin-left: 279px;
-  border-radius: 0 15px 15px 0;
-  background: #15dea5; }
-
-.food__list-heading {
-  font-weight: normal;
-  border-bottom: 2px solid #99e2d0;
-  padding-bottom: 5px;
-  width: 13%;
-  margin-left: -275px;
-  margin-top: 40px; }
-
-.food__descript {
-  width: 100%;
-  margin-left: 10px;
-  font-weight: bold;
-  margin-top: 12px; }
-  .food__descript.food__descript--1 {
-    margin-top: 5px; }
-
-.food__descript-acompaniment {
-  width: 100%;
-  margin-left: 10px;
-  line-height: 25px;
-  font-size: 14px; }
-
-.food__descript--price {
-  position: absolute;
-  margin-left: 290px;
-  margin-top: 30px;
-  font-weight: bold; }
-
-.link__command--wrap {
-  display: flex;
-  align-items: center;
-  width: 16%;
-  justify-content: center;
-  border: 0px groove #b68de7;
-  height: 50px;
-  color: #fff;
-  margin-bottom: 40px;
-  border-radius: 30px 30px;
-  background: #9356dc;
-  padding-right: 10px;
-  box-shadow: 5px 8px 8px #cfcfcf;
-  width: 45%;
-  margin-top: 40px; }
-  .link__command--wrap:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-    background: linear-gradient(to top, #9356dc, 20%, #b68de7);
-    box-shadow: 5px 8px 8px #9c9c9c;
-    transition-duration: 400ms;
-    background: linear-gradient(to top, #9356dc, 20%, #b68de7); }
-    .link__command--wrap:hover:active {
-      transform: scale(1);
-      transition-duration: 200ms; }
-
-footer {
-  display: flex;
-  flex-direction: column;
-  background: #000;
-  position: absolute;
-  top: 1360px;
-  width: 100%; }
-  footer h2 {
-    font-family: shrikhand;
-    font-size: 24px;
-    margin-left: 30px;
-    color: #fff;
-    margin-top: 15px;
-    margin-bottom: 15px; }
-  footer span, footer a {
-    font-family: Roboto, sans-serif;
-    margin-left: 15px;
-    cursor: pointer;
-    width: fit-content; }
-    footer span:hover, footer a:hover {
-      text-decoration: underline; }
-  footer a:hover {
-    text-decoration: underline; }
-
-@media screen and (min-width: 280px) and (max-width: 480px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    width: 480px; }
-
-  header {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    background: #fff;
-    height: 66px;
-    width: 480px;
-    margin: 0; }
-
-  .container__header {
-    width: 480px; }
-    .container__header img {
-      height: 34px;
-      position: relative;
-      top: 5px;
-      margin: 0px auto;
-      width: 50%; }
-    .container__header .fas {
-      left: 25px;
-      top: 28px;
-      margin: 0;
-      font-size: 1rem; }
-
-  .food--picture img {
-    width: 480px;
-    bottom: 50px;
-    top: 66px; }
-
-  .name__food-heading {
-    margin-top: 35px;
-    margin-right: 125px;
-    font-size: 2rem; }
-
-  .container__main--food {
-    width: 480px;
-    top: 10px;
-    margin: 0;
-    height: 1270px;
-    left: 0; }
-
-  .food-prev__nolike {
-    font-size: 1.6rem;
-    top: 5px;
-    right: 80px; }
-
-  .food-prev__like {
-    font-size: 1.6rem;
-    top: 5px;
-    right: 80px; }
-
-  .food__list-heading {
-    position: relative;
-    right: 55px; }
-
-  .food__wrap {
-    height: 70px;
-    animation: affich 1500ms backwards; }
-    .food__wrap--1 {
-      animation-delay: 150ms; }
-    .food__wrap--2 {
-      animation-delay: 300ms; }
-    .food__wrap--3 {
-      animation-delay: 450ms; }
-    .food__wrap--4 {
-      animation-delay: 600ms; }
-    .food__wrap--5 {
-      animation-delay: 750ms; }
-    .food__wrap--6 {
-      animation-delay: 900ms; }
-    .food__wrap--7 {
-      animation-delay: 1050ms; }
-    .food__wrap--8 {
-      animation-delay: 1200ms; }
-    .food__wrap--9 {
-      animation-delay: 1350ms; }
-    .food__wrap .box {
-      height: 72px;
-      margin-left: 74%;
-      width: 16%; }
-      .food__wrap .box i {
-        color: #fff;
-        margin-left: 20px;
-        font-size: 30px; }
-
-  .wrap---4 {
-    height: 85px; }
-    .wrap---4 .box {
-      height: 82px; }
-
-  .food__descript--price {
-    margin-top: 60px; }
-
-  .food__descript {
-    font-size: 20px;
-    margin-left: 20px; }
-    .food__descript.food__descript--1 {
-      margin-top: 2px; }
-
-  .food__descript-acompaniment {
-    font-size: 15px;
-    line-height: 35px;
-    margin-left: 20px; }
-
-  .food__descript--price {
-    left: 80%;
-    font-size: 18px;
-    margin: 0;
-    margin-top: 40px; }
-
-  .link__command--wrap {
-    margin-top: 50px;
-    margin-bottom: 50px; }
-
-  .link__command--wrap {
-    height: 60px; }
-
-  footer {
-    width: 480px;
-    top: 1535px; } }
-
-/*# sourceMappingURL=all.css.map */
+Backtrace:
+styles/libs/_keyframes.scss:180
+./styles/scss/all.scss:3
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:226:in `directive_body'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:217:in `directive'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:321:in `to_tree'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:323:in `block in visit_import'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:88:in `block in with_import'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:88:in `with_import'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 180 of styles/libs/_keyframes.scss\A         from line 3 of ./styles/scss/all.scss\A \A 175:     -ms-transform: rotate(360deg);\A 176:     -o-transform: rotate(360deg);\A 177:     transform: rotate(360deg);\A 178:   }\A 179: }"; }
