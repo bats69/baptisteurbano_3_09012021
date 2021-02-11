@@ -469,7 +469,8 @@ footer {
 
   .food-prev__title {
     position: relative;
-    right: 50px; }
+    right: 50px;
+    text-align: initial; }
 
   .link-restaurant__wrap {
     width: 50%; }
