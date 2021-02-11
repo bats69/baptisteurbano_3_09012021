@@ -104,7 +104,6 @@ nav{
     			.nav__link--number{
     				transform: translate(-15px);
     				transition-duration: 400ms;
-    				transition-timing-function: linear 400ms;
     			}
     				@include hover;	
     				background:lighten($color-primary, 38%);			
@@ -206,7 +205,6 @@ img{
    	}
    	&:hover{
    		animation: like;
-   		transform-origin: 0% 50% left;
    		opacity:1;
    }
 }

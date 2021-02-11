@@ -116,14 +116,8 @@
   transition-duration: 8s; }
 @keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
     transform: rotate(0deg); }
   100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
 .link-footer, a, i {
   display: flex;
@@ -266,8 +260,7 @@ nav {
       background: #faf7fd; }
       .nav__link--wrap .nav__link--choice:hover .nav__link--number {
         transform: translate(-15px);
-        transition-duration: 400ms;
-        transition-timing-function: linear 400ms; }
+        transition-duration: 400ms; }
     .nav__link--wrap .nav__link--choice .nav__link--number {
       text-align: center;
       border: 0px solid #9356dc;
@@ -363,7 +356,6 @@ img {
     color: #ff79da; }
   .food-prev__like:hover {
     animation: like;
-    transform-origin: 0% 50% left;
     opacity: 1; }
 
 a {
