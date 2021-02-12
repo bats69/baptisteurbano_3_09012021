@@ -6,26 +6,7 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-third: #99e2d0;
-.loader{ 
-	display: flex;
-    width: 100%;
-    justify-content: center;
-    position: absolute;
-	z-index: 1;
-	animation: background 3200ms;
-	i{
-		position: fixed;
-		margin: 0;
-		top: 125px;
-        font-size: 26em;
-		animation: loader 2800ms 400ms both;
-	}
-}
-body{
-	font-family: Roboto, sans-serif;
-	background-size: cover;
-	animation: body 3200ms;
-}
+
 header {
 	@include header;
 	img{
@@ -246,7 +227,7 @@ a{
 }
 #loading-1:before{
   z-index: 100;
-  animation: spin 1s infinite;
+  animation: spin 1s 3s;
 }
 #loading-1:after{
   border: 10px solid $color-third;

@@ -1,0 +1,176 @@
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-third: #99e2d0;
+@keyframes body{
+	from{
+		filter: blur(3px);
+	}
+	to{
+		filter: blur(3px);
+	}
+}
+@keyframes background {
+	from {
+		height: 100%;
+		width: 100%;
+	}
+	to{
+		height: 100%;
+		width: 100%;
+	}
+	0% {
+		background-color: transparentize($color-third, 0.3);
+	}
+	33%{
+		background-color: transparentize($color-secondary, 0.3);
+	}
+	50%{
+		background-color: transparentize($color-primary, 0.3);
+	}
+	75%{
+		background-color: transparentize($color-third, 0.3);
+	}
+	100%{
+		background-color: transparentize($color-third, 0.3);
+		transition-timing-function: cubic-bezier(.54,.31,.89,.3);
+		display: none;
+	}
+}
+@keyframes loader{
+	0% {
+		transform: scale(0) rotate(45deg);
+		color: $color-primary;
+		opacity: 1;
+		transition-timing-function: cubic-bezier(.54,.31,.89,.3);
+	}
+	33% {
+		transform: scale(1) rotate(120deg);
+		color: $color-third;
+		opacity: 1;
+	}
+	50% {
+		transform: scale(1) rotate(180deg);
+		color:$color-third;
+		opacity: 1;
+	}
+	75% {
+		transform: scale(1) rotate(260deg);
+		color: $color-secondary;
+		opacity: 1;
+	}
+	100% {
+		transform: scale(0) rotate(360deg);
+		color: darken($color-primary, 5%);
+		opacity: 0.8;
+		visibility: hidden;
+		transition-timing-function: cubic-bezier(.54,.31,.89,.3);
+	}
+}
+@keyframes like{
+	0%{
+      	color: $color-primary;
+	}
+	33%{
+		color: $color-primary;
+	}
+	66%{
+		color: $color-secondary
+	}
+	100%{
+		color: $color-secondary;
+	}
+}
+@keyframes checked{
+	0%{
+		transform: rotate(90deg);
+		opacity: 0;
+	}
+	50%{
+		transform: rotate(180deg);
+	}
+	100%{
+		transform: rotate(360deg);
+		opacity: 1;
+		transition-duration: 2000ms;
+	}
+}
+@keyframes suite{
+	
+	
+	0%{
+		transform: translateX(0%);
+		opacity: 0;
+		font-size: 12px;
+	}
+	10%{
+		opacity: 0.2;
+	}
+	20%{
+		opacity: 0.5;
+	}
+	30%{
+		opacity: 0.8;
+	}
+	50%{
+		transform: translateX(50%);
+		opacity: 1;
+		font-size: 19px;
+	}
+	70%{
+		opacity: 0.8;
+	}
+	80%{
+		opacity: 0.5;
+	}
+	90%{
+		opacity: 0.2;
+	}
+	100%{
+		transform: translateX(100%);
+		opacity: 0;
+		font-size: 12px;
+	}
+	transform-delay: 3200ms;
+}
+@keyframes affich{
+	0%{
+		transform: scaleY(0);
+		opacity: 0;
+		
+	}
+	50%{
+		transform: scaleY(0.5);
+		opacity: 0.5;
+	}
+	100%{
+		transform: scaleY(1);
+		opacity: 1;
+	}
+
+}
+@keyframes box{
+	0%{
+		transform: scaleX(0);
+	}
+	100%{
+		transform: scaleX(1);
+	}
+}	
+@keyframes rotate{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+	transition-duration: 8s;
+}
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+}
