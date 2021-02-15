@@ -23,7 +23,7 @@ $color-third: #99e2d0;
     justify-content: flex-end;
 }
 @mixin ellipsis{
-	width: 60%;
+	width: 55%;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
