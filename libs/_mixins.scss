@@ -30,11 +30,11 @@ $color-third: #99e2d0;
 }
 @mixin food-heading{
 	margin-top: 35px;
-	 height: 20px;
-    font-size: 1.5rem;
+	height: 20px;
+    font-size: 22pt;
 }
 @mixin food-wrap{
-	display: flex;
+		display: flex;
 		flex-direction: column;
 		align-items: flex-start;  
 		width: 90%;
@@ -46,21 +46,17 @@ $color-third: #99e2d0;
 		background: #fff;
 		margin-top: 15px;
 		font-size: 15px; 
-		animation: affich $anim-dur backwards;
+		/*animation: affich $anim-dur backwards;*/
 			@for $i from 1 through 10 {
 				&--#{$i} {
 					animation-delay: $animation-delay * $i;
 			}
-			transform-origin: top;
 		}
 }
 @mixin fleche{
-	font-size: 2rem;
+		font-size: 1.5rem;
     	position: absolute;
-    	align-items: flex-start;
-    	margin-left: -470px;
 		color: #000;
-		top: 25px;
 		&:hover{
 			transform: scale(1.15);
 		}		
@@ -68,7 +64,7 @@ $color-third: #99e2d0;
 @mixin hover{
 	cursor: pointer;
 	transform: scale(1.05);
-	background: linear-gradient(to top,$color-primary,20%,#b68de7);
+	background: linear-gradient(180deg, $color-secondary, $color-primary);
 	box-shadow: 5px 8px 8px darken(#cfcfcf,20%);
 	transition-duration: 400ms;
 }
@@ -90,9 +86,10 @@ $color-third: #99e2d0;
 		span,a{
 			font-family: Roboto, sans-serif;
 			margin-left: 15px;
-			margin-bottom: 15px;
+			line-height: 1.8em;
 			cursor: pointer;
 			width: fit-content;
+			width: -moz-fit-content;
 			&:hover{
 				text-decoration: underline;
 			}
@@ -102,16 +99,11 @@ $color-third: #99e2d0;
 		}
 }
 .link-footer, a, i{
-	@include align;
-	justify-content: space-around;
 	font-family: Roboto, sans-serif;
 	width: auto;
 	height: auto;
 	color: #fff;
 	text-decoration: none;
-	margin-left: 15px;
-	margin-bottom: 10px;
-	line-height: 15px;
 	.other-restaurant{
 		margin-left: 18px;
 	}	
@@ -122,18 +114,17 @@ $color-third: #99e2d0;
     font-size: x-large;
 }
 @mixin btn{
-	display: flex;
-	align-items: center;    
-	width: 16%;
-    justify-content: center;
-	border: 0px groove lighten($color-primary, 13%);
-	height: 50px;
-	color: #fff;
-	margin-bottom: 40px;
-	border-radius: 30px 30px;
-	background: $color-primary;
-	padding-right: 10px;
-	box-shadow: 5px 8px 8px #cfcfcf;
+ 	display: flex;
+    align-items: center; 
+    margin: auto;
+    width: fit-content;
+    width: -moz-fit-content;
+    padding: 15px;   
+    color: #fff;
+    border-radius: 30px 30px;
+    background: $color-primary;
+    padding-right: 10px;
+    box-shadow: 5px 8px 8px #cfcfcf;
 	&:hover{
 		@include hover;
 		background: linear-gradient(to top,$color-primary,20%,#b68de7);

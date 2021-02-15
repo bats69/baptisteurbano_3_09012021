@@ -1,10 +1,10 @@
 /*
-Error: File to import not found or unreadable: ./libs/_keyframes.
-        on line 3 of ./styles/scss/menu.scss
+Error: File to import not found or unreadable: ./libs/keyframes.
+        on line 3 of ./mobil-first/menu.scss
 
 1: @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 2: @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Shrikhand&display=swap');
-3: @import "./libs/_keyframes";
+3: @import "./libs/keyframes";
 4: @import "./libs/mixins.scss";
 5: @import "./libs/reset.css";
 6: body{
@@ -12,7 +12,7 @@ Error: File to import not found or unreadable: ./libs/_keyframes.
 8: 	width: 100%; 
 
 Backtrace:
-./styles/scss/menu.scss:3
+./mobil-first/menu.scss:3
 C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:67:in `rescue in import'
 C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:44:in `import'
 C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -57,4 +57,4 @@ C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/interna
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: ./libs/_keyframes.\A         on line 3 of ./styles/scss/menu.scss\A \A 1: @import url(\"https://fonts.googleapis.com/css2?family=Shrikhand&display=swap\");\A 2: @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Shrikhand&display=swap');\A 3: @import \"./libs/_keyframes\";\A 4: @import \"./libs/mixins.scss\";\A 5: @import \"./libs/reset.css\";\A 6: body{\A 7: 	@include flex;\A 8: 	width: 100%; "; }
+  content: "Error: File to import not found or unreadable: ./libs/keyframes.\A         on line 3 of ./mobil-first/menu.scss\A \A 1: @import url(\"https://fonts.googleapis.com/css2?family=Shrikhand&display=swap\");\A 2: @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Shrikhand&display=swap');\A 3: @import \"./libs/keyframes\";\A 4: @import \"./libs/mixins.scss\";\A 5: @import \"./libs/reset.css\";\A 6: body{\A 7: 	@include flex;\A 8: 	width: 100%; "; }
