@@ -75,16 +75,7 @@ header img{
   height: 100px;
   } 
   .btn{
-    display: flex;
-    align-items: center; 
-    margin: auto;
-    width: fit-content;
-    padding: 15px;   
-    color: #fff;
-    border-radius: 30px 30px;
-    background: $color-primary;
-    padding-right: 10px;
-    box-shadow: 5px 8px 8px #cfcfcf;
+   @include btn;
   &:hover{
     @include hover;
       &:active{
@@ -161,7 +152,8 @@ nav{
     border-radius: 15px;
     padding-bottom: 25px;
     height: auto;
-    margin: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
     cursor: pointer;
 }
 .food__prev--ban{
@@ -178,13 +170,13 @@ nav{
     text-align: center;
     padding-top: 9px;
 }
-.food__prev--nolike {
+.food__prev--like {
     position: relative;
-    bottom: 75px;
+    bottom: 60px;
     margin-left: 80%;
+    margin-right: 8%;
     font-size: 28px;
     z-index: 1;
-    
   }
   i{
     color: #000;
@@ -229,40 +221,10 @@ img{
   height: auto;
   border-radius: 20px 20px 0 0;
 }
-.three_col{
-  height: 125px;
-  top: 12px;
-  background: lighten(#cfcfcf, 15%);
-}
-.loading{
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  position: relative;
-  margin: 0 auto;
-  background: lighten(#cfcfcf, 15%);
-}
-#loading-1:before, #loading-1:after{
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  border: 10px solid transparent;
-  border-top-color: $color-secondary;
-}
-#loading-1:before{
-  z-index: 100;
-  animation: spin 300ms;
-}
-#loading-1:after{
-  border: 10px solid $color-third;
-  }
 footer{
   @include footer;
   .fas{
     color: #fff;
+    margin-left: 15px;
   }
 }

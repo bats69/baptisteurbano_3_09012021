@@ -94,59 +94,17 @@ $color-third: #99e2d0;
 		transition-duration: 2000ms;
 	}
 }
-@keyframes suite{
-	
-	
-	0%{
-		transform: translateX(0%);
-		opacity: 0;
-		font-size: 12px;
-	}
-	10%{
-		opacity: 0.2;
-	}
-	20%{
-		opacity: 0.5;
-	}
-	30%{
-		opacity: 0.8;
-	}
-	50%{
-		transform: translateX(50%);
-		opacity: 1;
-		font-size: 19px;
-	}
-	70%{
-		opacity: 0.8;
-	}
-	80%{
-		opacity: 0.5;
-	}
-	90%{
-		opacity: 0.2;
-	}
-	100%{
-		transform: translateX(100%);
-		opacity: 0;
-		font-size: 12px;
-	}
-	transform-delay: 3200ms;
-}
 @keyframes affich{
 	0%{
 		transform: scaleY(0);
 		opacity: 0;
-		
-	}
-	50%{
-		transform: scaleY(0.5);
-		opacity: 0.5;
+		transform-origin: top;
 	}
 	100%{
 		transform: scaleY(1);
 		opacity: 1;
+		transform-origin: top;
 	}
-
 }
 @keyframes box{
 	0%{
