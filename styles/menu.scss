@@ -17,11 +17,10 @@ h1{
 	font-family: shrikhand, sans-serif;
 }
 .container__header{
+  @include position;
 	display: flex;
 	justify-content: center;
 	background: #fff;
-	position: absolute;
-	width: 100%;
 	z-index: 1;
 	.fas{
 		@include fleche;
@@ -35,17 +34,23 @@ h1{
 		padding-bottom: 10px;
 	}
 }
-.food--picture {  
+.container__food--picture2{  
+  display: flex;
+  justify-content: center;
+    img{
+      position: relative;
+      width: 100%;
+      bottom: 40px;
+  }
+}
+.container__food--picture {  
 	display: flex;
-	justify-content: center;
+  justify-content: center;
 	img{
 		position: relative;
-   		width: 100%;
-   		top: 50px;
+    width: 100%;
+   	top: 50px;
 	}
-}
-.food--picture4 img{
-  
 }
 .container__name-food{
 	@include name-food;
@@ -53,14 +58,6 @@ h1{
 .name__food-heading{
     display: flex;
     justify-content: flex-start;
-    margin-top: 35px;
-    height: 20px;
-    font-size: 22pt;
-    margin-right: 90px;
-    width: 80%;
-    margin-left: 45px;
-}
-.name__food-heading {
     margin-top: 35px;
     height: 20px;
     font-size: 22pt;
@@ -85,23 +82,35 @@ h1{
       transition-duration: 1500ms;
   }
 }
+.container__main--food2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 1155px;
+  background: lighten(#cfcfcf, 15%);
+  border-radius: 40px 40px 0 0;
+  position: absolute;
+  top: 286px;
+}
 .container__main--food{
 	display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: center;
-    width: 100%;
-    height: 1155px;
-    background: lighten(#cfcfcf, 15%);
-    border-radius: 40px 40px 0 0;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  height: 1155px;
+  background: lighten(#cfcfcf, 15%);
+  border-radius: 40px 40px 0 0;
 }
 .food__wrap{
 	@include food-wrap;
   position: relative;
 	&:hover .box{
 		display: flex;
+    justify-content: center;
 		animation: box 600ms;
-		transition-duration: 400ms;
+		transition-duration: 400ms; 
 		transform-origin: right -4px -50px;
 		}
 			&:hover .food__descript--price{
@@ -151,15 +160,13 @@ h1{
   margin-top: 40px;
 }
 .food__descript{
-  position: absolute;
-	width: 100%;
+  @include position;
 	margin-left: 10px;
   font-weight: bold;
   margin-top: 12px;	
 }
 .food__descript-acompaniment{
-  position: absolute;
-	width: 100%;
+  @include position;
 	margin-left: 10px;
   margin-top: 35px;
   font-size: 14px;
@@ -172,15 +179,22 @@ h1{
 }
 .btn{
 	@include btn;
+  justify-content: center;
+  width: 40%;
 	&:hover{
 		@include hover;
 	}
 }
+.footer--wrap{
+      position: relative;
+      top: 974px;
+    }
 footer{
 	@include footer;
     width: 100%;
-    i{
+    .fas{
     	color: #fff;
     	margin-left: 15px;
     }
+    
 }

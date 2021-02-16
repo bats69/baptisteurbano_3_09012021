@@ -1,6 +1,6 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
-$color-third: #99e2d0;
+$color-third: #99e2d0; 
 @mixin header{
 	display: flex;
 	justify-content: center;
@@ -10,11 +10,15 @@ $color-third: #99e2d0;
 		height: 60px;
 	}
 }
+@mixin position{
+	position: absolute;
+	width: 100%;
+}
 @mixin img{
-		background: #fff;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		margin-bottom: 25px;
+	background: #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 25px;
 }
 @mixin name-food{
 	display: flex;
@@ -34,32 +38,42 @@ $color-third: #99e2d0;
     font-size: 22pt;
 }
 @mixin food-wrap{
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;  
-		width: 90%;
-    	height: 60px;
-		border-radius: 15px;
-    	box-shadow: 3px 3px 8px 2px #CFCFCF;
-    	cursor: pointer;
-		border: 2px solid #fff;
-		background: #fff;
-		margin-top: 15px;
-		font-size: 15px; 
-		/*animation: affich $anim-dur backwards;*/
-			@for $i from 1 through 10 {
-				&--#{$i} {
-					animation-delay: $animation-delay * $i;
-			}
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;  
+	width: 90%;
+	@include overflow;
+	height: 60px;
+	border-radius: 15px;
+	box-shadow: 3px 3px 8px 2px #CFCFCF;
+	cursor: pointer;
+	border: 2px solid #fff;
+	background: #fff;
+	margin-top: 15px;
+	font-size: 15px; 
+	animation: affich $anim-dur backwards;
+		@for $i from 1 through 10 {
+			&--#{$i} {
+				animation-delay: $animation-delay * $i;
 		}
+	}
+
+}
+$width: 80%;
+@mixin overflow{
+	@if $width <= 70% { $width:
+			(text-overflow: hidden);
+	} @else {
+		$width: (text-overflow: ellipsis);	
+	}
 }
 @mixin fleche{
-		font-size: 1.5rem;
-    	position: absolute;
-		color: #000;
-		&:hover{
-			transform: scale(1.15);
-		}		
+	font-size: 1.5rem;
+	position: absolute;
+	color: #000;
+	&:hover{
+		transform: scale(1.15);
+	}		
 }
 @mixin hover{
 	cursor: pointer;
@@ -87,6 +101,7 @@ $color-third: #99e2d0;
 			font-family: Roboto, sans-serif;
 			margin-left: 15px;
 			line-height: 1.8em;
+			color: #fff;
 			cursor: pointer;
 			width: fit-content;
 			width: -moz-fit-content;
@@ -96,7 +111,7 @@ $color-third: #99e2d0;
 		}
 			a:hover{
 				text-decoration: underline;
-		}
+	}
 }
 .link-footer, a, i{
 	font-family: Roboto, sans-serif;
@@ -105,7 +120,7 @@ $color-third: #99e2d0;
 	color: #fff;
 	text-decoration: none;
 	.other-restaurant{
-		margin-left: 18px;
+		margin-left: 22px;
 	}	
 }
 @mixin like{
