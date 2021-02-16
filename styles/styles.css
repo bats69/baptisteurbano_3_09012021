@@ -229,17 +229,16 @@ header img {
   .btn:hover {
     cursor: pointer;
     transform: scale(1.05);
-    background: linear-gradient(to top, #9356dc, 20%, #b68de7);
+    background: linear-gradient(to top, #9356dc, 30%, #ff79da);
     box-shadow: 5px 8px 8px #9c9c9c;
-    transition-duration: 400ms;
-    background: linear-gradient(to top, #9356dc, 20%, #b68de7); }
+    transition-duration: 400ms; }
     .btn:hover:active {
       transform: scale(1);
       transition-duration: 200ms; }
   .btn:hover {
     cursor: pointer;
     transform: scale(1.05);
-    background: linear-gradient(to top, #9356dc, 20%, #b68de7);
+    background: linear-gradient(to top, #9356dc, 30%, #ff79da);
     box-shadow: 5px 8px 8px #9c9c9c;
     transition-duration: 400ms; }
     .btn:hover:active {
@@ -278,7 +277,7 @@ nav {
     .nav__link--wrap .nav__link--choice:hover {
       cursor: pointer;
       transform: scale(1.05);
-      background: linear-gradient(to top, #9356dc, 20%, #b68de7);
+      background: linear-gradient(to top, #9356dc, 30%, #ff79da);
       box-shadow: 5px 8px 8px #9c9c9c;
       transition-duration: 400ms;
       background: #faf7fd; }

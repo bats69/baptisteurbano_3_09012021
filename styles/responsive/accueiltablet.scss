@@ -19,8 +19,8 @@
 		.suits{
 			display: contents;
 		}
-	
 	.link-restaurant__wrap{
+
 		width: auto;
 		padding-left: 10px;
 	}	
@@ -35,7 +35,6 @@
 		.nav__link--choice{
 			padding-right: 60px;
 			margin-bottom: 20px;
-
 		}
 		.food-prev__heading{
 			@include align;
@@ -44,7 +43,7 @@
 			align-content: center;
 			height: 1200px;
 		    justify-content: space-around;
-    	
+    		margin-top: 15px;
     	h2{
     		font-size: 26px;
     		margin: 15px;
@@ -80,13 +79,11 @@
   	}
 }
 	footer{
-		margin-bottom: 0;
 		@include footer;
-	}
-	i{
-		margin-bottom: 0;
-	}
-	.other{
-		margin-bottom: 0;
+		display: flex;
+    	flex-direction: column;
+    		a{
+				line-height: 35px;
+		}
 	}
 }

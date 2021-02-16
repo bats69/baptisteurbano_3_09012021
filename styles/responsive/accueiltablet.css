@@ -189,7 +189,8 @@
     background: whitesmoke;
     align-content: center;
     height: 1200px;
-    justify-content: space-around; }
+    justify-content: space-around;
+    margin-top: 15px; }
     .food-prev__heading h2 {
       font-size: 26px;
       margin: 15px;
@@ -222,8 +223,9 @@
         transition-duration: 1500ms; }
 
   footer {
-    margin-bottom: 0;
-    background: #000; }
+    background: #000;
+    display: flex;
+    flex-direction: column; }
     footer h2 {
       font-family: shrikhand;
       font-size: 24px;
@@ -241,11 +243,7 @@
         text-decoration: underline; }
     footer a:hover {
       text-decoration: underline; }
-
-  i {
-    margin-bottom: 0; }
-
-  .other {
-    margin-bottom: 0; } }
+    footer a {
+      line-height: 35px; } }
 
 /*# sourceMappingURL=accueiltablet.css.map */

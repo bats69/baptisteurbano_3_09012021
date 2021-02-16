@@ -156,17 +156,27 @@
     background: linear-gradient(0.25turn, #9356dc, white, #9356dc); }
 
   .container__header {
-    display: flex;
-    margin-left: 33%;
-    margin-right: 33%;
-    width: 365px; }
+    height: 15%; }
+    .container__header img {
+      width: 250px;
+      height: auto; }
 
   .container__food--picture,
   .container__main--food {
     width: 365px;
     margin-left: 33%;
     margin-right: 33%;
-    top: -5px; }
+    top: 10px; }
+
+  .food__prev--like {
+    right: 25px; }
+    .food__prev--like i {
+      color: #000; }
+      .food__prev--like i:hover {
+        cursor: pointer;
+        font-weight: bolder;
+        color: #9356dc;
+        transition-duration: 1500ms; }
 
   footer {
     position: absolute;
