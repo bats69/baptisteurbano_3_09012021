@@ -6,7 +6,9 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-third: #99e2d0;
-
+body{
+  background: linear-gradient(0.25turn,$color-primary, white, $color-primary);
+}
 header {
 	@include header;
 	img{

@@ -173,7 +173,7 @@ h1 {
   justify-content: flex-start;
   margin-top: 35px;
   height: 20px;
-  font-size: 22pt;
+  font-size: 20pt;
   margin-right: 90px;
   width: 80%;
   margin-left: 45px; }
@@ -198,7 +198,7 @@ i {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: auto;
   height: 1155px;
   background: whitesmoke;
   border-radius: 40px 40px 0 0;
@@ -307,16 +307,28 @@ i {
 .food__descript {
   position: absolute;
   width: 100%;
+  width: 84%;
   margin-left: 10px;
   font-weight: bold;
-  margin-top: 12px; }
+  margin-top: 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; }
+  .food__descript:hover {
+    overflow: visible; }
 
 .food__descript-acompaniment {
   position: absolute;
   width: 100%;
   margin-left: 10px;
   margin-top: 35px;
-  font-size: 14px; }
+  font-size: 14px;
+  width: 84%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; }
+  .food__descript-acompaniment:hover {
+    overflow: visible; }
 
 .food__descript--price {
   position: absolute;

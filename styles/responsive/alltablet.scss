@@ -5,36 +5,30 @@
 @import "../libs/reset.css";
 @media screen and (min-width: 481px) and (max-width: 1101px) {
 	body{
-		max-width: 1101px;
-	}
-	header{
-		width: 1101px;
-		
+		background: linear-gradient(0.25turn,$color-primary, white, $color-primary);
 	}
 	.container__header{
-		background: #fff;
-		position: absolute;
-		height: 80px;
-		.fas{
-			margin-left: 0;
-			left: 60px;
-			font-size: 1.5rem;
-		}	
-		img{
-			width: 264px;
-			margin-bottom: 0;
-		}
+		display: flex;
+	    margin-left: 33%;
+	    margin-right: 33%;
+	    width: 365px;
 	}
-	img{
+	.container__food--picture,
+	.container__main--food
+	{
 		width: 365px;
-		}
-	.container__main--food{
-		margin-left: 0;
-		margin-right: 0;
-		width: 365px;
-		
+		margin-left: 33%;
+		margin-right: 33%;
+		top: -5px;
 	}
+	
 	footer{
+		position: absolute;
+    	top: 1382px;
+		width: 100%;
 		@include footer;
+	}
+	span, a, .other{
+		margin-bottom: 0;
 	}
 }

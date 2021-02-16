@@ -73,9 +73,12 @@ header img{
 }
 .link-restaurant__wrap{
   height: 100px;
+  display: flex;
+  justify-content: center;
   } 
   .btn{
    @include btn;
+   width: 250px;
   &:hover{
     @include hover;
       &:active{
@@ -158,17 +161,16 @@ nav{
 }
 .food__prev--ban{
     position: absolute;
-    width: 90px;
+    width: auto;
     cursor: pointer;
     right: 25px;
     margin-top: 20px;
+    padding: 10px;
     z-index: 1;
     background-color: $color-third;
     opacity: 1;
     color: darken($color-third, 30%);
-    height: 25px;
     text-align: center;
-    padding-top: 9px;
 }
 .food__prev--like {
     position: relative;

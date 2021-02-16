@@ -3,37 +3,23 @@
 @import "../libs/_keyframes.scss";
 @import "../libs/mixins.scss";
 @import "../libs/reset.css";
-@media screen and (min-width: 481px) and (max-width: 1101px){  
-	body{
-		max-width: 1101px;
-		min-width: 481px;
-	}
+@media screen and (min-width: 481px) and (max-width: 1101px){
 	header{
 		display: flex;
-		max-width: 1101px;
-		min-width: 481px;
 		img{
+			left: 0;
 			width: 40%;
 		}
 	}
-	.localisation-search__heading{
-		max-width: 1101px;
-		min-width: 481px;
-	}
-	.website__descript--heading{
-		max-width: 1101px;
-		min-width: 481px;
 		.website__descript--title{
-			max-width: 1101px;
-			min-width: 481px;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
 		}
-	}
-	.suit{
-		margin-left: 10px;
-	}
+		.suits{
+			display: contents;
+		}
+	
 	.link-restaurant__wrap{
 		width: auto;
 		padding-left: 10px;
@@ -47,14 +33,60 @@
 			align-items: center;
 		}
 		.nav__link--choice{
-			width: 282px;
+			padding-right: 60px;
 			margin-bottom: 20px;
+
 		}
+		.food-prev__heading{
+			@include align;
+			flex-wrap: wrap;
+			background:lighten(#cfcfcf, 15%);
+			align-content: center;
+			height: 1200px;
+		    justify-content: space-around;
+    	
+    	h2{
+    		font-size: 26px;
+    		margin: 15px;
+    		text-align: center;
+    	}
+	}
+	a{
+    		margin-left: 25%;
+    		margin-right: 25%;
+    	}
 	.food-prev__title{
 		text-align: center;
 	}
+	.food__prev--ban{
+		position: absolute;
+		right: 30%;
+	}
+	.food__prev--like {
+    position: relative;
+    right: 15%;
+    bottom: 65px;
+    width: 10%;
+    font-size: 28px;
+    z-index: 1;
+    	.far{
+    		color: #000;
+    	&:hover {
+	      cursor: pointer;
+	      font-weight: bolder;
+	      color: $color-primary;
+	      transition-duration: 1500ms;
+  		}
+  	}
+}
 	footer{
-		max-width: 1101px;
+		margin-bottom: 0;
 		@include footer;
+	}
+	i{
+		margin-bottom: 0;
+	}
+	.other{
+		margin-bottom: 0;
 	}
 }
