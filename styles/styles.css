@@ -415,4 +415,77 @@ footer {
     .link-footer i .other-restaurant {
       margin-left: 22px; }
 
+@media all and (min-width: 1102px) {
+  header img {
+    display: flex;
+    height: auto;
+    width: auto;
+    left: 0; }
+
+  .website__descript--heading .website__descript--title .suit,
+  .website__descript--heading .website__descript--subtitle .suits {
+    display: inline; }
+
+  .nav__link--wrap {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row; }
+    .nav__link--wrap .nav__link--choice {
+      width: 282px; }
+
+  .food-prev__heading {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: whitesmoke;
+    align-content: center;
+    height: 1200px;
+    justify-content: space-around; }
+    .food-prev__heading a {
+      color: inherit; }
+    .food-prev__heading h2 {
+      font-size: 26px;
+      margin: 20px;
+      text-align: center; }
+
+  img {
+    border-radius: 15px 15px 0 0;
+    width: 335px;
+    height: 175px;
+    cursor: pointer; }
+
+  .container__food__prev--menu {
+    display: flex;
+    border: 1px solid #000; }
+
+  .food__prev--heading {
+    align-items: center; }
+
+  .food__prev .food__prev--ban {
+    display: flex;
+    margin-left: 225px;
+    top: 670px;
+    right: inherit;
+    margin-top: inherit; }
+
+  .food__prev--ban2 {
+    display: flex;
+    margin-left: 225px;
+    top: 960px;
+    right: inherit;
+    margin-top: inherit;
+    position: absolute;
+    width: auto;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+    background-color: #99e2d0;
+    opacity: 1;
+    color: #32b091;
+    text-align: center; }
+
+  .food__prev--like {
+    margin-left: 15%;
+    margin-right: inherit; } }
+
 /*# sourceMappingURL=styles.css.map */

@@ -6,6 +6,7 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-third: #99e2d0;
+$background-color: #cfcfcf;
 .loader{ 
   display: flex;
     width: 100%;
@@ -51,7 +52,7 @@ header img{
 }
 .website__descript--heading{
   align-items: center;
-  background: lighten(#cfcfcf, 15%);
+  background: lighten($background-color, 15%);
     .website__descript--title{
       font-family: Roboto;
       font-weight: bold;
@@ -113,11 +114,11 @@ nav{
         width: auto;
         margin: 15px;
         border: 0px solid $color-primary;
-        box-shadow:5px 5px 8px #cfcfcf;
+        box-shadow:5px 5px 8px $background-color;
         margin-left: 25px;
         border-radius: 20px;
         height: 70px;
-        background: lighten(#cfcfcf, 15%);
+        background: lighten($background-color, 15%);
         &:hover{
             @include hover; 
             background:lighten($color-primary, 38%);      
@@ -206,7 +207,7 @@ a{
 .food__prev--heading{
   @include align;
   flex-wrap: wrap;
-  background:lighten(#cfcfcf, 15%);
+  background:lighten($background-color, 15%);
   align-content: center;
   height: auto;
   justify-content: space-around;
@@ -267,5 +268,81 @@ footer {
     .other-restaurant{
         margin-left: 22px;
       }
+  }
+}
+@media all and (min-width: 1102px) {
+  header img{
+    display: flex;
+    height: auto;
+    width: auto;
+    left: 0;
+  }
+  .website__descript--heading .website__descript--title .suit,
+  .website__descript--heading .website__descript--subtitle .suits{
+    display: inline;
+  }
+  .nav__link--wrap{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  .nav__link--choice{
+        width: 282px;
+  }
+}
+.food-prev__heading{
+  @include align;
+  flex-wrap: wrap;
+  background:lighten($background-color, 15%);
+  align-content: center;
+  height: 1200px;
+    justify-content: space-around;
+    a{
+      color: inherit;
+    }
+    h2{
+      font-size: 26px;
+      margin: 20px;
+      text-align: center;
+    }
+}
+img{
+  border-radius:15px 15px 0 0;
+  width: 335px;
+  height: 175px;
+  cursor: pointer;
+}
+.container__food__prev--menu{
+  display: flex;
+  border: 1px solid #000;
+}
+.food__prev--heading{
+  align-items: center;
+}
+.food__prev .food__prev--ban {
+    display: flex;
+    margin-left: 225px;
+    top: 670px;
+    right: inherit;
+    margin-top: inherit;
+  }
+  .food__prev--ban2{
+    display: flex;
+    margin-left: 225px;
+    top: 960px;
+    right: inherit;
+    margin-top: inherit;
+    position: absolute;
+    width: auto;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+    background-color: $color-third;
+    opacity: 1;
+    color: darken($color-third, 30%);
+    text-align: center;
+  }
+  .food__prev--like{
+    margin-left: 15%;
+    margin-right: inherit;
   }
 }
