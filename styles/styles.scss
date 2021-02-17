@@ -190,6 +190,7 @@ nav{
   }
 }
 a{
+  text-decoration: none;
   z-index: 0;
 }
 .food__prev--name{
@@ -223,10 +224,48 @@ img{
   height: auto;
   border-radius: 20px 20px 0 0;
 }
-footer{
-  @include footer;
-  .fas{
+footer {
+  display: flex;
+  flex-direction: column;
+  background: #000;
+    h2{  
+      font-family: shrikhand;
+      font-size: 24px;
+      margin-left: 30px;
+      color: #fff;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .link{
+      font-family: Roboto, sans-serif;
+      cursor: pointer;
+      color: #fff;
+      width: fit-content;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+      a:hover{
+        text-decoration: underline;
+    }
+}
+.link-footer {
+  justify-content: space-around;
+  font-family: Roboto, sans-serif;
+  width: auto;
+  height: auto;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+  line-height: 25px;
+  i{
     color: #fff;
-    margin-left: 15px;
+    .link{
+      margin-left: 15px;
+      
+    }
+    .other-restaurant{
+        margin-left: 22px;
+      }
   }
 }

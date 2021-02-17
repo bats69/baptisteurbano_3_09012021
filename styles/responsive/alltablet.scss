@@ -8,29 +8,37 @@
 		background: linear-gradient(0.25turn,$color-primary, white, $color-primary);
 	}
 	.container__header{
-		height: 15%;
 		img{
 			width: 250px;
 			height: auto;
 		}
 	}
 	.container__food--picture,
-	.container__food--picture2,
+	.food__picture--2,
 	.container__main--food{
 		width: 365px;
 		margin-left: 33%;
 		margin-right: 33%;
 		top: 10px;
 	}
-	.container__main--food2{
+	.food__picture--2 img{
+		margin-top: -21px;
+	}
+	.main__food--2{
 		top: -170px;
 		width: 365px;
 		margin-left: 33%;
 		margin-right: 33%;
 		height: 1236px;
 	}
+	.prev__like--2{
+		position: absolute;
+		margin-left: 300px;
+		right: initial;
+	}
 	.food__prev--like {
 		right: 25px;
+		top: initial;
 	i{
     color: #000;
     &:hover {
@@ -41,9 +49,13 @@
     }
   }
 }
+.food__wrap{
+	@include food-wrap;
+}
 	.footer--wrap{
 		position: absolute;
 		top: 1514px;
+		z-index: 1;
 	}
 	footer{
 		position: absolute;

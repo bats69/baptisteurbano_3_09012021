@@ -50,8 +50,9 @@ $color-third: #99e2d0;
 			@for $i from 1 through 10 {
 				&--#{$i} {
 					animation-delay: $animation-delay * $i;
+					transform-origin: top;
 			}
-			transform-origin: top;
+			
 		}
 }
 @mixin fleche{
@@ -101,7 +102,7 @@ $color-third: #99e2d0;
 				text-decoration: underline;
 		}
 }
-.link-footer a i{
+.link-footer a .fas{
 	justify-content: space-around;
 	font-family: Roboto, sans-serif;
 	width: auto;

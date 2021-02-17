@@ -135,7 +135,7 @@
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
-.link-footer a i {
+.link-footer a .fas {
   justify-content: space-around;
   font-family: Roboto, sans-serif;
   width: auto;
@@ -144,7 +144,7 @@
   text-decoration: none;
   margin-left: 15px;
   line-height: 25px; }
-  .link-footer a i .other {
+  .link-footer a .fas .other {
     margin-left: 22px; }
 
 /* mixin element mobile*/
@@ -345,6 +345,7 @@ i {
     transition-duration: 1500ms; }
 
 a {
+  text-decoration: none;
   z-index: 0; }
 
 .food__prev--name {
@@ -388,17 +389,30 @@ footer {
     color: #fff;
     margin-top: 15px;
     margin-bottom: 15px; }
-  footer span a {
+  footer .link {
     font-family: Roboto, sans-serif;
-    margin-left: 15px;
     cursor: pointer;
+    color: #fff;
     width: fit-content; }
-    footer span a:hover {
+    footer .link:hover {
       text-decoration: underline; }
   footer a:hover {
     text-decoration: underline; }
-  footer .fas {
-    color: #fff;
-    margin-left: 15px; }
+
+.link-footer {
+  justify-content: space-around;
+  font-family: Roboto, sans-serif;
+  width: auto;
+  height: auto;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+  line-height: 25px; }
+  .link-footer i {
+    color: #fff; }
+    .link-footer i .link {
+      margin-left: 15px; }
+    .link-footer i .other-restaurant {
+      margin-left: 22px; }
 
 /*# sourceMappingURL=styles.css.map */
