@@ -15,12 +15,19 @@
 		}
 	}
 	.container__food--picture,
-	.container__main--food
-	{
+	.container__food--picture2,
+	.container__main--food{
 		width: 365px;
 		margin-left: 33%;
 		margin-right: 33%;
 		top: 10px;
+	}
+	.container__main--food2{
+		top: -170px;
+		width: 365px;
+		margin-left: 33%;
+		margin-right: 33%;
+		height: 1236px;
 	}
 	.food__prev--like {
 		right: 25px;
@@ -34,13 +41,17 @@
     }
   }
 }
+	.footer--wrap{
+		position: absolute;
+		top: 1514px;
+	}
 	footer{
 		position: absolute;
     	top: 1382px;
 		width: 100%;
 		@include footer;
 	}
-	span, a, .other{
+	span a .other{
 		margin-bottom: 0;
 	}
 }

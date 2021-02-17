@@ -77,6 +77,8 @@ $color-third: #99e2d0;
 	flex-direction: column;  
 }
 @mixin footer{
+	display: flex;
+	flex-direction: column;
 	background: #000;
 		h2{  
 			font-family: shrikhand;
@@ -86,10 +88,9 @@ $color-third: #99e2d0;
 			margin-top: 15px;
 			margin-bottom: 15px;
 		}
-		span,a{
+		span a{
 			font-family: Roboto, sans-serif;
 			margin-left: 15px;
-			margin-bottom: 15px;
 			cursor: pointer;
 			width: fit-content;
 			&:hover{
@@ -100,7 +101,7 @@ $color-third: #99e2d0;
 				text-decoration: underline;
 		}
 }
-.link-footer, a, i{
+.link-footer a i{
 	justify-content: space-around;
 	font-family: Roboto, sans-serif;
 	width: auto;
@@ -108,9 +109,9 @@ $color-third: #99e2d0;
 	color: #fff;
 	text-decoration: none;
 	margin-left: 15px;
-	margin-bottom: 10px;
-	.other-restaurant{
-		margin-left: 18px;
+	line-height: 25px;
+	.other{
+		margin-left: 22px;
 	}	
 }
 @mixin like{

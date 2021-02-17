@@ -4,35 +4,36 @@
 @import "../libs/mixins.scss";
 @import "../libs/reset.css";
 body{
-	@include flex;
-	width: 100%; 
+  @include flex;
+  width: 100%; 
 }
 header{
-	@include flex;
+  @include flex;
 }
 body{
-	font-family: Roboto, sans-serif;
+  font-family: Roboto, sans-serif;
 }
 h1{
-	font-family: shrikhand, sans-serif;
+  font-family: shrikhand, sans-serif;
 }
 .container__header{
   @include position;
-	display: flex;
-	justify-content: center;
-	background: #fff;
-	z-index: 1;
-	.fas{
-		@include fleche;
-		left: 25px;
-		top: 20px;
-	}
-	img{
-		width: 50%;
-		height: auto;
-		padding-top: 10px;
-		padding-bottom: 10px;
-	}
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  z-index: 1;
+  .fas{
+    @include fleche;
+    width: auto;
+    top: 30%;
+    left: 30px;
+  }
+  img{
+    width: 50%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 .container__food--picture2{  
   display: flex;
@@ -44,16 +45,24 @@ h1{
   }
 }
 .container__food--picture {  
-	display: flex;
+  display: flex;
   justify-content: center;
-	img{
-		position: relative;
+  img{
+    position: relative;
     width: 100%;
-   	top: 50px;
-	}
+    top: 50px;
+  }
+}
+.food__picture--2{
+  display: flex;
+  justify-content: center;
+  img{
+    width: 100%;
+    margin-bottom: 75px;
+  }
 }
 .container__name-food{
-	@include name-food;
+  @include name-food;
 }
 .name__food-heading{
     display: flex;
@@ -82,19 +91,36 @@ h1{
       transition-duration: 1500ms;
   }
 }
-.container__main--food2{
+.prev__like--2{ 
+    position: absolute;
+    width: 10%;
+    right: 15px;
+    font-size: 28px;
+    z-index: 1;
+  }
+  .far{
+    color: #000;
+    &:hover {
+      cursor: pointer;
+      font-weight: bolder;
+      color: $color-primary;
+      transition-duration: 1500ms;
+  }
+  margin-top: 30px
+}
+.main__food--2{
   display: flex;
   flex-direction: column;
+  z-index: 1;
   align-items: center;
-  width: auto;
-  height: 1155px;
+  width: 100%;
+  margin-top: -230px;
+  height: 1211px;
   background: lighten(#cfcfcf, 15%);
   border-radius: 40px 40px 0 0;
-  position: absolute;
-  top: 286px;
 }
 .container__main--food{
-	display: flex;
+  display: flex;
   flex-direction: column;
   position: relative;
   align-items: center;
@@ -104,23 +130,23 @@ h1{
   border-radius: 40px 40px 0 0;
 }
 .food__wrap{
-	@include food-wrap;
+  @include food-wrap;
   position: relative;
-	&:hover .box{
-		display: flex;
+  &:hover .box{
+    display: flex;
     justify-content: center;
-		animation: box 600ms;
-		transition-duration: 400ms; 
-		transform-origin: right -4px -50px;
-		}
-			&:hover .food__descript--price{
-				transform: translateX(-60px);
-				animation-duration: 600ms;
-				transition-duration: 600ms;
-		}
-			&:hover .fas{
-				animation: rotate 800ms;
-		}
+    animation: box 600ms;
+    transition-duration: 400ms; 
+    transform-origin: right -4px -50px;
+    }
+      &:hover .food__descript--price{
+        transform: translateX(-60px);
+        animation-duration: 600ms;
+        transition-duration: 600ms;
+    }
+      &:hover .fas{
+        animation: rotate 800ms;
+    }
         &:hover .food__descript{
           @include ellipsis;
           transform: scaleX(1);
@@ -131,17 +157,17 @@ h1{
           transform: scaleX(1);
           transition-duration: 500ms;
     }
-}		
+}   
 .box .fas{
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
   margin: 20px;
   position: relative;
- 	font-size: 24px;
- 	color: #fff;
+  font-size: 24px;
+  color: #fff;
 }
 .box{
-	border: 1px solid $color-third;
+  border: 1px solid $color-third;
   height: 62px;
   width: 16%;
   display: none;
@@ -152,8 +178,8 @@ h1{
   background: #15dea5;
 }
 .food__list-heading{
-	margin-right: 80%;
-	font-weight: normal;
+  margin-right: 80%;
+  font-weight: normal;
   border-bottom: 2px solid $color-third;
   padding-bottom: 5px;
   width: 10%;
@@ -162,7 +188,8 @@ h1{
 .food__descript{
   @include position;
   width: 84%;
-	margin-left: 10px;
+  padding-bottom: 1px;
+  margin-left: 10px;
   font-weight: bold;
   margin-top: 12px;
   text-overflow: ellipsis;
@@ -171,10 +198,15 @@ h1{
   &:hover{
     overflow: visible;
   }
+
 }
+.food__descript--1{
+    margin-top: 6px;
+  }
 .food__descript-acompaniment{
   @include position;
-	margin-left: 10px;
+  padding-bottom: 1px;
+  margin-left: 10px;
   margin-top: 35px;
   font-size: 14px;
   width: 84%;
@@ -185,30 +217,29 @@ h1{
     overflow: visible;
   }
 }
+.acompaniement--1{
+  margin-top: 40px;
+}
 .food__descript--price{
-	position: absolute;
-  left: 90%;
+  position: absolute;
+  left: 85%;
   margin-top: 35px;
   font-weight: bold;
 }
 .btn{
-	@include btn;
+  @include btn;
   justify-content: center;
   width: 40%;
-	&:hover{
-		@include hover;
-	}
+  &:hover{
+    @include hover;
+  }
 }
-.footer--wrap{
-      position: relative;
-      top: 974px;
-    }
 footer{
-	@include footer;
+  @include footer;
     width: 100%;
     .fas{
-    	color: #fff;
-    	margin-left: 15px;
+      color: #fff;
+      margin-left: 15px;
     }
    
 }

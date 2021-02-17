@@ -143,9 +143,9 @@
   color: #fff;
   text-decoration: none;
   margin-left: 15px;
-  margin-bottom: 10px; }
-  .link-footer .other-restaurant, a .other-restaurant, i .other-restaurant {
-    margin-left: 18px; }
+  line-height: 25px; }
+  .link-footer .other, a .other, i .other {
+    margin-left: 22px; }
 
 /* mixin element mobile*/
 /*mixin version mobile pour le menu1*/
@@ -162,11 +162,19 @@
       height: auto; }
 
   .container__food--picture,
+  .container__food--picture2,
   .container__main--food {
     width: 365px;
     margin-left: 33%;
     margin-right: 33%;
     top: 10px; }
+
+  .container__main--food2 {
+    top: -170px;
+    width: 365px;
+    margin-left: 33%;
+    margin-right: 33%;
+    height: 1236px; }
 
   .food__prev--like {
     right: 25px; }
@@ -178,10 +186,16 @@
         color: #9356dc;
         transition-duration: 1500ms; }
 
+  .footer--wrap {
+    position: absolute;
+    top: 1514px; }
+
   footer {
     position: absolute;
     top: 1382px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
     background: #000; }
     footer h2 {
       font-family: shrikhand;
@@ -193,7 +207,6 @@
     footer span, footer a {
       font-family: Roboto, sans-serif;
       margin-left: 15px;
-      margin-bottom: 15px;
       cursor: pointer;
       width: fit-content; }
       footer span:hover, footer a:hover {
@@ -201,7 +214,7 @@
     footer a:hover {
       text-decoration: underline; }
 
-  span, a, .other {
+  span a .other {
     margin-bottom: 0; } }
 
 /*# sourceMappingURL=alltablet.css.map */

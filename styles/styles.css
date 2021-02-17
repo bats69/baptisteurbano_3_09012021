@@ -135,7 +135,7 @@
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
-.link-footer, a, i {
+.link-footer a i {
   justify-content: space-around;
   font-family: Roboto, sans-serif;
   width: auto;
@@ -143,9 +143,9 @@
   color: #fff;
   text-decoration: none;
   margin-left: 15px;
-  margin-bottom: 10px; }
-  .link-footer .other-restaurant, a .other-restaurant, i .other-restaurant {
-    margin-left: 18px; }
+  line-height: 25px; }
+  .link-footer a i .other {
+    margin-left: 22px; }
 
 /* mixin element mobile*/
 /*mixin version mobile pour le menu1*/
@@ -378,6 +378,8 @@ img {
   border-radius: 20px 20px 0 0; }
 
 footer {
+  display: flex;
+  flex-direction: column;
   background: #000; }
   footer h2 {
     font-family: shrikhand;
@@ -386,13 +388,12 @@ footer {
     color: #fff;
     margin-top: 15px;
     margin-bottom: 15px; }
-  footer span, footer a {
+  footer span a {
     font-family: Roboto, sans-serif;
     margin-left: 15px;
-    margin-bottom: 15px;
     cursor: pointer;
     width: fit-content; }
-    footer span:hover, footer a:hover {
+    footer span a:hover {
       text-decoration: underline; }
   footer a:hover {
     text-decoration: underline; }

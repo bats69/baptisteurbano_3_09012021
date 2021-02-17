@@ -136,8 +136,9 @@ h1 {
     font-size: 1.5rem;
     position: absolute;
     color: #000;
-    left: 25px;
-    top: 20px; }
+    width: auto;
+    top: 30%;
+    left: 30px; }
     .container__header .fas:hover {
       transform: scale(1.15); }
   .container__header img {
@@ -161,6 +162,13 @@ h1 {
     position: relative;
     width: 100%;
     top: 50px; }
+
+.food__picture--2 {
+  display: flex;
+  justify-content: center; }
+  .food__picture--2 img {
+    width: 100%;
+    margin-bottom: 75px; }
 
 .container__name-food {
   display: flex;
@@ -194,16 +202,32 @@ i {
     color: #9356dc;
     transition-duration: 1500ms; }
 
-.container__main--food2 {
+.prev__like--2 {
+  position: absolute;
+  width: 10%;
+  right: 15px;
+  font-size: 28px;
+  z-index: 1; }
+
+.far {
+  color: #000;
+  margin-top: 30px; }
+  .far:hover {
+    cursor: pointer;
+    font-weight: bolder;
+    color: #9356dc;
+    transition-duration: 1500ms; }
+
+.main__food--2 {
   display: flex;
   flex-direction: column;
+  z-index: 1;
   align-items: center;
-  width: auto;
-  height: 1155px;
+  width: 100%;
+  margin-top: -230px;
+  height: 1211px;
   background: whitesmoke;
-  border-radius: 40px 40px 0 0;
-  position: absolute;
-  top: 286px; }
+  border-radius: 40px 40px 0 0; }
 
 .container__main--food {
   display: flex;
@@ -308,6 +332,7 @@ i {
   position: absolute;
   width: 100%;
   width: 84%;
+  padding-bottom: 1px;
   margin-left: 10px;
   font-weight: bold;
   margin-top: 12px;
@@ -317,9 +342,13 @@ i {
   .food__descript:hover {
     overflow: visible; }
 
+.food__descript--1 {
+  margin-top: 6px; }
+
 .food__descript-acompaniment {
   position: absolute;
   width: 100%;
+  padding-bottom: 1px;
   margin-left: 10px;
   margin-top: 35px;
   font-size: 14px;
@@ -330,9 +359,12 @@ i {
   .food__descript-acompaniment:hover {
     overflow: visible; }
 
+.acompaniement--1 {
+  margin-top: 40px; }
+
 .food__descript--price {
   position: absolute;
-  left: 90%;
+  left: 85%;
   margin-top: 35px;
   font-weight: bold; }
 
@@ -366,10 +398,6 @@ i {
     background: linear-gradient(180deg, #ff79da, #9356dc);
     box-shadow: 5px 8px 8px #9c9c9c;
     transition-duration: 400ms; }
-
-.footer--wrap {
-  position: relative;
-  top: 974px; }
 
 footer {
   display: flex;
