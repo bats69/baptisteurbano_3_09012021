@@ -142,7 +142,6 @@
   .link-footer a .fas .other {
     margin-left: 22px; }
 
-/* mixin element mobile*/
 .loader {
   display: flex;
   width: 100%;
@@ -234,14 +233,6 @@ header img {
     cursor: pointer;
     transform: scale(1.05);
     background: linear-gradient(to top, #9356dc, 30%, #ff79da);
-    transition-duration: 400ms; }
-    .btn:hover:active {
-      transform: scale(1);
-      transition-duration: 200ms; }
-  .btn:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-    background: linear-gradient(to top, #9356dc, 30%, #ff79da);
     transition-duration: 400ms;
     box-shadow: 3px 3px 8px 2px #9c9c9c; }
     .btn:hover:active {
@@ -255,7 +246,7 @@ nav {
   display: block;
   margin-bottom: 50px; }
   nav i {
-    color: black;
+    color: #000;
     margin-left: 30px; }
 
 .nav__link--title {
@@ -294,7 +285,7 @@ nav {
     .nav__link--wrap .nav__link--choice .number--wrap {
       position: relative;
       background: #985ede;
-      color: white;
+      color: #fff;
       right: 10px;
       border-radius: 15px 15px;
       font-size: small;
@@ -460,6 +451,7 @@ footer {
   .link-footer i {
     color: #fff; }
     .link-footer i .link {
+      text-decoration: none;
       margin-left: 15px; }
     .link-footer i .other-restaurant {
       margin-left: 22px; }

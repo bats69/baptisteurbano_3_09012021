@@ -1,17 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Shrikhand&display=swap');
-@import "../libs/keyframes";
-@import "../libs/mixins.scss";
-@import "../libs/reset.css";
+@import "./libs/keyframes.scss";
+@import "./libs/mixins.scss";
+@import "./libs/reset.css";
 body{
+  font-family: Roboto, sans-serif;
   @include flex;
-  width: 100%; 
+  width: 100%;
+  @include desktop{
+    background: linear-gradient(0.25turn,$color-primary, white, $color-primary);
+  } 
 }
 header{
   @include flex;
-}
-body{
-  font-family: Roboto, sans-serif;
 }
 h1{
   font-family: shrikhand, sans-serif;
@@ -33,6 +34,10 @@ h1{
     height: auto;
     padding-top: 10px;
     padding-bottom: 10px;
+    @include desktop{
+      width: 250px;
+      height: auto;
+    }
   }
 }
 .container__food--picture2{  
@@ -65,48 +70,56 @@ h1{
   @include name-food;
 }
 .name__food-heading{
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 35px;
-    height: 20px;
-    font-size: 20pt;
-    margin-right: 90px;
-    width: 80%;
-    margin-left: 45px;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 35px;
+  height: 20px;
+  font-size: 20pt;
+  margin-right: 90px;
+  width: 80%;
+  margin-left: 45px;
 }
 .food__prev--like {
-    position: absolute;
-    width: 10%;
-    right: 15px;
-    top: 5px;
-    font-size: 28px;
-    z-index: 1;
+  position: absolute;
+  width: 10%;
+  right: 15px;
+  top: 5px;
+  font-size: 28px;
+  z-index: 1;
+  @include desktop{
+    right: 25px;
+    top: initial;
   }
-  i{
-    color: #000;
-    &:hover {
-      cursor: pointer;
-      font-weight: bolder;
-      color: $color-primary;
-      transition-duration: 1500ms;
+}
+i{
+  color: #000;
+  &:hover {
+    cursor: pointer;
+    font-weight: bolder;
+    color: $color-primary;
+    transition-duration: 1500ms;
   }
 }
 .prev__like--2{ 
-    position: absolute;
-    width: 10%;
-    right: 15px;
-    font-size: 28px;
-    z-index: 1;
+  position: absolute;
+  width: 10%;
+  right: 15px;
+  font-size: 28px;
+  z-index: 1;
+  @include desktop{
+    margin-left: 400px;
+    right: initial;
   }
-  .far{
-    color: #000;
-    &:hover {
-      cursor: pointer;
-      font-weight: bolder;
-      color: $color-primary;
-      transition-duration: 1500ms;
+}
+.far{
+  margin-top: 30px;
+  color: #000;
+  &:hover {
+    cursor: pointer;
+    font-weight: bolder;
+    color: $color-primary;
+    transition-duration: 1500ms;
   }
-  margin-top: 30px
 }
 .main__food--2{
   display: flex;
@@ -129,6 +142,17 @@ h1{
   background: lighten(#cfcfcf, 15%);
   border-radius: 40px 40px 0 0;
 }
+.container__food--picture,
+.food__picture--2,
+.container__main--food,
+.main__food--2{
+  @include desktop{
+    width: 365px;
+    margin-left: 50%;
+    margin-right: 50%;
+    top: 10px;
+  }
+}
 .food__wrap{
   @include food-wrap;
   position: relative;
@@ -147,15 +171,15 @@ h1{
       &:hover .fas{
         animation: rotate 800ms;
     }
-        &:hover .food__descript{
-          @include ellipsis;
-          transform: scaleX(1);
-          transition-duration: 500ms;
+      &:hover .food__descript{
+        @include ellipsis;
+        transform: scaleX(1);
+        transition-duration: 500ms;
     }
-        &:hover .food__descript-acompaniment{
-          @include ellipsis;
-          transform: scaleX(1);
-          transition-duration: 500ms;
+      &:hover .food__descript-acompaniment{
+        @include ellipsis;
+        transform: scaleX(1);
+        transition-duration: 500ms;
     }
 }   
 .box .fas{
@@ -198,7 +222,6 @@ h1{
   &:hover{
     overflow: visible;
   }
-
 }
 .food__descript--1{
     margin-top: 6px;
@@ -230,16 +253,59 @@ h1{
   @include btn;
   justify-content: center;
   width: 40%;
+  margin-top: 70px;
   &:hover{
     @include hover;
   }
 }
-footer{
-  @include footer;
+.footer--wrap{
+  @include desktop{
+    top: 1514px;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  background: $color-footer;
+  @include desktop{
+    position: absolute;
+    top: 1400px;
+    z-index: 1;
     width: 100%;
-    .fas{
-      color: #fff;
-      margin-left: 15px;
+  }
+    h2{  
+      font-family: shrikhand;
+      font-size: 24px;
+      margin-left: 30px;
+      color: $color-init;
+      margin-top: 15px;
+      margin-bottom: 15px;
     }
-   
+    .link{
+      font-family: Roboto, sans-serif;
+      cursor: pointer;
+      color: $color-init;
+      width: fit-content;
+      text-decoration: none;
+      margin-left: 15px;
+      &:hover{
+        text-decoration: underline;
+    }
+  }
+}
+.link-footer {
+  justify-content: space-around;
+  font-family: Roboto, sans-serif;
+  width: auto;
+  height: auto;
+  color: $color-init;
+  text-decoration: none;
+  margin-left: 15px;
+  line-height: 25px;
+  .fas{
+    color: $color-init;
+    .other-restaurant{
+      margin-left: 22px;
+    }
+  }
 }

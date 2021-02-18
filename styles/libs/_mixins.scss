@@ -1,6 +1,9 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-third: #99e2d0;
+$color-init: #fff;
+$color-footer: #000;
+$color-icon: #000;
 $background-color: #cfcfcf;
 $shadow: darken($background-color, 20%);
 $breakpoints:(
@@ -10,6 +13,10 @@ $breakpoints:(
 	@media screen and (min-width: map-get($breakpoints, desktop)){
 		@content;
 	}
+}
+@mixin position{
+	position: absolute;
+	width: 100%;
 }
 @mixin header{
 	display: flex;
@@ -24,10 +31,10 @@ $breakpoints:(
 	box-shadow: 3px 3px 8px 2px $color;	
 }
 @mixin img{
-		background: #fff;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		margin-bottom: 25px;
+	background: #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 25px;
 }
 @mixin name-food{
 	display: flex;
@@ -43,41 +50,38 @@ $breakpoints:(
 }
 @mixin food-heading{
 	margin-top: 35px;
-	 height: 20px;
+	height: 20px;
     font-size: 1.5rem;
 }
 @mixin food-wrap{
 	display: flex;
-		flex-direction: column;
-		align-items: flex-start;  
-		width: 90%;
-    	height: 60px;
-		border-radius: 15px;
-    	
-    	cursor: pointer;
-		border: 2px solid #fff;
-		background: #fff;
-		margin-top: 15px;
-		font-size: 15px; 
-		animation: affich $anim-dur backwards;
-			@for $i from 1 through 10 {
-				&--#{$i} {
-					animation-delay: $animation-delay * $i;
-					transform-origin: top;
-			}
-			
+	flex-direction: column;
+	align-items: flex-start;  
+	width: 90%;
+	height: 60px;
+	border-radius: 15px;
+	cursor: pointer;
+	border: 2px solid #fff;
+	background: #fff;
+	margin-top: 15px;
+	font-size: 15px; 
+	animation: affich $anim-dur backwards;
+		@for $i from 1 through 10 {
+			&--#{$i} {
+				animation-delay: $animation-delay * $i;
+				transform-origin: top;
 		}
+	}
 }
 @mixin fleche{
-	font-size: 2rem;
-    	position: absolute;
-    	align-items: flex-start;
-    	margin-left: -470px;
-		color: #000;
-		top: 25px;
+	font-size: 1.5rem;
+	position: absolute;
+	align-items: flex-start;
+	color: #000;
+	top: 25px;
 		&:hover{
 			transform: scale(1.15);
-		}		
+	}		
 }
 @mixin hover{
 	cursor: pointer;
@@ -106,8 +110,8 @@ $breakpoints:(
 			margin-left: 15px;
 			cursor: pointer;
 			width: fit-content;
-			&:hover{
-				text-decoration: underline;
+				&:hover{
+					text-decoration: underline;
 			}
 		}
 			a:hover{
@@ -136,19 +140,12 @@ $breakpoints:(
 	display: flex;
 	align-items: center;    
 	width: 25%;
-    justify-content: center;
+	justify-content: center;
 	border: 0px groove lighten($color-primary, 13%);
 	height: 50px;
 	color: #fff;
 	border-radius: 30px 30px;
 	background: $color-primary;
-	&:hover{
-		@include hover;
-			&:active{
-				transform: scale(1);
-				transition-duration: 200ms;
-		}
-	}
 }
 @mixin flex{
 	display: flex;
@@ -168,9 +165,6 @@ $animation-delay: $anim-dur / 9;
 			@for $i from 1 through 9 {
 				&--#{$i} {
 					animation-delay: $animation-delay * $i;
-			}
-		}	
+		}
+	}	
 }
-
-			/* mixin element mobile*/
-

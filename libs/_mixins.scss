@@ -1,6 +1,6 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
-$color-third: #99e2d0; 
+$color-third: #99e2d0;
 @mixin header{
 	display: flex;
 	justify-content: center;
@@ -10,15 +10,11 @@ $color-third: #99e2d0;
 		height: 60px;
 	}
 }
-@mixin position{
-	position: absolute;
-	width: 100%;
-}
 @mixin img{
-	background: #fff;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	margin-bottom: 25px;
+		background: #fff;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		margin-bottom: 25px;
 }
 @mixin name-food{
 	display: flex;
@@ -27,58 +23,52 @@ $color-third: #99e2d0;
     justify-content: flex-end;
 }
 @mixin ellipsis{
-	width: 55%;
+	width: 65%;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 @mixin food-heading{
 	margin-top: 35px;
-	height: 20px;
-    font-size: 22pt;
+	 height: 20px;
+    font-size: 1.5rem;
 }
 @mixin food-wrap{
 	display: flex;
-	flex-direction: column;
-	align-items: flex-start;  
-	width: 90%;
-	@include overflow;
-	height: 60px;
-	border-radius: 15px;
-	box-shadow: 3px 3px 8px 2px #CFCFCF;
-	cursor: pointer;
-	border: 2px solid #fff;
-	background: #fff;
-	margin-top: 15px;
-	font-size: 15px; 
-	animation: affich $anim-dur backwards;
-		@for $i from 1 through 10 {
-			&--#{$i} {
-				animation-delay: $animation-delay * $i;
+		flex-direction: column;
+		align-items: flex-start;  
+		width: 90%;
+    	height: 60px;
+		border-radius: 15px;
+    	box-shadow: 3px 3px 8px 2px #CFCFCF;
+    	cursor: pointer;
+		border: 2px solid #fff;
+		background: #fff;
+		margin-top: 15px;
+		font-size: 15px; 
+		animation: affich $anim-dur backwards;
+			@for $i from 1 through 10 {
+				&--#{$i} {
+					animation-delay: $animation-delay * $i;
+			}
+			transform-origin: top;
 		}
-	}
-
-}
-$width: 80%;
-@mixin overflow{
-	@if $width <= 70% { $width:
-			(text-overflow: hidden);
-	} @else {
-		$width: (text-overflow: ellipsis);	
-	}
 }
 @mixin fleche{
-	font-size: 1.5rem;
-	position: absolute;
-	color: #000;
-	&:hover{
-		transform: scale(1.15);
-	}		
+	font-size: 2rem;
+    	position: absolute;
+    	align-items: flex-start;
+    	margin-left: -470px;
+		color: #000;
+		top: 25px;
+		&:hover{
+			transform: scale(1.15);
+		}		
 }
 @mixin hover{
 	cursor: pointer;
 	transform: scale(1.05);
-	background: linear-gradient(180deg, $color-secondary, $color-primary);
+	background: linear-gradient(to top,$color-primary,30%,$color-secondary);
 	box-shadow: 5px 8px 8px darken(#cfcfcf,20%);
 	transition-duration: 400ms;
 }
@@ -87,7 +77,6 @@ $width: 80%;
 	flex-direction: column;  
 }
 @mixin footer{
-	@include align;
 	background: #000;
 		h2{  
 			font-family: shrikhand;
@@ -100,27 +89,28 @@ $width: 80%;
 		span,a{
 			font-family: Roboto, sans-serif;
 			margin-left: 15px;
-			line-height: 1.8em;
-			color: #fff;
+			margin-bottom: 15px;
 			cursor: pointer;
 			width: fit-content;
-			width: -moz-fit-content;
 			&:hover{
 				text-decoration: underline;
 			}
 		}
 			a:hover{
 				text-decoration: underline;
-	}
+		}
 }
 .link-footer, a, i{
+	justify-content: space-around;
 	font-family: Roboto, sans-serif;
 	width: auto;
 	height: auto;
 	color: #fff;
 	text-decoration: none;
+	margin-left: 15px;
+	margin-bottom: 10px;
 	.other-restaurant{
-		margin-left: 22px;
+		margin-left: 18px;
 	}	
 }
 @mixin like{
@@ -129,20 +119,18 @@ $width: 80%;
     font-size: x-large;
 }
 @mixin btn{
- 	display: flex;
-    align-items: center; 
-    margin: auto;
-    width: fit-content;
-    width: -moz-fit-content;
-    padding: 15px;   
-    color: #fff;
-    border-radius: 30px 30px;
-    background: $color-primary;
-    padding-right: 10px;
-    box-shadow: 5px 8px 8px #cfcfcf;
+	display: flex;
+	align-items: center;    
+	width: 25%;
+    justify-content: center;
+	border: 0px groove lighten($color-primary, 13%);
+	height: 50px;
+	color: #fff;
+	border-radius: 30px 30px;
+	background: $color-primary;
+	box-shadow: 5px 8px 8px #cfcfcf;
 	&:hover{
 		@include hover;
-		background: linear-gradient(to top,$color-primary,20%,#b68de7);
 			&:active{
 				transform: scale(1);
 				transition-duration: 200ms;

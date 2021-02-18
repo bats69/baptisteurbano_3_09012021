@@ -5,11 +5,11 @@
 @import "./libs/reset.css";
 .loader{ 
   display: flex;
-    width: 100%;
-    justify-content: center;
-    position: absolute;
-    z-index: 1;
-    animation: background 3200ms;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  animation: background 3200ms;
   i{
     position: fixed;
     margin: 0;
@@ -43,13 +43,13 @@ header img{
   height: 70px;
   background: linear-gradient(to bottom,grey,1%,#ececec);
   .fas{
-    color: #000;
+    color: $color-icon;
     margin: 0;
   }
-    .localisation-search__city{
-      margin-left: 15px;
-      font-weight: bold;
-      letter-spacing: 0em;
+  .localisation-search__city{
+    margin-left: 15px;
+    font-weight: bold;
+    letter-spacing: 0em;
   }
 }
 .website__descript--heading{
@@ -69,14 +69,14 @@ header img{
         }
       }
     }   
-      .website__descript--subtitle{
-        text-align: center;
-        margin-bottom: 30px;
-        .suits{
-          display: block;
-          @include desktop{
-            display: inline;
-          }
+    .website__descript--subtitle{
+      text-align: center;
+      margin-bottom: 30px;
+      .suits{
+        display: block;
+        @include desktop{
+          display: inline;
+      }
     }  
   }
 }
@@ -84,29 +84,29 @@ header img{
   height: 100px;
   display: flex;
   justify-content: center;
-  } 
-  .btn{
-   @include btn;
-   @include shadow($color: $background-color);
-   width: 250px;
+} 
+.btn{
+  @include btn;
+  @include shadow($color: $background-color);
+  width: 250px;
   &:hover{
     @include hover;
     @include shadow($color: $shadow);
-      &:active{
-        transform: scale(1);
-        transition-duration: 200ms;
+    &:active{
+      transform: scale(1);
+      transition-duration: 200ms;
     }
   }
-    .link-restaurant{
-      color:#fff;
-      text-align: center;
+  .link-restaurant{
+    color: $color-init;
+    text-align: center;
   }
 }
 nav{  
   display: block;
   margin-bottom: 50px;
   i{
-    color: black;
+    color: $color-icon;
     margin-left: 30px;
   }
 }
@@ -122,121 +122,121 @@ nav{
     justify-content: space-evenly;
     flex-direction: row;
   }
-    .nav__link--choice{
-        @include shadow ($color: $background-color);  
-        display: inline-flex;
-        align-items: center;
-        width: auto;
-        margin: 15px;
-        border: 0px solid $color-primary;
-        margin-left: 25px;
-        border-radius: 20px;
-        height: 70px;
-        background: lighten($background-color, 15%);
-        @include desktop{
-           width: 282px;
-        }
-        &:hover{
-            @include hover;
-            @include shadow($color: $shadow); 
-            background:lighten($color-primary, 38%);      
-        }
-        .number--wrap{
-            position: relative;
-            background: lighten($color-primary, 2%);
-            color: white;
-            right: 10px;
-            border-radius: 15px 15px;
-            font-size: small;
-            width: 20px;
-            height: 20px;
-            font-size: 12px;
-        .number{
-            position: relative;
-            top: 4px;
-            left: 6px;
+  .nav__link--choice{
+    @include shadow ($color: $background-color);  
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    margin: 15px;
+    border: 0px solid $color-primary;
+    margin-left: 25px;
+    border-radius: 20px;
+    height: 70px;
+    background: lighten($background-color, 15%);
+      @include desktop{
+        width: 282px;
+      }
+      &:hover{
+        @include hover;
+        @include shadow($color: $shadow); 
+        background:lighten($color-primary, 38%);      
+      }
+    .number--wrap{
+        position: relative;
+        background: lighten($color-primary, 2%);
+        color: $color-init;
+        right: 10px;
+        border-radius: 15px 15px;
+        font-size: small;
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    .number{
+        position: relative;
+        top: 4px;
+        left: 6px;
       }
     }
   }
 }
 .icon-fonc-style .fas{
-    color: $color-primary;
+  color: $color-primary;
 }
 .fas_fa-mobile-alt{
-    margin-left: inherit; 
+  margin-left: inherit; 
 }
 .nav__link--list{  
-    margin-left: inherit;
-    font-weight: bold;
+  margin-left: inherit;
+  font-weight: bold;
 }
 .food__prev{
-    background: white;
-    border-radius: 15px;
-    padding-bottom: 25px;
-    height: auto;
-    margin-left: 15px;
-    margin-right: 15px;
-    cursor: pointer;
+  background: white;
+  border-radius: 15px;
+  padding-bottom: 25px;
+  height: auto;
+  margin-left: 15px;
+  margin-right: 15px;
+  cursor: pointer;
 }
 .food__prev--ban{
-    position: absolute;
-    width: auto;
-    cursor: pointer;
-    right: 25px;
-    margin-top: 20px;
-    padding: 10px;
-    z-index: 1;
-    background-color: $color-third;
-    opacity: 1;
-    color: darken($color-third, 30%);
-    text-align: center;
-    @include desktop{
-      display: flex;
-      margin-left: 225px;
-      top: 670px;
-      right: inherit;
-      margin-top: inherit;
-    }
+  position: absolute;
+  width: auto;
+  cursor: pointer;
+  right: 25px;
+  margin-top: 20px;
+  padding: 10px;
+  z-index: 1;
+  background-color: $color-third;
+  opacity: 1;
+  color: darken($color-third, 30%);
+  text-align: center;
+  @include desktop{
+    display: flex;
+    margin-left: 225px;
+    top: 670px;
+    right: inherit;
+    margin-top: inherit;
+  }
 }
 .food__prev--ban2{
-   position: absolute;
-    width: auto;
-    cursor: pointer;
-    right: 25px;
-    margin-top: 20px;
-    padding: 10px;
-    z-index: 1;
-    background-color: $color-third;
-    opacity: 1;
-    color: darken($color-third, 30%);
-    text-align: center;
-    @include desktop{
-      display: flex;
-      margin-left: 225px;
-      top: 960px;
-      right: inherit;
-      margin-top: inherit;
-    }
+  position: absolute;
+  width: auto;
+  cursor: pointer;
+  right: 25px;
+  margin-top: 20px;
+  padding: 10px;
+  z-index: 1;
+  background-color: $color-third;
+  opacity: 1;
+  color: darken($color-third, 30%);
+  text-align: center;
+  @include desktop{
+    display: flex;
+    margin-left: 225px;
+    top: 960px;
+    right: inherit;
+    margin-top: inherit;
   }
+}
 .food__prev--like {
-    position: relative;
-    bottom: 60px;
-    margin-left: 80%;
-    margin-right: 8%;
-    font-size: 28px;
-    z-index: 1;
-    @include desktop{
-      margin-left: 15%;
-      margin-right: inherit;
-    }
+  position: relative;
+  bottom: 60px;
+  margin-left: 80%;
+  margin-right: 8%;
+  font-size: 28px;
+  z-index: 1;
+  @include desktop{
+    margin-left: 15%;
+    margin-right: inherit;
   }
-  i{
-    color: #000;
-    &:hover {
-      cursor: pointer;
-      font-weight: bolder;
-      color: $color-primary;
-      transition-duration: 1500ms;
+}
+i{
+  color: $color-icon;
+  &:hover {
+    cursor: pointer;
+    font-weight: bolder;
+    color: $color-primary;
+    transition-duration: 1500ms;
   }
 }
 a{
@@ -244,14 +244,14 @@ a{
   z-index: 0;
 }
 .food__prev--name{
-    font-weight: bold;
-    font-size: 20px;
-    margin-left: 15px;
-    margin-top: 8px;
-    line-height: 1.8em;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 15px;
+  margin-top: 8px;
+  line-height: 1.8em;
 }
 .food__prev--place{
-      margin-left: 15px;
+  margin-left: 15px;
 }
 .food__prev--heading{
   @include align;
@@ -263,14 +263,14 @@ a{
   @include desktop{
      align-items: center;
   }
-    a{
-      color: inherit;
-    }
-    h2{
-      font-size: 26px;
-      margin: 15px;
-      text-align: center;
-    }
+  a{
+    color: inherit;
+  }
+  h2{
+    font-size: 26px;
+    margin: 15px;
+    text-align: center;
+  }
 }
 img{
   width: 100%;
@@ -285,46 +285,46 @@ img{
 footer {
   display: flex;
   flex-direction: column;
-  background: #000;
+  background: $color-footer;
     h2{  
       font-family: shrikhand;
       font-size: 24px;
       margin-left: 30px;
-      color: #fff;
+      color: $color-init;
       margin-top: 15px;
       margin-bottom: 15px;
     }
     .link{
       font-family: Roboto, sans-serif;
       cursor: pointer;
-      color: #fff;
+      color: $color-init;
       width: fit-content;
       &:hover{
         text-decoration: underline;
-      }
     }
-      a:hover{
-        text-decoration: underline;
-    }
+  }
+  a:hover{
+    text-decoration: underline;
+  }
 }
 .link-footer {
   justify-content: space-around;
   font-family: Roboto, sans-serif;
   width: auto;
   height: auto;
-  color: #fff;
+  color: $color-init;
   text-decoration: none;
   margin-left: 15px;
   line-height: 25px;
   i{
-    color: #fff;
+    color: $color-init;
     .link{
+      text-decoration: none;
       margin-left: 15px;
-      
     }
     .other-restaurant{
-        margin-left: 22px;
-      }
+      margin-left: 22px;
+    }
   }
 }
 

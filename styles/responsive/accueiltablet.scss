@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Shrikhand&display=swap');
-@import "../libs/_keyframes.scss";
+@import "../libs/keyframes.scss";
 @import "../libs/mixins.scss";
 @import "../libs/reset.css";
 @media screen and (min-width: 481px) and (max-width: 1101px){
@@ -16,11 +16,10 @@
 			flex-wrap: wrap;
 			justify-content: center;
 		}
-		.suits{
-			display: contents;
+		.suit{
+			margin-left: 5px;
 		}
 	.link-restaurant__wrap{
-
 		width: auto;
 		padding-left: 10px;
 	}	
