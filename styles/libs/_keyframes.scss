@@ -38,17 +38,14 @@ $color-third: #99e2d0;
 }
 @keyframes ellipsis{
 	0%{
-		text-overflow: hidden;
 		transform: scaleX(0);
 		opacity: 0;
 	}
 	50%{
-		text-overflow: hidden;
 		transform: scaleX(0.5);
 		opacity: 0.5;
 	}
 	100%{
-		text-overflow: hidden;
 		transform: scaleX(1);
 		opacity: 1;
 		animation-delay: 200ms;
@@ -152,7 +149,7 @@ $color-third: #99e2d0;
 		opacity: 0;
 		font-size: 12px;
 	}
-	transform-delay: 3200ms;
+	
 }
 @keyframes affich{
 	0%{
@@ -181,7 +178,6 @@ $color-third: #99e2d0;
 		transform: rotate(360deg);
 		-moz-webkit-transform: rotate(360deg);
 	}
-	transition-duration: 8s;
 }
 @keyframes spin{
   0%{

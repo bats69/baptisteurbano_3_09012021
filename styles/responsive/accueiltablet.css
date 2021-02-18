@@ -27,15 +27,12 @@
     display: none; } }
 @keyframes ellipsis {
   0% {
-    text-overflow: hidden;
     transform: scaleX(0);
     opacity: 0; }
   50% {
-    text-overflow: hidden;
     transform: scaleX(0.5);
     opacity: 0.5; }
   100% {
-    text-overflow: hidden;
     transform: scaleX(1);
     opacity: 1;
     animation-delay: 200ms; } }
@@ -110,8 +107,7 @@
   100% {
     transform: translateX(100%);
     opacity: 0;
-    font-size: 12px; }
-  transform-delay: 3200ms; }
+    font-size: 12px; } }
 @keyframes affich {
   0% {
     transform: scaleY(0); }
@@ -128,14 +124,13 @@
     -moz-webkit-transform: rotate(0deg); }
   to {
     transform: rotate(360deg);
-    -moz-webkit-transform: rotate(360deg); }
-  transition-duration: 8s; }
+    -moz-webkit-transform: rotate(360deg); } }
 @keyframes spin {
   0% {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
-.link-footer, a, i {
+.link-footer a .fas {
   justify-content: space-around;
   font-family: Roboto, sans-serif;
   width: auto;
@@ -143,14 +138,11 @@
   color: #fff;
   text-decoration: none;
   margin-left: 15px;
-  margin-bottom: 10px; }
-  .link-footer .other-restaurant, a .other-restaurant, i .other-restaurant {
-    margin-left: 18px; }
+  line-height: 25px; }
+  .link-footer a .fas .other {
+    margin-left: 22px; }
 
 /* mixin element mobile*/
-/*mixin version mobile pour le menu1*/
-/* mixin version mobile menu2.3.4.*/
-/*mixin version mobile page accueil*/
 @media screen and (min-width: 481px) and (max-width: 1101px) {
   header {
     display: flex; }
@@ -203,7 +195,8 @@
   .food-prev__title {
     text-align: center; }
 
-  .food__prev--ban {
+  .food__prev--ban,
+  .food__prev--ban2 {
     position: absolute;
     right: 30%; }
 
@@ -223,6 +216,8 @@
         transition-duration: 1500ms; }
 
   footer {
+    display: flex;
+    flex-direction: column;
     background: #000;
     display: flex;
     flex-direction: column; }
@@ -233,13 +228,12 @@
       color: #fff;
       margin-top: 15px;
       margin-bottom: 15px; }
-    footer span, footer a {
+    footer span a {
       font-family: Roboto, sans-serif;
       margin-left: 15px;
-      margin-bottom: 15px;
       cursor: pointer;
       width: fit-content; }
-      footer span:hover, footer a:hover {
+      footer span a:hover {
         text-decoration: underline; }
     footer a:hover {
       text-decoration: underline; }

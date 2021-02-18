@@ -3,10 +3,6 @@
 @import "./libs/_keyframes.scss";
 @import "./libs/_mixins.scss";
 @import "./libs/reset.css";
-$color-primary: #9356dc;
-$color-secondary: #ff79da;
-$color-third: #99e2d0;
-$background-color: #cfcfcf;
 .loader{ 
   display: flex;
     width: 100%;
@@ -33,7 +29,13 @@ header img{
   width: 50%;
   margin: 20px auto;
   left: 25%;
-}
+  @include desktop{
+    display: flex;
+    height: auto;
+    width: auto;
+    left: 0;
+  }
+} 
 .localisation-search__heading{
   display: flex;
   justify-content: center;
@@ -62,6 +64,9 @@ header img{
       text-align: center;
       .suit{
         display: block;
+        @include desktop{
+          display: inline;
+        }
       }
     }   
       .website__descript--subtitle{
@@ -69,6 +74,9 @@ header img{
         margin-bottom: 30px;
         .suits{
           display: block;
+          @include desktop{
+            display: inline;
+          }
     }  
   }
 }
@@ -79,9 +87,11 @@ header img{
   } 
   .btn{
    @include btn;
+   @include shadow($color: $background-color);
    width: 250px;
   &:hover{
     @include hover;
+    @include shadow($color: $shadow);
       &:active{
         transform: scale(1);
         transition-duration: 200ms;
@@ -108,19 +118,27 @@ nav{
 .nav__link--wrap{
   display: flex;
   flex-direction: column;
-    .nav__link--choice{  
+  @include desktop{
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+    .nav__link--choice{
+        @include shadow ($color: $background-color);  
         display: inline-flex;
         align-items: center;
         width: auto;
         margin: 15px;
         border: 0px solid $color-primary;
-        box-shadow:5px 5px 8px $background-color;
         margin-left: 25px;
         border-radius: 20px;
         height: 70px;
         background: lighten($background-color, 15%);
+        @include desktop{
+           width: 282px;
+        }
         &:hover{
-            @include hover; 
+            @include hover;
+            @include shadow($color: $shadow); 
             background:lighten($color-primary, 38%);      
         }
         .number--wrap{
@@ -160,7 +178,8 @@ nav{
     margin-right: 15px;
     cursor: pointer;
 }
-.food__prev--ban{
+.food__prev--ban,
+.food__prev--ban2{
     position: absolute;
     width: auto;
     cursor: pointer;
@@ -172,7 +191,19 @@ nav{
     opacity: 1;
     color: darken($color-third, 30%);
     text-align: center;
+    @include desktop{
+      display: flex;
+      margin-left: 225px;
+      top: 670px;
+      right: inherit;
+      margin-top: inherit;
+    }
 }
+.food__prev--ban2{
+    @include desktop{
+      top: 960px;
+    }
+  }
 .food__prev--like {
     position: relative;
     bottom: 60px;
@@ -180,6 +211,10 @@ nav{
     margin-right: 8%;
     font-size: 28px;
     z-index: 1;
+    @include desktop{
+      margin-left: 15%;
+      margin-right: inherit;
+    }
   }
   i{
     color: #000;
@@ -211,6 +246,9 @@ a{
   align-content: center;
   height: auto;
   justify-content: space-around;
+  @include desktop{
+     align-items: center;
+  }
     a{
       color: inherit;
     }
@@ -224,6 +262,11 @@ img{
   width: 100%;
   height: auto;
   border-radius: 20px 20px 0 0;
+  @include desktop{
+    border-radius:15px 15px 0 0;
+    width: 335px;
+    height: 175px;
+  }
 }
 footer {
   display: flex;
@@ -270,79 +313,7 @@ footer {
       }
   }
 }
-@media all and (min-width: 1102px) {
-  header img{
-    display: flex;
-    height: auto;
-    width: auto;
-    left: 0;
-  }
-  .website__descript--heading .website__descript--title .suit,
-  .website__descript--heading .website__descript--subtitle .suits{
-    display: inline;
-  }
-  .nav__link--wrap{
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  .nav__link--choice{
-        width: 282px;
-  }
-}
-.food-prev__heading{
-  @include align;
-  flex-wrap: wrap;
-  background:lighten($background-color, 15%);
-  align-content: center;
-  height: 1200px;
-    justify-content: space-around;
-    a{
-      color: inherit;
-    }
-    h2{
-      font-size: 26px;
-      margin: 20px;
-      text-align: center;
-    }
-}
-img{
-  border-radius:15px 15px 0 0;
-  width: 335px;
-  height: 175px;
-  cursor: pointer;
-}
-.container__food__prev--menu{
-  display: flex;
-  border: 1px solid #000;
-}
-.food__prev--heading{
-  align-items: center;
-}
-.food__prev .food__prev--ban {
-    display: flex;
-    margin-left: 225px;
-    top: 670px;
-    right: inherit;
-    margin-top: inherit;
-  }
-  .food__prev--ban2{
-    display: flex;
-    margin-left: 225px;
-    top: 960px;
-    right: inherit;
-    margin-top: inherit;
-    position: absolute;
-    width: auto;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 1;
-    background-color: $color-third;
-    opacity: 1;
-    color: darken($color-third, 30%);
-    text-align: center;
-  }
-  .food__prev--like{
-    margin-left: 15%;
-    margin-right: inherit;
-  }
-}
+
+
+
+ 
