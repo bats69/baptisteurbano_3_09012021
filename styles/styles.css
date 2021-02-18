@@ -325,7 +325,26 @@ nav {
   margin-right: 15px;
   cursor: pointer; }
 
-.food__prev--ban,
+.food__prev--ban {
+  position: absolute;
+  width: auto;
+  cursor: pointer;
+  right: 25px;
+  margin-top: 20px;
+  padding: 10px;
+  z-index: 1;
+  background-color: #99e2d0;
+  opacity: 1;
+  color: #32b091;
+  text-align: center; }
+  @media screen and (min-width: 1102px) {
+    .food__prev--ban {
+      display: flex;
+      margin-left: 225px;
+      top: 670px;
+      right: inherit;
+      margin-top: inherit; } }
+
 .food__prev--ban2 {
   position: absolute;
   width: auto;
@@ -339,17 +358,8 @@ nav {
   color: #32b091;
   text-align: center; }
   @media screen and (min-width: 1102px) {
-    .food__prev--ban,
     .food__prev--ban2 {
-      display: flex;
-      margin-left: 225px;
-      top: 670px;
-      right: inherit;
-      margin-top: inherit; } }
-
-@media screen and (min-width: 1102px) {
-  .food__prev--ban2 {
-    top: 960px; } }
+      top: 960px; } }
 
 .food__prev--like {
   position: relative;

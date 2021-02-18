@@ -178,8 +178,7 @@ nav{
     margin-right: 15px;
     cursor: pointer;
 }
-.food__prev--ban, 
-.food__prev--ban2{
+.food__prev--ban{
     position: absolute;
     width: auto;
     cursor: pointer;
@@ -200,6 +199,17 @@ nav{
     }
 }
 .food__prev--ban2{
+   position: absolute;
+    width: auto;
+    cursor: pointer;
+    right: 25px;
+    margin-top: 20px;
+    padding: 10px;
+    z-index: 1;
+    background-color: $color-third;
+    opacity: 1;
+    color: darken($color-third, 30%);
+    text-align: center;
     @include desktop{
       top: 960px;
     }
