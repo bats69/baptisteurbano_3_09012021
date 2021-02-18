@@ -211,7 +211,11 @@ nav{
     color: darken($color-third, 30%);
     text-align: center;
     @include desktop{
+      display: flex;
+      margin-left: 225px;
       top: 960px;
+      right: inherit;
+      margin-top: inherit;
     }
   }
 .food__prev--like {

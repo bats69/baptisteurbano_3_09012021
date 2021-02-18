@@ -188,7 +188,7 @@
       margin: 15px;
       text-align: center; }
 
-  a {
+  .map {
     margin-left: 25%;
     margin-right: 25%; }
 
@@ -237,7 +237,7 @@
         text-decoration: underline; }
     footer a:hover {
       text-decoration: underline; }
-    footer a {
+    footer .link {
       line-height: 35px; } }
 
 /*# sourceMappingURL=accueiltablet.css.map */
