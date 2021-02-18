@@ -36,6 +36,24 @@ $color-third: #99e2d0;
 		display: none;
 	}
 }
+@keyframes ellipsis{
+	0%{
+		text-overflow: hidden;
+		transform: scaleX(0);
+		opacity: 0;
+	}
+	50%{
+		text-overflow: hidden;
+		transform: scaleX(0.5);
+		opacity: 0.5;
+	}
+	100%{
+		text-overflow: hidden;
+		transform: scaleX(1);
+		opacity: 1;
+		animation-delay: 200ms;
+	}
+}
 @keyframes loader{
 	0% {
 		transform: scale(0) rotate(45deg);
@@ -67,18 +85,22 @@ $color-third: #99e2d0;
 	}
 }
 @keyframes like{
-	0%{
-      	color: $color-primary;
-	}
-	33%{
-		color: $color-primary;
-	}
-	66%{
-		color: $color-secondary
-	}
-	100%{
-		color: $color-secondary;
-	}
+	0% {
+       transform: scale(0);
+        opacity: 0;
+    }
+    33%{
+    	transform: scale(0.33);
+    	opacity: 0.3;
+    }
+    66%{
+    	transform: scale(0.66);
+    	opacity: 0.6;
+    }
+    100% {
+        font-size: inherit;
+        opacity: 1;
+    }
 }
 @keyframes checked{
 	0%{
@@ -94,17 +116,53 @@ $color-third: #99e2d0;
 		transition-duration: 2000ms;
 	}
 }
+@keyframes suite{
+	
+	
+	0%{
+		transform: translateX(0%);
+		opacity: 0;
+		font-size: 12px;
+	}
+	10%{
+		opacity: 0.2;
+	}
+	20%{
+		opacity: 0.5;
+	}
+	30%{
+		opacity: 0.8;
+	}
+	50%{
+		transform: translateX(50%);
+		opacity: 1;
+		font-size: 19px;
+	}
+	70%{
+		opacity: 0.8;
+	}
+	80%{
+		opacity: 0.5;
+	}
+	90%{
+		opacity: 0.2;
+	}
+	100%{
+		transform: translateX(100%);
+		opacity: 0;
+		font-size: 12px;
+	}
+	transform-delay: 3200ms;
+}
 @keyframes affich{
 	0%{
 		transform: scaleY(0);
-		opacity: 0;
-		transform-origin: top;
+		
 	}
 	100%{
 		transform: scaleY(1);
-		opacity: 1;
-		transform-origin: top;
 	}
+
 }
 @keyframes box{
 	0%{
@@ -117,9 +175,11 @@ $color-third: #99e2d0;
 @keyframes rotate{
 	from{
 		transform: rotate(0deg);
+		-moz-webkit-transform: rotate(0deg);
 	}
 	to{
 		transform: rotate(360deg);
+		-moz-webkit-transform: rotate(360deg);
 	}
 	transition-duration: 8s;
 }
