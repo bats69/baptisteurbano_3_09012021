@@ -3,15 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./scss/styles.scss:./styles/styles/styles.css",
-    "sass": "sass --watch ./styles/scss/menu.scss:./styles/styles/menu.css",
-    "sass": "sass --watch ./styles/scss/all.scss:./styles/styles/all.css",
-    "sass": "sass --watch ./styles/responsive/accueilmobil.scss:./styles/resonsive/accueilmobil.css",
-    "sass": "sass --watch ./styles/responsive/menumobil.scss:.styles/responsive/menumobil.css",
-    "sass": "sass --watch ./styles/responsive/allmobil.scss:.styles/responsive/allmobil.css",
+    "sass": "sass --watch ./styles/styles.scss:./styles/styles.css",
+    "sass": "sass --watch ./styles/menu.scss:./styles/menu.css",
     "sass": "sass --watch ./styles/responsive/alltablet.scss:./styles/responsive/alltablet.css",
     "sass": "sass --watch ./styles/responsive/accueiltablet.scss:./styles/responsive/accueiltablet.css",
-    "prefix": "postcss ./styles/styles/styles.css --use autoprefixer -d ./styles/styles/styles.css/prefixed/"
+    "prefix": "postcss ./styles/styles.css --use autoprefixer -d ./styles/styles.css/prefixed/"
   },
   "author": "",
   "license": "ISC",

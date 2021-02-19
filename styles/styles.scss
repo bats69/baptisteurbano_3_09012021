@@ -179,17 +179,7 @@ nav{
   cursor: pointer;
 }
 .food__prev--ban{
-  position: absolute;
-  width: auto;
-  cursor: pointer;
-  right: 25px;
-  margin-top: 20px;
-  padding: 10px;
-  z-index: 1;
-  background-color: $color-third;
-  opacity: 1;
-  color: darken($color-third, 30%);
-  text-align: center;
+  @include ban;
   @include desktop{
     display: flex;
     margin-left: 225px;
@@ -199,17 +189,7 @@ nav{
   }
 }
 .food__prev--ban2{
-  position: absolute;
-  width: auto;
-  cursor: pointer;
-  right: 25px;
-  margin-top: 20px;
-  padding: 10px;
-  z-index: 1;
-  background-color: $color-third;
-  opacity: 1;
-  color: darken($color-third, 30%);
-  text-align: center;
+  @include ban;
   @include desktop{
     display: flex;
     margin-left: 225px;
