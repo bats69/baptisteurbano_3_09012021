@@ -160,6 +160,17 @@ $breakpoints:(
 	border-radius: 30px 30px;
 	background: $color-primary;
 }
+@mixin btn-nav{
+	display: inline-flex;
+    align-items: center;
+    width: auto;
+    margin: 15px;
+    border: 0px solid $color-primary;
+    margin-left: 25px;
+    border-radius: 20px;
+    height: 70px;
+    background: lighten($background-color, 15%);
+}
 @mixin flex{
 	display: flex;
 	flex-direction: column;
