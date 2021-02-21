@@ -49,7 +49,7 @@ $breakpoints:(
 	padding-bottom: 10px;
 	margin-bottom: 25px;
 }
-@mixin name-food() {
+@mixin name-food {
 	display: flex;
 	margin-left: 635px;
     width: fit-content;
@@ -61,12 +61,12 @@ $breakpoints:(
     overflow: hidden;
     white-space: nowrap;
 }
-@mixin food-heading() {
+@mixin food-heading {
 	margin-top: 35px;
 	height: 20px;
     font-size: 1.5rem;
 }
-@mixin food-wrap() {
+@mixin food-wrap {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;  
@@ -110,7 +110,7 @@ $breakpoints:(
 	display: flex;
 	flex-direction: column;
 	background: #000;
-		h2() {  
+		h2{  
 			font-family: shrikhand;
 			font-size: 24px;
 			margin-left: 30px;
@@ -118,7 +118,7 @@ $breakpoints:(
 			margin-top: 15px;
 			margin-bottom: 15px;
 		}
-		span a() {
+		span a{
 			font-family: Roboto, sans-serif;
 			margin-left: 15px;
 			cursor: pointer;

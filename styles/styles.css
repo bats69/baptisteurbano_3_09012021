@@ -362,7 +362,7 @@ nav {
   z-index: 1; }
   @media screen and (min-width: 1102px) {
     .food__prev--like {
-      margin-left: 15%;
+      margin-left: 235px;
       margin-right: inherit; } }
 
 i {

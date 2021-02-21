@@ -174,8 +174,7 @@
     right: initial; }
 
   .food__prev--like {
-    right: 25px;
-    top: initial; }
+    right: 25px; }
     .food__prev--like i {
       color: #000; }
       .food__prev--like i:hover {
