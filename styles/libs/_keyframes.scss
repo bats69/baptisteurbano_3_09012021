@@ -1,6 +1,7 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-third: #99e2d0;
+$color-prim-light: lighten($color-primary, 20%);
 @keyframes body{
 	from{
 		filter: blur(3px);
@@ -83,21 +84,15 @@ $color-third: #99e2d0;
 }
 @keyframes like{
 	0% {
-       transform: scale(0);
-        opacity: 0;
-    }
-    33%{
-    	transform: scale(0.33);
-    	opacity: 0.3;
-    }
-    66%{
-    	transform: scale(0.66);
-    	opacity: 0.6;
+		transform: scaleY(0);
     }
     100% {
-        font-size: inherit;
-        opacity: 1;
+    	transform: scaleY(1);
+    	background: -webkit-linear-gradient(top, $color-primary, $color-prim-light);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
+    transition-duration: 2000ms;
 }
 @keyframes checked{
 	0%{
@@ -153,11 +148,10 @@ $color-third: #99e2d0;
 }
 @keyframes affich{
 	0%{
-		transform: scaleY(0);
-		
+		opacity: 0;
 	}
 	100%{
-		transform: scaleY(1);
+		opacity: 1;
 	}
 
 }

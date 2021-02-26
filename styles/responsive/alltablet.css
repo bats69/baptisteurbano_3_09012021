@@ -110,9 +110,9 @@
     font-size: 12px; } }
 @keyframes affich {
   0% {
-    transform: scaleY(0); }
+    opacity: 0; }
   100% {
-    transform: scaleY(1); } }
+    opacity: 1; } }
 @keyframes box {
   0% {
     transform: scaleX(0); }
@@ -195,7 +195,7 @@
     background: #fff;
     margin-top: 15px;
     font-size: 15px;
-    animation: affich 2000ms backwards; }
+    animation: affich 1s backwards; }
     .food--wrap--1 {
       animation-delay: 222.2222222222ms;
       transform-origin: top; }

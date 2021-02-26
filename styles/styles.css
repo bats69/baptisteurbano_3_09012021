@@ -62,17 +62,13 @@
     transition-timing-function: cubic-bezier(0.54, 0.31, 0.89, 0.3); } }
 @keyframes like {
   0% {
-    transform: scale(0);
-    opacity: 0; }
-  33% {
-    transform: scale(0.33);
-    opacity: 0.3; }
-  66% {
-    transform: scale(0.66);
-    opacity: 0.6; }
+    transform: scaleY(0); }
   100% {
-    font-size: inherit;
-    opacity: 1; } }
+    transform: scaleY(1);
+    background: -webkit-linear-gradient(top, #9356dc, #c9abee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  transition-duration: 2000ms; }
 @keyframes checked {
   0% {
     transform: rotate(90deg);
@@ -110,9 +106,9 @@
     font-size: 12px; } }
 @keyframes affich {
   0% {
-    transform: scaleY(0); }
+    opacity: 0; }
   100% {
-    transform: scaleY(1); } }
+    opacity: 1; } }
 @keyframes box {
   0% {
     transform: scaleX(0); }
@@ -227,11 +223,12 @@ header img {
   height: 50px;
   color: #fff;
   border-radius: 30px 30px;
-  background: #9356dc;
+  background: linear-gradient(to top, #9356dc, 30%, #ff79da);
   box-shadow: 3px 3px 8px 2px #cfcfcf;
   width: 250px; }
   .btn:hover {
     cursor: pointer;
+    opacity: 0.85;
     transform: scale(1.05);
     background: linear-gradient(to top, #9356dc, 30%, #ff79da);
     transition-duration: 400ms;
@@ -286,6 +283,7 @@ nav {
         width: 282px; } }
     .nav__link--wrap .nav__link--choice:hover {
       cursor: pointer;
+      opacity: 0.85;
       transform: scale(1.05);
       background: linear-gradient(to top, #9356dc, 30%, #ff79da);
       transition-duration: 400ms;
@@ -370,8 +368,10 @@ i {
   i:hover {
     cursor: pointer;
     font-weight: bolder;
-    color: #9356dc;
-    transition-duration: 1500ms; }
+    background: -webkit-linear-gradient(top, #9356dc, #c9abee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition-duration: 1s; }
 
 a {
   text-decoration: none;
@@ -414,7 +414,7 @@ img {
 footer {
   display: flex;
   flex-direction: column;
-  background: #000; }
+  background: #353535; }
   footer h2 {
     font-family: shrikhand;
     font-size: 24px;
@@ -423,9 +423,7 @@ footer {
     margin-top: 15px;
     margin-bottom: 15px; }
   footer .link {
-    font-family: Roboto, sans-serif;
     cursor: pointer;
-    color: #fff;
     width: fit-content; }
     footer .link:hover {
       text-decoration: underline; }
@@ -434,10 +432,8 @@ footer {
 
 .link-footer {
   justify-content: space-around;
-  font-family: Roboto, sans-serif;
   width: auto;
   height: auto;
-  color: #fff;
   text-decoration: none;
   line-height: 25px; }
   .link-footer i {
@@ -446,5 +442,10 @@ footer {
       text-decoration: none; }
     .link-footer i .other-restaurant {
       margin-left: 22px; }
+
+.link,
+.link-footer {
+  font-family: Roboto, sans-serif;
+  color: #fff; }
 
 /*# sourceMappingURL=styles.css.map */

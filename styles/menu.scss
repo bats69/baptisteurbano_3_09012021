@@ -81,7 +81,9 @@ h1{
     &:hover{
       cursor: pointer;
       font-weight: bolder;
-      color: $color-primary;
+      background: -webkit-linear-gradient(top, $color-primary, $color-prim-light);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       transition-duration: 1500ms;
     }
   }
@@ -89,6 +91,7 @@ h1{
 .food__prev--like{  
   top: 30px;
   @include desktop{
+    top: 30px;
     width: 10%;
     right: 25px;
   }
@@ -179,9 +182,10 @@ h1{
   left: 84%;
   margin-top: -2px;
   border-radius: 0 15px 15px 0;
-  background: #15dea5;
+  background: $color-third;
 }
 .food__list-heading{
+  font-family: Roboto, sans-serif;
   margin-right: 80%;
   font-weight: normal;
   border-bottom: 2px solid $color-third;
@@ -191,6 +195,7 @@ h1{
 }
 .food__descript-acompaniment,
 .food__descript{
+  font-family: Roboto, sans-serif;
   @include position;
   width: 84%;
   padding-bottom: 1px;
@@ -224,11 +229,13 @@ h1{
 }
 .btn{
   @include btn;
+  @include shadow($background-color);
   justify-content: center;
   width: 40%;
   margin-top: 70px;
   &:hover{
     @include hover;
+    @include shadow ($shadow);
   }
 }
 .footer--wrap{

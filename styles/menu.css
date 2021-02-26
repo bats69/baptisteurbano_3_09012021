@@ -62,17 +62,13 @@
     transition-timing-function: cubic-bezier(0.54, 0.31, 0.89, 0.3); } }
 @keyframes like {
   0% {
-    transform: scale(0);
-    opacity: 0; }
-  33% {
-    transform: scale(0.33);
-    opacity: 0.3; }
-  66% {
-    transform: scale(0.66);
-    opacity: 0.6; }
+    transform: scaleY(0); }
   100% {
-    font-size: inherit;
-    opacity: 1; } }
+    transform: scaleY(1);
+    background: -webkit-linear-gradient(top, #9356dc, #c9abee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  transition-duration: 2000ms; }
 @keyframes checked {
   0% {
     transform: rotate(90deg);
@@ -110,9 +106,9 @@
     font-size: 12px; } }
 @keyframes affich {
   0% {
-    transform: scaleY(0); }
+    opacity: 0; }
   100% {
-    transform: scaleY(1); } }
+    opacity: 1; } }
 @keyframes box {
   0% {
     transform: scaleX(0); }
@@ -232,13 +228,16 @@ h1 {
   .prev__like--2 .far:hover {
     cursor: pointer;
     font-weight: bolder;
-    color: #9356dc;
+    background: -webkit-linear-gradient(top, #9356dc, #c9abee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     transition-duration: 1500ms; }
 
 .food__prev--like {
   top: 30px; }
   @media screen and (min-width: 1102px) {
     .food__prev--like {
+      top: 30px;
       width: 10%;
       right: 25px; } }
 
@@ -291,7 +290,7 @@ h1 {
   background: #fff;
   margin-top: 15px;
   font-size: 15px;
-  animation: affich 2000ms backwards;
+  animation: affich 1.5s backwards;
   position: relative; }
   .food__wrap--1 {
     animation-delay: 222.2222222222ms;
@@ -367,9 +366,10 @@ h1 {
   left: 84%;
   margin-top: -2px;
   border-radius: 0 15px 15px 0;
-  background: #15dea5; }
+  background: #99e2d0; }
 
 .food__list-heading {
+  font-family: Roboto, sans-serif;
   margin-right: 80%;
   font-weight: normal;
   border-bottom: 2px solid #99e2d0;
@@ -379,6 +379,7 @@ h1 {
 
 .food__descript-acompaniment,
 .food__descript {
+  font-family: Roboto, sans-serif;
   position: absolute;
   width: 100%;
   width: 84%;
@@ -420,15 +421,18 @@ h1 {
   height: 50px;
   color: #fff;
   border-radius: 30px 30px;
-  background: #9356dc;
+  background: linear-gradient(to top, #9356dc, 30%, #ff79da);
+  box-shadow: 3px 3px 8px 2px #cfcfcf;
   justify-content: center;
   width: 40%;
   margin-top: 70px; }
   .btn:hover {
     cursor: pointer;
+    opacity: 0.85;
     transform: scale(1.05);
     background: linear-gradient(to top, #9356dc, 30%, #ff79da);
-    transition-duration: 400ms; }
+    transition-duration: 400ms;
+    box-shadow: 3px 3px 8px 2px #9c9c9c; }
 
 @media screen and (min-width: 1102px) {
   .footer--wrap {
@@ -437,7 +441,7 @@ h1 {
 footer {
   display: flex;
   flex-direction: column;
-  background: #000; }
+  background: #353535; }
   @media screen and (min-width: 1102px) {
     footer {
       position: absolute;

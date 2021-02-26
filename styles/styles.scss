@@ -215,8 +215,10 @@ i{
   &:hover {
     cursor: pointer;
     font-weight: bolder;
-    color: $color-primary;
-    transition-duration: 1500ms;
+    background: -webkit-linear-gradient(top, $color-primary, $color-prim-light);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition-duration: 1s;
   }
 }
 a{
@@ -271,9 +273,7 @@ footer {
       margin-bottom: 15px;
     }
     .link{
-      font-family: Roboto, sans-serif;
       cursor: pointer;
-      color: $color-init;
       width: fit-content;
       &:hover{
         text-decoration: underline;
@@ -285,10 +285,8 @@ footer {
 }
 .link-footer {
   justify-content: space-around;
-  font-family: Roboto, sans-serif;
   width: auto;
   height: auto;
-  color: $color-init;
   text-decoration: none;
   line-height: 25px;
   i{
@@ -301,7 +299,11 @@ footer {
     }
   }
 }
-
+.link,
+.link-footer{
+  font-family: Roboto, sans-serif;
+  color: $color-init;
+}
 
 
  

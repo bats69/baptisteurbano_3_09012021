@@ -2,8 +2,9 @@ $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-third: #99e2d0;
 $color-init: #fff;
-$color-footer: #000;
+$color-footer: #353535;
 $color-icon: #000;
+$color-prim-light: lighten($color-primary, 20%);
 $background-color: #cfcfcf;
 $shadow: darken($background-color, 20%);
 $breakpoints:(
@@ -78,7 +79,7 @@ $breakpoints:(
 	background: #fff;
 	margin-top: 15px;
 	font-size: 15px; 
-	animation: affich $anim-dur backwards;
+	animation: affich 1.5s backwards;
 		@for $i from 1 through 10 {
 			&--#{$i} {
 				animation-delay: $animation-delay * $i;
@@ -98,6 +99,7 @@ $breakpoints:(
 }
 @mixin hover{
 	cursor: pointer;
+	opacity: 0.85;
 	transform: scale(1.05);
 	background: linear-gradient(to top,$color-primary,30%,$color-secondary);
 	transition-duration: 400ms;
@@ -158,7 +160,7 @@ $breakpoints:(
 	height: 50px;
 	color: #fff;
 	border-radius: 30px 30px;
-	background: $color-primary;
+	background: linear-gradient(to top,$color-primary,30%,$color-secondary);
 }
 @mixin btn-nav{
 	display: inline-flex;
