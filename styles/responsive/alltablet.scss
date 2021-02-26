@@ -40,12 +40,6 @@
 		right: 25px;
 	i{
     color: #000;
-    &:hover {
-      cursor: pointer;
-      font-weight: bolder;
-      color: $color-primary;
-      transition-duration: 1500ms;
-    }
   }
 }
 .food--wrap{

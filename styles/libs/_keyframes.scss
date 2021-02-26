@@ -82,17 +82,14 @@ $color-prim-light: lighten($color-primary, 20%);
 		transition-timing-function: cubic-bezier(.54,.31,.89,.3);
 	}
 }
-@keyframes like{
-	0% {
-		transform: scaleY(0);
+@-webkit-keyframes like{  
+
+	0%{
+		opacity: 0.1;
+	}
+    100%{
+    	opacity: 1;
     }
-    100% {
-    	transform: scaleY(1);
-    	background: -webkit-linear-gradient(top, $color-primary, $color-prim-light);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    transition-duration: 2000ms;
 }
 @keyframes checked{
 	0%{

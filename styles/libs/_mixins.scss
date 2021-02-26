@@ -111,7 +111,7 @@ $breakpoints:(
 @mixin footer{
 	display: flex;
 	flex-direction: column;
-	background: #000;
+	background: $color-footer;
 		h2{  
 			font-family: shrikhand;
 			font-size: 24px;
@@ -185,10 +185,10 @@ $breakpoints:(
 	right: 80px;
 }
 $anim-dur: 2000ms;
-$animation-delay: $anim-dur / 9;
+$animation-delay: $anim-dur / 10;
 @mixin anim{
 	animation: affich $anim-dur backwards;
-			@for $i from 1 through 9 {
+			@for $i from 1 through 10 {
 				&--#{$i} {
 					animation-delay: $animation-delay * $i;
 		}

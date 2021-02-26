@@ -62,17 +62,13 @@
     transition-timing-function: cubic-bezier(0.54, 0.31, 0.89, 0.3); } }
 @keyframes like {
   0% {
-    transform: scale(0);
-    opacity: 0; }
-  33% {
-    transform: scale(0.33);
-    opacity: 0.3; }
-  66% {
-    transform: scale(0.66);
-    opacity: 0.6; }
+    transform: scaleY(0); }
   100% {
-    font-size: inherit;
-    opacity: 1; } }
+    transform: scaleY(1);
+    background: -webkit-linear-gradient(top, #9356dc, #c9abee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  transition-duration: 2000ms; }
 @keyframes checked {
   0% {
     transform: rotate(90deg);
@@ -177,11 +173,6 @@
     right: 25px; }
     .food__prev--like i {
       color: #000; }
-      .food__prev--like i:hover {
-        cursor: pointer;
-        font-weight: bolder;
-        color: #9356dc;
-        transition-duration: 1500ms; }
 
   .food--wrap {
     display: flex;
@@ -195,36 +186,36 @@
     background: #fff;
     margin-top: 15px;
     font-size: 15px;
-    animation: affich 1s backwards; }
+    animation: affich 1.5s backwards; }
     .food--wrap--1 {
-      animation-delay: 222.2222222222ms;
+      animation-delay: 200ms;
       transform-origin: top; }
     .food--wrap--2 {
-      animation-delay: 444.4444444444ms;
+      animation-delay: 400ms;
       transform-origin: top; }
     .food--wrap--3 {
-      animation-delay: 666.6666666667ms;
+      animation-delay: 600ms;
       transform-origin: top; }
     .food--wrap--4 {
-      animation-delay: 888.8888888889ms;
+      animation-delay: 800ms;
       transform-origin: top; }
     .food--wrap--5 {
-      animation-delay: 1111.1111111111ms;
+      animation-delay: 1000ms;
       transform-origin: top; }
     .food--wrap--6 {
-      animation-delay: 1333.3333333333ms;
+      animation-delay: 1200ms;
       transform-origin: top; }
     .food--wrap--7 {
-      animation-delay: 1555.5555555556ms;
+      animation-delay: 1400ms;
       transform-origin: top; }
     .food--wrap--8 {
-      animation-delay: 1777.7777777778ms;
+      animation-delay: 1600ms;
       transform-origin: top; }
     .food--wrap--9 {
-      animation-delay: 2000ms;
+      animation-delay: 1800ms;
       transform-origin: top; }
     .food--wrap--10 {
-      animation-delay: 2222.2222222222ms;
+      animation-delay: 2000ms;
       transform-origin: top; }
 
   .footer--wrap {
@@ -238,7 +229,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    background: #000; }
+    background: #353535; }
     footer h2 {
       font-family: shrikhand;
       font-size: 24px;

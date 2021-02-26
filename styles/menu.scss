@@ -84,7 +84,7 @@ h1{
       background: -webkit-linear-gradient(top, $color-primary, $color-prim-light);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      transition-duration: 1500ms;
+      -webkit-animation: like 1500ms;
     }
   }
 }

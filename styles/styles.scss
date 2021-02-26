@@ -218,7 +218,8 @@ i{
     background: -webkit-linear-gradient(top, $color-primary, $color-prim-light);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      transition-duration: 1s;
+      -webkit-animation: like 1500ms;
+    transform-origin: left -4px -50px;
   }
 }
 a{
