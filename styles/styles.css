@@ -367,8 +367,7 @@ i {
     background: -webkit-linear-gradient(top, #9356dc, #c9abee);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-animation: like 1500ms;
-    transform-origin: left -4px -50px; }
+    -webkit-animation: like 1500ms; }
 
 a {
   text-decoration: none;

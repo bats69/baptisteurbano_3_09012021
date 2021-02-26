@@ -73,8 +73,10 @@
     	&:hover {
 	      cursor: pointer;
 	      font-weight: bolder;
-	      color: $color-primary;
-	      transition-duration: 1500ms;
+	     background: -webkit-linear-gradient(top, $color-primary, $color-prim-light);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-animation: like 1500ms;
   		}
   	}
 }
